@@ -446,7 +446,7 @@ Partial Class Xtreme
         '
         'btn_ChangerTable
         '
-        Me.btn_ChangerTable.Location = New System.Drawing.Point(221, 25)
+        Me.btn_ChangerTable.Location = New System.Drawing.Point(140, 25)
         Me.btn_ChangerTable.Name = "btn_ChangerTable"
         Me.btn_ChangerTable.Size = New System.Drawing.Size(27, 23)
         Me.btn_ChangerTable.TabIndex = 45

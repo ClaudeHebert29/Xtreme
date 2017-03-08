@@ -21,3 +21,7 @@ C:\Users\elvey\Desktop\Xtreme\Xtreme\obj\Debug\Xtreme.vbprojResolveAssemblyRefer
 C:\Users\elvey\Desktop\Xtreme\Xtreme\obj\Debug\Xtreme.Xtreme.resources
 C:\Users\elvey\Desktop\Xtreme\Xtreme\obj\Debug\Xtreme.Resources.resources
 C:\Users\elvey\Desktop\Xtreme\Xtreme\obj\Debug\Xtreme.vbproj.GenerateResource.Cache
+D:\EnvironnementVB\projet claude\Xtreme\bin\Debug\Xtreme.exe.config
+D:\EnvironnementVB\projet claude\Xtreme\obj\Debug\Xtreme.exe
+D:\EnvironnementVB\projet claude\Xtreme\obj\Debug\Xtreme.xml
+D:\EnvironnementVB\projet claude\Xtreme\obj\Debug\Xtreme.pdb
