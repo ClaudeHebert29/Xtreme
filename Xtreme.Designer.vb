@@ -521,7 +521,7 @@ Partial Class Xtreme
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(350, 109)
+        Me.Label8.Location = New System.Drawing.Point(18, 229)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(113, 13)
         Me.Label8.TabIndex = 42
@@ -536,7 +536,7 @@ Partial Class Xtreme
         '
         'Txt_40
         '
-        Me.Txt_40.Location = New System.Drawing.Point(489, 106)
+        Me.Txt_40.Location = New System.Drawing.Point(157, 226)
         Me.Txt_40.Name = "Txt_40"
         Me.Txt_40.Size = New System.Drawing.Size(168, 20)
         Me.Txt_40.TabIndex = 41
@@ -550,7 +550,7 @@ Partial Class Xtreme
         '
         'Txt_45
         '
-        Me.Txt_45.Location = New System.Drawing.Point(529, 240)
+        Me.Txt_45.Location = New System.Drawing.Point(529, 222)
         Me.Txt_45.Name = "Txt_45"
         Me.Txt_45.Size = New System.Drawing.Size(167, 20)
         Me.Txt_45.TabIndex = 40
@@ -564,7 +564,7 @@ Partial Class Xtreme
         '
         'Txt_43
         '
-        Me.Txt_43.Location = New System.Drawing.Point(490, 184)
+        Me.Txt_43.Location = New System.Drawing.Point(490, 166)
         Me.Txt_43.Name = "Txt_43"
         Me.Txt_43.Size = New System.Drawing.Size(167, 20)
         Me.Txt_43.TabIndex = 39
@@ -578,7 +578,7 @@ Partial Class Xtreme
         '
         'Txt_44
         '
-        Me.Txt_44.Location = New System.Drawing.Point(529, 214)
+        Me.Txt_44.Location = New System.Drawing.Point(529, 196)
         Me.Txt_44.Name = "Txt_44"
         Me.Txt_44.Size = New System.Drawing.Size(167, 20)
         Me.Txt_44.TabIndex = 38
@@ -592,7 +592,7 @@ Partial Class Xtreme
         '
         'Txt_42
         '
-        Me.Txt_42.Location = New System.Drawing.Point(490, 158)
+        Me.Txt_42.Location = New System.Drawing.Point(490, 140)
         Me.Txt_42.Name = "Txt_42"
         Me.Txt_42.Size = New System.Drawing.Size(167, 20)
         Me.Txt_42.TabIndex = 37
@@ -606,7 +606,7 @@ Partial Class Xtreme
         '
         'Txt_41
         '
-        Me.Txt_41.Location = New System.Drawing.Point(490, 132)
+        Me.Txt_41.Location = New System.Drawing.Point(490, 114)
         Me.Txt_41.Name = "Txt_41"
         Me.Txt_41.Size = New System.Drawing.Size(167, 20)
         Me.Txt_41.TabIndex = 36
@@ -621,7 +621,7 @@ Partial Class Xtreme
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(350, 243)
+        Me.Label10.Location = New System.Drawing.Point(350, 225)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(150, 13)
         Me.Label10.TabIndex = 34
@@ -630,7 +630,7 @@ Partial Class Xtreme
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(350, 217)
+        Me.Label12.Location = New System.Drawing.Point(350, 199)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(173, 13)
         Me.Label12.TabIndex = 33
@@ -638,7 +638,7 @@ Partial Class Xtreme
         '
         'Txt_39
         '
-        Me.Txt_39.Location = New System.Drawing.Point(158, 225)
+        Me.Txt_39.Location = New System.Drawing.Point(157, 200)
         Me.Txt_39.Name = "Txt_39"
         Me.Txt_39.Size = New System.Drawing.Size(168, 20)
         Me.Txt_39.TabIndex = 8
@@ -646,7 +646,7 @@ Partial Class Xtreme
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(350, 191)
+        Me.Label14.Location = New System.Drawing.Point(350, 173)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(121, 13)
         Me.Label14.TabIndex = 32
@@ -664,7 +664,7 @@ Partial Class Xtreme
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(350, 165)
+        Me.Label18.Location = New System.Drawing.Point(350, 147)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(135, 13)
         Me.Label18.TabIndex = 31
@@ -682,7 +682,7 @@ Partial Class Xtreme
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(350, 139)
+        Me.Label24.Location = New System.Drawing.Point(350, 121)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(39, 13)
         Me.Label24.TabIndex = 30
@@ -700,7 +700,7 @@ Partial Class Xtreme
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(18, 228)
+        Me.Label26.Location = New System.Drawing.Point(17, 203)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(35, 13)
         Me.Label26.TabIndex = 28

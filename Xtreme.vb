@@ -36,7 +36,7 @@ Public Class Xtreme
             If IsDBNull(dsXtreme.Tables(0).Rows(position).Item(ctr)) = False Then
                 If table = 3 And ctr = 10 Then
                     ctr2 -= 1
-                    pbx_Photo.BackgroundImage = dsXtreme.Tables(0).Rows(position).Item(ctr)
+                    pbx_Photo.BackgroundImage = Image.FromStream(dsXtreme.Tables(0).Rows(position).Item(ctr))
                 Else
                     listeTXT_Client(ctr2).Text = dsXtreme.Tables(0).Rows(position).Item(ctr)
 
