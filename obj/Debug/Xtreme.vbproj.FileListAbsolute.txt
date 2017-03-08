@@ -1,0 +1,12 @@
+C:\Users\1538140\AppData\Local\Temporary Projects\Xtreme\bin\Debug\Xtreme.exe.config
+F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\bin\Debug\Xtreme.exe.config
+F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\bin\Debug\Xtreme.exe
+F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\bin\Debug\Xtreme.pdb
+F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\bin\Debug\Xtreme.xml
+F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\obj\Debug\Xtreme.vbprojResolveAssemblyReference.cache
+F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\obj\Debug\Xtreme.Xtreme.resources
+F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\obj\Debug\Xtreme.Resources.resources
+F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\obj\Debug\Xtreme.vbproj.GenerateResource.Cache
+F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\obj\Debug\Xtreme.exe
+F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\obj\Debug\Xtreme.xml
+F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\obj\Debug\Xtreme.pdb
