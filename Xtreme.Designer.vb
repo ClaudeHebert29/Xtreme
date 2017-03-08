@@ -61,7 +61,6 @@ Partial Class Xtreme
         Me.cbx_Nomtable = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Pan_employer = New System.Windows.Forms.Panel()
-        Me.pbx_Photo = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Txt_31 = New System.Windows.Forms.TextBox()
@@ -88,7 +87,6 @@ Partial Class Xtreme
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Pan_fournisseur = New System.Windows.Forms.Panel()
@@ -123,9 +121,10 @@ Partial Class Xtreme
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
+        Me.txt_38 = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
-        CType(Me.pbx_Photo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pan_fournisseur.SuspendLayout()
         Me.pan_produit.SuspendLayout()
         Me.SuspendLayout()
@@ -473,7 +472,8 @@ Partial Class Xtreme
         '
         'Pan_employer
         '
-        Me.Pan_employer.Controls.Add(Me.pbx_Photo)
+        Me.Pan_employer.Controls.Add(Me.txt_38)
+        Me.Pan_employer.Controls.Add(Me.Label28)
         Me.Pan_employer.Controls.Add(Me.Label6)
         Me.Pan_employer.Controls.Add(Me.Label8)
         Me.Pan_employer.Controls.Add(Me.Txt_31)
@@ -500,7 +500,6 @@ Partial Class Xtreme
         Me.Pan_employer.Controls.Add(Me.Label25)
         Me.Pan_employer.Controls.Add(Me.Label26)
         Me.Pan_employer.Controls.Add(Me.Label27)
-        Me.Pan_employer.Controls.Add(Me.Label28)
         Me.Pan_employer.Controls.Add(Me.Label29)
         Me.Pan_employer.Controls.Add(Me.Label30)
         Me.Pan_employer.Location = New System.Drawing.Point(12, 54)
@@ -508,14 +507,6 @@ Partial Class Xtreme
         Me.Pan_employer.Size = New System.Drawing.Size(773, 266)
         Me.Pan_employer.TabIndex = 48
         Me.Pan_employer.Visible = False
-        '
-        'pbx_Photo
-        '
-        Me.pbx_Photo.Location = New System.Drawing.Point(491, 21)
-        Me.pbx_Photo.Name = "pbx_Photo"
-        Me.pbx_Photo.Size = New System.Drawing.Size(166, 79)
-        Me.pbx_Photo.TabIndex = 43
-        Me.pbx_Photo.TabStop = False
         '
         'Label6
         '
@@ -722,15 +713,6 @@ Partial Class Xtreme
         Me.Label27.Size = New System.Drawing.Size(91, 13)
         Me.Label27.TabIndex = 24
         Me.Label27.Text = "Date d'embauche"
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(450, 20)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(35, 13)
-        Me.Label28.TabIndex = 27
-        Me.Label28.Text = "Photo"
         '
         'Label29
         '
@@ -1036,6 +1018,22 @@ Partial Class Xtreme
         Me.Label31.TabIndex = 26
         Me.Label31.Text = "Telephone"
         '
+        'txt_38
+        '
+        Me.txt_38.Location = New System.Drawing.Point(490, 45)
+        Me.txt_38.Name = "txt_38"
+        Me.txt_38.Size = New System.Drawing.Size(167, 20)
+        Me.txt_38.TabIndex = 44
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(350, 52)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(34, 13)
+        Me.Label28.TabIndex = 43
+        Me.Label28.Text = "photo"
+        '
         'Xtreme
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1058,7 +1056,6 @@ Partial Class Xtreme
         Me.pan_clients.PerformLayout()
         Me.Pan_employer.ResumeLayout(False)
         Me.Pan_employer.PerformLayout()
-        CType(Me.pbx_Photo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pan_fournisseur.ResumeLayout(False)
         Me.Pan_fournisseur.PerformLayout()
         Me.pan_produit.ResumeLayout(False)
@@ -1132,7 +1129,6 @@ Partial Class Xtreme
     Friend WithEvents Label25 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents Label27 As Label
-    Friend WithEvents Label28 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
     Friend WithEvents Pan_fournisseur As Panel
@@ -1167,5 +1163,6 @@ Partial Class Xtreme
     Friend WithEvents Label9 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label31 As Label
-    Friend WithEvents pbx_Photo As PictureBox
+    Friend WithEvents txt_38 As TextBox
+    Friend WithEvents Label28 As Label
 End Class

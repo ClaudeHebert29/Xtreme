@@ -13,7 +13,7 @@ Public Class Xtreme
         NomTable = {"Clients", "Fournisseurs", "Produits", "Employés"}
         listeTXT_Four = {txt_16, txt_17, Txt_18, Txt_19, Txt_20, Txt_21, Txt_22, Txt_23}
         listeTXT_Produit = {Txt_24, Txt_25, Txt_26, Txt_27, Txt_28, Txt_29, Txt_30}
-        listeTXT_Employes = {Txt_31, Txt_32, Txt_33, Txt_34, Txt_35, Txt_36, Txt_37, Txt_39, Txt_40, Txt_41, Txt_42, Txt_43, Txt_44, Txt_45}
+        listeTXT_Employes = {Txt_31, Txt_32, Txt_33, Txt_34, Txt_35, Txt_36, Txt_37, Txt_38, Txt_39, Txt_40, Txt_41, Txt_42, Txt_43, Txt_44, Txt_45}
         listeTXT_Client = {txt_Clients_1, txt_Clients_2, txt_Clients_3, txt_Clients_4, txt_Clients_5, txt_Clients_6, txt_Clients_7, txt_Clients_8, txt_Clients_9, txt_Clients_10, txt_Clients_11, txt_Clients_12, txt_Clients_13, txt_Clients_14, txt_Clients_15}
         listPanel = {pan_clients, Pan_fournisseur, pan_produit, pan_produit}
         bd.connexion("..\xtreme.mdb")
@@ -34,9 +34,8 @@ Public Class Xtreme
         Dim ctr2 As Integer
         For ctr As Integer = 2 To dsXtreme.Tables(0).Columns.Count - 1
             If IsDBNull(dsXtreme.Tables(0).Rows(position).Item(ctr)) = False Then
-                If table = 3 And ctr = 10 Then
-                    ctr2 -= 1
-                    pbx_Photo.BackgroundImage = Image.FromStream(dsXtreme.Tables(0).Rows(position).Item(ctr))
+                If table = 3 And ctr = 9 Then
+                    listeTXT_Client(ctr2).Text = "Null"
                 Else
                     listeTXT_Client(ctr2).Text = dsXtreme.Tables(0).Rows(position).Item(ctr)
 
@@ -107,4 +106,8 @@ Public Class Xtreme
             End If
         Next
     End Sub
+
+
+
+
 End Class
