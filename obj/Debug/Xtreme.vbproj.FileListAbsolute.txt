@@ -10,3 +10,14 @@ F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\obj\Debug\Xtreme.vbproj.Genera
 F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\obj\Debug\Xtreme.exe
 F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\obj\Debug\Xtreme.xml
 F:\cloclo\usb\4e session\Multimedia\Xtreme\Xtreme\obj\Debug\Xtreme.pdb
+C:\Users\elvey\Desktop\Xtreme\Xtreme\bin\Debug\Xtreme.exe.config
+C:\Users\elvey\Desktop\Xtreme\Xtreme\obj\Debug\Xtreme.exe
+C:\Users\elvey\Desktop\Xtreme\Xtreme\obj\Debug\Xtreme.xml
+C:\Users\elvey\Desktop\Xtreme\Xtreme\obj\Debug\Xtreme.pdb
+C:\Users\elvey\Desktop\Xtreme\Xtreme\bin\Debug\Xtreme.exe
+C:\Users\elvey\Desktop\Xtreme\Xtreme\bin\Debug\Xtreme.pdb
+C:\Users\elvey\Desktop\Xtreme\Xtreme\bin\Debug\Xtreme.xml
+C:\Users\elvey\Desktop\Xtreme\Xtreme\obj\Debug\Xtreme.vbprojResolveAssemblyReference.cache
+C:\Users\elvey\Desktop\Xtreme\Xtreme\obj\Debug\Xtreme.Xtreme.resources
+C:\Users\elvey\Desktop\Xtreme\Xtreme\obj\Debug\Xtreme.Resources.resources
+C:\Users\elvey\Desktop\Xtreme\Xtreme\obj\Debug\Xtreme.vbproj.GenerateResource.Cache

@@ -77,7 +77,6 @@ Partial Class Xtreme
         Me.Txt_41 = New System.Windows.Forms.TextBox()
         Me.Txt_37 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Txt_38 = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Txt_39 = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -123,10 +122,12 @@ Partial Class Xtreme
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
+        Me.pbx_Photo = New System.Windows.Forms.PictureBox()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_fournisseur.SuspendLayout()
         Me.pan_produit.SuspendLayout()
+        CType(Me.pbx_Photo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn_ElementLast
@@ -472,6 +473,7 @@ Partial Class Xtreme
         '
         'Pan_employer
         '
+        Me.Pan_employer.Controls.Add(Me.pbx_Photo)
         Me.Pan_employer.Controls.Add(Me.Label6)
         Me.Pan_employer.Controls.Add(Me.Label8)
         Me.Pan_employer.Controls.Add(Me.Txt_31)
@@ -488,7 +490,6 @@ Partial Class Xtreme
         Me.Pan_employer.Controls.Add(Me.Txt_41)
         Me.Pan_employer.Controls.Add(Me.Txt_37)
         Me.Pan_employer.Controls.Add(Me.Label10)
-        Me.Pan_employer.Controls.Add(Me.Txt_38)
         Me.Pan_employer.Controls.Add(Me.Label12)
         Me.Pan_employer.Controls.Add(Me.Txt_39)
         Me.Pan_employer.Controls.Add(Me.Label14)
@@ -520,7 +521,7 @@ Partial Class Xtreme
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(374, 17)
+        Me.Label8.Location = New System.Drawing.Point(350, 109)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(113, 13)
         Me.Label8.TabIndex = 42
@@ -535,7 +536,7 @@ Partial Class Xtreme
         '
         'Txt_40
         '
-        Me.Txt_40.Location = New System.Drawing.Point(513, 14)
+        Me.Txt_40.Location = New System.Drawing.Point(489, 106)
         Me.Txt_40.Name = "Txt_40"
         Me.Txt_40.Size = New System.Drawing.Size(168, 20)
         Me.Txt_40.TabIndex = 41
@@ -549,7 +550,7 @@ Partial Class Xtreme
         '
         'Txt_45
         '
-        Me.Txt_45.Location = New System.Drawing.Point(553, 148)
+        Me.Txt_45.Location = New System.Drawing.Point(529, 240)
         Me.Txt_45.Name = "Txt_45"
         Me.Txt_45.Size = New System.Drawing.Size(167, 20)
         Me.Txt_45.TabIndex = 40
@@ -563,7 +564,7 @@ Partial Class Xtreme
         '
         'Txt_43
         '
-        Me.Txt_43.Location = New System.Drawing.Point(514, 92)
+        Me.Txt_43.Location = New System.Drawing.Point(490, 184)
         Me.Txt_43.Name = "Txt_43"
         Me.Txt_43.Size = New System.Drawing.Size(167, 20)
         Me.Txt_43.TabIndex = 39
@@ -577,7 +578,7 @@ Partial Class Xtreme
         '
         'Txt_44
         '
-        Me.Txt_44.Location = New System.Drawing.Point(553, 122)
+        Me.Txt_44.Location = New System.Drawing.Point(529, 214)
         Me.Txt_44.Name = "Txt_44"
         Me.Txt_44.Size = New System.Drawing.Size(167, 20)
         Me.Txt_44.TabIndex = 38
@@ -591,7 +592,7 @@ Partial Class Xtreme
         '
         'Txt_42
         '
-        Me.Txt_42.Location = New System.Drawing.Point(514, 66)
+        Me.Txt_42.Location = New System.Drawing.Point(490, 158)
         Me.Txt_42.Name = "Txt_42"
         Me.Txt_42.Size = New System.Drawing.Size(167, 20)
         Me.Txt_42.TabIndex = 37
@@ -605,7 +606,7 @@ Partial Class Xtreme
         '
         'Txt_41
         '
-        Me.Txt_41.Location = New System.Drawing.Point(514, 40)
+        Me.Txt_41.Location = New System.Drawing.Point(490, 132)
         Me.Txt_41.Name = "Txt_41"
         Me.Txt_41.Size = New System.Drawing.Size(167, 20)
         Me.Txt_41.TabIndex = 36
@@ -620,23 +621,16 @@ Partial Class Xtreme
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(374, 151)
+        Me.Label10.Location = New System.Drawing.Point(350, 243)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(150, 13)
         Me.Label10.TabIndex = 34
         Me.Label10.Text = "En cas d'urgence - Telephone"
         '
-        'Txt_38
-        '
-        Me.Txt_38.Location = New System.Drawing.Point(158, 199)
-        Me.Txt_38.Name = "Txt_38"
-        Me.Txt_38.Size = New System.Drawing.Size(168, 20)
-        Me.Txt_38.TabIndex = 7
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(374, 125)
+        Me.Label12.Location = New System.Drawing.Point(350, 217)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(173, 13)
         Me.Label12.TabIndex = 33
@@ -652,7 +646,7 @@ Partial Class Xtreme
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(374, 99)
+        Me.Label14.Location = New System.Drawing.Point(350, 191)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(121, 13)
         Me.Label14.TabIndex = 32
@@ -670,7 +664,7 @@ Partial Class Xtreme
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(374, 73)
+        Me.Label18.Location = New System.Drawing.Point(350, 165)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(135, 13)
         Me.Label18.TabIndex = 31
@@ -688,7 +682,7 @@ Partial Class Xtreme
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(374, 47)
+        Me.Label24.Location = New System.Drawing.Point(350, 139)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(39, 13)
         Me.Label24.TabIndex = 30
@@ -724,7 +718,7 @@ Partial Class Xtreme
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(18, 202)
+        Me.Label28.Location = New System.Drawing.Point(450, 20)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(35, 13)
         Me.Label28.TabIndex = 27
@@ -1034,6 +1028,14 @@ Partial Class Xtreme
         Me.Label31.TabIndex = 26
         Me.Label31.Text = "Telephone"
         '
+        'pbx_Photo
+        '
+        Me.pbx_Photo.Location = New System.Drawing.Point(491, 21)
+        Me.pbx_Photo.Name = "pbx_Photo"
+        Me.pbx_Photo.Size = New System.Drawing.Size(166, 79)
+        Me.pbx_Photo.TabIndex = 43
+        Me.pbx_Photo.TabStop = False
+        '
         'Xtreme
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1042,14 +1044,14 @@ Partial Class Xtreme
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cbx_Nomtable)
         Me.Controls.Add(Me.btn_ChangerTable)
-        Me.Controls.Add(Me.pan_clients)
         Me.Controls.Add(Me.btn_ElementLast)
         Me.Controls.Add(Me.btn_ElementNext)
         Me.Controls.Add(Me.btn_ElementPreview)
         Me.Controls.Add(Me.btn_ElementFirst)
+        Me.Controls.Add(Me.Pan_employer)
+        Me.Controls.Add(Me.pan_clients)
         Me.Controls.Add(Me.pan_produit)
         Me.Controls.Add(Me.Pan_fournisseur)
-        Me.Controls.Add(Me.Pan_employer)
         Me.Name = "Xtreme"
         Me.Text = "Gestion de Xtreme"
         Me.pan_clients.ResumeLayout(False)
@@ -1060,6 +1062,7 @@ Partial Class Xtreme
         Me.Pan_fournisseur.PerformLayout()
         Me.pan_produit.ResumeLayout(False)
         Me.pan_produit.PerformLayout()
+        CType(Me.pbx_Photo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1119,7 +1122,6 @@ Partial Class Xtreme
     Friend WithEvents Txt_41 As TextBox
     Friend WithEvents Txt_37 As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents Txt_38 As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Txt_39 As TextBox
     Friend WithEvents Label14 As Label
@@ -1165,4 +1167,5 @@ Partial Class Xtreme
     Friend WithEvents Label9 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label31 As Label
+    Friend WithEvents pbx_Photo As PictureBox
 End Class
