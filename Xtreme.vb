@@ -4,13 +4,12 @@ Public Class Xtreme
     Dim daXtreme As New OleDbDataAdapter
     Dim dsXtreme As New DataSet
     Dim gestionoperation As New OleDbCommandBuilder
-    Dim position, table, ctrTable As Integer
+    Dim position, table, ctrTable, min, max As Integer
     Dim NomTable(), NomtableTout() As String
     Dim listeTXT_Client(), listeTXT_Four(), listeTXT_Produit(), listeTXT_Employes() As TextBox
     Dim listeTXT As Object()
     Dim listPanel() As Panel
-    Dim min, max As Integer
-
+#Region "Load"
     Private Sub Xtreme_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         NomtableTout = {"Achats", "Adresses des employés", "Clients", "Commandes", "Détails des commandes", "Employés", "Fournisseurs", "Info Xtreme", "Produits", "Régions", "Types de produit"}
         NomTable = {"Clients", "Fournisseurs", "Produits", "Employés", "Types de produit"}
@@ -27,7 +26,8 @@ Public Class Xtreme
             cbx_Nomtable.Items.Add(NomTable(c))
         Next
     End Sub
-
+#End Region
+#Region "BD"
     Sub ChargerDataset()
         Dim cmdXtreme As New OleDbCommand
         dsXtreme = New DataSet
@@ -52,8 +52,9 @@ Public Class Xtreme
             ctr2 += 1
         Next
     End Sub
-
-    Private Sub btn_ElementLast_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_ElementLast.Click,
+#End Region
+#Region "Déplacement dans les tables"
+    Private Sub btn_Deplacement(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_ElementLast.Click,
     btn_ElementNext.Click, btn_ElementPreview.Click, btn_ElementFirst.Click
         Select Case sender.text
             Case "<<"
@@ -84,7 +85,7 @@ Public Class Xtreme
 
     Private Sub ChangerDeTable(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_ChangerTable.Click
         For ctr As Integer = 0 To 4
-            If NomTable(ctr) Like cbx_Nomtable.Text Then
+            If NomTable(ctr) Like cbx_Nomtable.Text And ctr < 4 Then
                 changerPanel(ctr)
                 table = ctr
                 position = 0
@@ -101,6 +102,7 @@ Public Class Xtreme
                 Exit For
             ElseIf ctr = 4 Then
                 MsgBox("Erreur")
+                Exit For
             End If
         Next
     End Sub
@@ -121,4 +123,71 @@ Public Class Xtreme
             End If
         Next
     End Sub
+#End Region
+#Region "C.A.M.E."
+    Private Sub btn_Ajouter_Click(sender As Object, e As EventArgs) Handles btn_Ajouter.Click
+        Dim b As Boolean
+        If sender.text = "Ajouter" Then
+            Select Case cbx_Nomtable.Text
+                Case "Clients", "Employés"
+                    vider(dsXtreme.Tables(0).Columns.Count - 3)
+                Case "Fournisseurs", "Produits"
+                    vider(dsXtreme.Tables(0).Columns.Count - 2)
+            End Select
+            sender.text = "Enregistrer"
+        Else
+            For c As Integer = 0 To dsXtreme.Tables(0).Columns.Count - 3
+                If listeTXT(table)(c).text Like "" Then
+                    b = False
+                    Exit For
+                Else
+                    b = True
+                End If
+            Next
+            If b = True Then
+                Select Case cbx_Nomtable.Text
+                    Case "Clients"
+                        Ajouter(dsXtreme.Tables(0).Columns.Count - 3, 2)
+                    Case "Fournisseurs", "Produits", "Employés"
+                        Ajouter(dsXtreme.Tables(0).Columns.Count - 3, 1)
+                End Select
+                sender.text = "Ajouter"
+                miseAjourBD()
+            Else
+                MsgBox("Des sections n'ont pas été remplie.")
+            End If
+        End If
+    End Sub
+    Sub vider(nbr As Integer)
+        For c As Integer = 0 To nbr
+            listeTXT(table)(c).text = ""
+        Next
+    End Sub
+    Sub Ajouter(nbr As Integer, min As Integer)
+        Dim drnouvel As DataRow
+        Dim c2 As Integer = min
+        With dsXtreme.Tables(0)
+            drnouvel = .NewRow()
+            drnouvel(0) = dsXtreme.Tables(0).Rows.Count + 1
+            drnouvel(1) = 0
+            For c As Integer = 0 To nbr
+                drnouvel(c2) = listeTXT(table)(c).text
+                c2 += 1
+            Next
+            .Rows.Add(drnouvel)
+        End With
+
+    End Sub
+    Sub miseAjourBD()
+        gestionoperation = New OleDbCommandBuilder(daXtreme)
+        daXtreme.Update(dsXtreme, NomTable(table))
+        dsXtreme.Clear()
+        daXtreme.Fill(dsXtreme, NomTable(table))
+    End Sub
+#End Region
+
+
+
+
 End Class
+

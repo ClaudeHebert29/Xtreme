@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GestionBD.vb" />
+    <Compile Include="Regex.vb" />
     <Compile Include="Xtreme.vb">
       <SubType>Form</SubType>
     </Compile>

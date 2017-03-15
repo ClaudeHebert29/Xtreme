@@ -1,10 +1,7 @@
-﻿'**Francis Pichette -  realisation entiere de la classe
-Imports System.Text.RegularExpressions
+﻿Imports System.Text.RegularExpressions
 
 Public Class clsRegex
 
-    '**Francis Pichette 
-    '- Expresion reguliere
     Dim regexTelephone As New Regex("^(\((\d{3})\)|(\d{3}))\s*[-\/\.]?\s*(\d{3})\s*[-\/\.]?\s*(\d{4})$")
     Dim regexTelFrance As New Regex("^(0[1-68])([ _.\-]?(\d{2})){4}$")
     Dim regexPosteTel As New Regex("^\d{1,5}$")

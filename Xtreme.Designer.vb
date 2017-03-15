@@ -127,9 +127,9 @@ Partial Class Xtreme
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.btn_annuler = New System.Windows.Forms.Button()
+        Me.btn_supprimer = New System.Windows.Forms.Button()
+        Me.btn_Modifier = New System.Windows.Forms.Button()
         Me.btn_Ajouter = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
@@ -798,7 +798,7 @@ Partial Class Xtreme
         Me.Pan_produit.Controls.Add(Me.Label22)
         Me.Pan_produit.Location = New System.Drawing.Point(5, 56)
         Me.Pan_produit.Name = "Pan_produit"
-        Me.Pan_produit.Size = New System.Drawing.Size(778, 265)
+        Me.Pan_produit.Size = New System.Drawing.Size(781, 265)
         Me.Pan_produit.TabIndex = 47
         Me.Pan_produit.Visible = False
         '
@@ -1082,32 +1082,32 @@ Partial Class Xtreme
         Me.Label31.TabIndex = 26
         Me.Label31.Text = "Telephone"
         '
-        'Button5
+        'btn_annuler
         '
-        Me.Button5.Location = New System.Drawing.Point(616, 326)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 53
-        Me.Button5.Text = "Annuler"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btn_annuler.Location = New System.Drawing.Point(616, 326)
+        Me.btn_annuler.Name = "btn_annuler"
+        Me.btn_annuler.Size = New System.Drawing.Size(75, 23)
+        Me.btn_annuler.TabIndex = 53
+        Me.btn_annuler.Text = "Annuler"
+        Me.btn_annuler.UseVisualStyleBackColor = True
         '
-        'Button6
+        'btn_supprimer
         '
-        Me.Button6.Location = New System.Drawing.Point(535, 326)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
-        Me.Button6.TabIndex = 52
-        Me.Button6.Text = "Supprimer"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.btn_supprimer.Location = New System.Drawing.Point(535, 326)
+        Me.btn_supprimer.Name = "btn_supprimer"
+        Me.btn_supprimer.Size = New System.Drawing.Size(75, 23)
+        Me.btn_supprimer.TabIndex = 52
+        Me.btn_supprimer.Text = "Supprimer"
+        Me.btn_supprimer.UseVisualStyleBackColor = True
         '
-        'Button7
+        'btn_Modifier
         '
-        Me.Button7.Location = New System.Drawing.Point(454, 326)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(75, 23)
-        Me.Button7.TabIndex = 51
-        Me.Button7.Text = "Modifier"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.btn_Modifier.Location = New System.Drawing.Point(454, 326)
+        Me.btn_Modifier.Name = "btn_Modifier"
+        Me.btn_Modifier.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Modifier.TabIndex = 51
+        Me.btn_Modifier.Text = "Modifier"
+        Me.btn_Modifier.UseVisualStyleBackColor = True
         '
         'btn_Ajouter
         '
@@ -1141,9 +1141,9 @@ Partial Class Xtreme
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(812, 388)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.btn_annuler)
+        Me.Controls.Add(Me.btn_supprimer)
+        Me.Controls.Add(Me.btn_Modifier)
         Me.Controls.Add(Me.btn_Ajouter)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cbx_Nomtable)
@@ -1277,8 +1277,8 @@ Partial Class Xtreme
     Friend WithEvents Label33 As Label
     Friend WithEvents Button9 As Button
     Friend WithEvents Button8 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
+    Friend WithEvents btn_annuler As Button
+    Friend WithEvents btn_supprimer As Button
+    Friend WithEvents btn_Modifier As Button
     Friend WithEvents btn_Ajouter As Button
 End Class
