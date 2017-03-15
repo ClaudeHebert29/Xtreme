@@ -11,12 +11,16 @@ Public Class Xtreme
     Dim listPanel() As Panel
     Dim min, max As Integer
 
+    Private Sub Pan_fournisseur_Paint(sender As Object, e As PaintEventArgs) Handles Pan_fournisseur.Paint
+
+    End Sub
+
     Private Sub Xtreme_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         NomtableTout = {"Achats", "Adresses des employés", "Clients", "Commandes", "Détails des commandes", "Employés", "Fournisseurs", "Info Xtreme", "Produits", "Régions", "Types de produit"}
         NomTable = {"Clients", "Fournisseurs", "Produits", "Employés"}
-        listeTXT_Four = {txt_16, txt_17, Txt_18, Txt_19, Txt_20, Txt_21, txt_46, Txt_22, Txt_23}
-        listeTXT_Produit = {Txt_24, Txt_25, Txt_26, Txt_27, Txt_28, Txt_29, Txt_30}
-        listeTXT_Employes = {Txt_31, Txt_32, Txt_33, Txt_34, Txt_35, Txt_36, Txt_37, txt_38, Txt_39, Txt_40, Txt_41, Txt_42, Txt_43, Txt_44, Txt_45}
+        listeTXT_Four = {txt_four_1, txt_four_2, Txt_four_3, Txt_four_4, Txt_four_5, Txt_four_7, txt_four_6, Txt_four_8, Txt_prod_1}
+        listeTXT_Produit = {Txt_prod_2, Txt_prod_3, Txt_prod_4, Txt_prod_5, Txt_prod_6, Txt_prod_7, Txt_prod_8}
+        listeTXT_Employes = {Txt_Emp_1, Txt_Emp_2, Txt_Emp_3, Txt_Emp_4, Txt_Emp_5, Txt_Emp_6, Txt_Emp_7, txt_Emp_10, Txt_Emp_8, Txt_Emp_9, Txt_Emp_11, Txt_Emp_12, Txt_Emp_13, Txt_Emp_14, Txt_Emp_15}
         listeTXT_Client = {txt_Clients_1, txt_Clients_2, txt_Clients_3, txt_Clients_4, txt_Clients_5, txt_Clients_6, txt_Clients_7, txt_Clients_8, txt_Clients_9, txt_Clients_10, txt_Clients_11, txt_Clients_12, txt_Clients_13, txt_Clients_14, txt_Clients_15}
         listeTXT = {listeTXT_Client, listeTXT_Four, listeTXT_Produit, listeTXT_Employes}
         listPanel = {pan_clients, pan_produit, Pan_fournisseur, Pan_employer}
