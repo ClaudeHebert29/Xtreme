@@ -127,10 +127,34 @@ Partial Class Xtreme
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.btn_Ajouter = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_fournisseur.SuspendLayout()
         Me.pan_produit.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btn_ElementLast
@@ -772,6 +796,8 @@ Partial Class Xtreme
         '
         'Pan_fournisseur
         '
+        Me.Pan_fournisseur.Controls.Add(Me.Button9)
+        Me.Pan_fournisseur.Controls.Add(Me.Button8)
         Me.Pan_fournisseur.Controls.Add(Me.Label2)
         Me.Pan_fournisseur.Controls.Add(Me.Txt_prod_1)
         Me.Pan_fournisseur.Controls.Add(Me.Txt_prod_2)
@@ -924,6 +950,7 @@ Partial Class Xtreme
         '
         'pan_produit
         '
+        Me.pan_produit.Controls.Add(Me.Panel1)
         Me.pan_produit.Controls.Add(Me.txt_four_6)
         Me.pan_produit.Controls.Add(Me.Label32)
         Me.pan_produit.Controls.Add(Me.Label3)
@@ -1074,11 +1101,221 @@ Partial Class Xtreme
         Me.Label31.TabIndex = 26
         Me.Label31.Text = "Telephone"
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.Label34)
+        Me.Panel1.Controls.Add(Me.Label35)
+        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.TextBox3)
+        Me.Panel1.Controls.Add(Me.TextBox4)
+        Me.Panel1.Controls.Add(Me.TextBox5)
+        Me.Panel1.Controls.Add(Me.TextBox6)
+        Me.Panel1.Controls.Add(Me.TextBox7)
+        Me.Panel1.Controls.Add(Me.TextBox8)
+        Me.Panel1.Controls.Add(Me.Label36)
+        Me.Panel1.Controls.Add(Me.Label37)
+        Me.Panel1.Controls.Add(Me.Label38)
+        Me.Panel1.Controls.Add(Me.Label39)
+        Me.Panel1.Controls.Add(Me.Label40)
+        Me.Panel1.Controls.Add(Me.Label41)
+        Me.Panel1.Location = New System.Drawing.Point(0, -16)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(775, 279)
+        Me.Panel1.TabIndex = 54
+        Me.Panel1.Visible = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(158, 143)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(168, 20)
+        Me.TextBox1.TabIndex = 27
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(19, 169)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(30, 13)
+        Me.Label34.TabIndex = 28
+        Me.Label34.Text = "Pays"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(18, 17)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(98, 13)
+        Me.Label35.TabIndex = 20
+        Me.Label35.Text = "Nom du fournisseur"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(158, 14)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(167, 20)
+        Me.TextBox2.TabIndex = 0
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(158, 40)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(168, 20)
+        Me.TextBox3.TabIndex = 1
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(158, 69)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(168, 20)
+        Me.TextBox4.TabIndex = 2
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(158, 95)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(167, 20)
+        Me.TextBox5.TabIndex = 3
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(158, 121)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(168, 20)
+        Me.TextBox6.TabIndex = 4
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(158, 166)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(168, 20)
+        Me.TextBox7.TabIndex = 5
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(158, 192)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(168, 20)
+        Me.TextBox8.TabIndex = 6
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(18, 44)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(54, 13)
+        Me.Label36.TabIndex = 21
+        Me.Label36.Text = "Adresse 1"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(18, 73)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(54, 13)
+        Me.Label37.TabIndex = 22
+        Me.Label37.Text = "Adresse 2"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Location = New System.Drawing.Point(18, 99)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(26, 13)
+        Me.Label38.TabIndex = 23
+        Me.Label38.Text = "Ville"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(18, 125)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(41, 13)
+        Me.Label39.TabIndex = 24
+        Me.Label39.Text = "Region"
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Location = New System.Drawing.Point(19, 148)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(63, 13)
+        Me.Label40.TabIndex = 25
+        Me.Label40.Text = "Code postal"
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Location = New System.Drawing.Point(18, 195)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(58, 13)
+        Me.Label41.TabIndex = 26
+        Me.Label41.Text = "Telephone"
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(616, 326)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 53
+        Me.Button5.Text = "Annuler"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(535, 326)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 52
+        Me.Button6.Text = "Supprimer"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(454, 326)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.TabIndex = 51
+        Me.Button7.Text = "Modifier"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'btn_Ajouter
+        '
+        Me.btn_Ajouter.Location = New System.Drawing.Point(374, 326)
+        Me.btn_Ajouter.Name = "btn_Ajouter"
+        Me.btn_Ajouter.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Ajouter.TabIndex = 50
+        Me.btn_Ajouter.Text = "Ajouter"
+        Me.btn_Ajouter.UseVisualStyleBackColor = True
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(335, 195)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(75, 23)
+        Me.Button8.TabIndex = 54
+        Me.Button8.Text = "Ajouter"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(335, 146)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(75, 23)
+        Me.Button9.TabIndex = 54
+        Me.Button9.Text = "Ajouter"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
         'Xtreme
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(786, 444)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.btn_Ajouter)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cbx_Nomtable)
         Me.Controls.Add(Me.btn_ChangerTable)
@@ -1086,10 +1323,10 @@ Partial Class Xtreme
         Me.Controls.Add(Me.btn_ElementNext)
         Me.Controls.Add(Me.btn_ElementPreview)
         Me.Controls.Add(Me.btn_ElementFirst)
-        Me.Controls.Add(Me.Pan_employer)
-        Me.Controls.Add(Me.pan_clients)
         Me.Controls.Add(Me.pan_produit)
         Me.Controls.Add(Me.Pan_fournisseur)
+        Me.Controls.Add(Me.Pan_employer)
+        Me.Controls.Add(Me.pan_clients)
         Me.Name = "Xtreme"
         Me.Text = "Gestion de Xtreme"
         Me.pan_clients.ResumeLayout(False)
@@ -1100,6 +1337,8 @@ Partial Class Xtreme
         Me.Pan_fournisseur.PerformLayout()
         Me.pan_produit.ResumeLayout(False)
         Me.pan_produit.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1209,4 +1448,27 @@ Partial Class Xtreme
     Friend WithEvents Label32 As Label
     Friend WithEvents Txt_Emp_16 As TextBox
     Friend WithEvents Label33 As Label
+    Friend WithEvents Button9 As Button
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label34 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents Label40 As Label
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents btn_Ajouter As Button
 End Class
