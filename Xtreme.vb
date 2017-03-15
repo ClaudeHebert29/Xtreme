@@ -90,12 +90,20 @@ Public Class Xtreme
                 position = 0
                 ChargerDataset()
                 Btn_Element_Bloquer(False, False, True, True)
-                If cbx_Nomtable.Text = "Clients" Then
-                    min = 2
-                Else
-                    min = 1
-                End If
-                max = dsXtreme.Tables(0).Columns.Count - 1
+                Select Case cbx_Nomtable.Text
+                    Case "Clients"
+                        min = 2
+                        max = dsXtreme.Tables(0).Columns.Count - 1
+                    Case "Fournisseurs"
+                        min = 1
+                        max = dsXtreme.Tables(0).Columns.Count - 1
+                    Case "Produits"
+                        min = 1
+                        max = dsXtreme.Tables(0).Columns.Count - 2
+                    Case "Employés"
+                        min = 1
+                        max = dsXtreme.Tables(0).Columns.Count - 3
+                End Select
                 RemplirControles()
                 Exit For
             ElseIf ctr = 4 Then
