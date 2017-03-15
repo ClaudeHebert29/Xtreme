@@ -211,13 +211,12 @@ Public Class Xtreme
                     modifier(dsXtreme.Tables(0).Columns.Count - 3, 1)
             End Select
             btnOption(True, True, True, False)
-            miseAjourBD()
+            'miseAjourBD()
         End If
     End Sub
 
     Sub modifier(nbr As Integer, min As Integer)
         For c As Integer = 0 To nbr
-            MsgBox(c & listeTXT(table)(c).text)
             If table = 3 And c = 7 Then
                 dsXtreme.Tables(0).Rows(position).Item(min) = 0
             Else
@@ -225,21 +224,14 @@ Public Class Xtreme
             End If
             min += 1
         Next
-
     End Sub
+
     Sub btnOption(a As Boolean, b As Boolean, c As Boolean, d As Boolean)
         btn_Ajouter.Enabled = a
         btn_Modifier.Enabled = b
         btn_supprimer.Enabled = c
         btn_annuler.Enabled = d
     End Sub
-
-
-
 #End Region
-
-
-
-
 End Class
 
