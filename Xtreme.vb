@@ -102,11 +102,11 @@ Public Class Xtreme
                         min = 1
                         max = dsXtreme.Tables(0).Columns.Count - 1
                     Case "Produits"
-                        min = 1
+                        min = 2
                         max = dsXtreme.Tables(0).Columns.Count - 2
                     Case "Employés"
-                        min = 1
-                        max = dsXtreme.Tables(0).Columns.Count - 3
+                        min = 2
+                        max = dsXtreme.Tables(0).Columns.Count - 2
                 End Select
                 RemplirControles()
                 Exit For
