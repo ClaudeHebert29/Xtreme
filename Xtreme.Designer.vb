@@ -93,7 +93,7 @@ Partial Class Xtreme
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
-        Me.Pan_fournisseur1 = New System.Windows.Forms.Panel()
+        Me.Pan_produit = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Txt_prod_1 = New System.Windows.Forms.TextBox()
         Me.Txt_prod_2 = New System.Windows.Forms.TextBox()
@@ -110,7 +110,7 @@ Partial Class Xtreme
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.pan_produit = New System.Windows.Forms.Panel()
+        Me.pan_Fournisseur = New System.Windows.Forms.Panel()
         Me.txt_four_6 = New System.Windows.Forms.TextBox()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -135,8 +135,8 @@ Partial Class Xtreme
         Me.Button9 = New System.Windows.Forms.Button()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
-        Me.Pan_fournisseur1.SuspendLayout()
-        Me.pan_produit.SuspendLayout()
+        Me.Pan_produit.SuspendLayout()
+        Me.pan_Fournisseur.SuspendLayout()
         Me.SuspendLayout()
         '
         'btn_ElementLast
@@ -776,31 +776,31 @@ Partial Class Xtreme
         Me.Label30.TabIndex = 26
         Me.Label30.Text = "Poste"
         '
-        'Pan_fournisseur1
+        'Pan_produit
         '
-        Me.Pan_fournisseur1.Controls.Add(Me.Button9)
-        Me.Pan_fournisseur1.Controls.Add(Me.Button8)
-        Me.Pan_fournisseur1.Controls.Add(Me.Label2)
-        Me.Pan_fournisseur1.Controls.Add(Me.Txt_prod_1)
-        Me.Pan_fournisseur1.Controls.Add(Me.Txt_prod_2)
-        Me.Pan_fournisseur1.Controls.Add(Me.Txt_prod_3)
-        Me.Pan_fournisseur1.Controls.Add(Me.Txt_prod_4)
-        Me.Pan_fournisseur1.Controls.Add(Me.Txt_prod_5)
-        Me.Pan_fournisseur1.Controls.Add(Me.Txt_prod_6)
-        Me.Pan_fournisseur1.Controls.Add(Me.Txt_prod_7)
-        Me.Pan_fournisseur1.Controls.Add(Me.Txt_prod_8)
-        Me.Pan_fournisseur1.Controls.Add(Me.Label13)
-        Me.Pan_fournisseur1.Controls.Add(Me.Label15)
-        Me.Pan_fournisseur1.Controls.Add(Me.Label17)
-        Me.Pan_fournisseur1.Controls.Add(Me.Label19)
-        Me.Pan_fournisseur1.Controls.Add(Me.Label20)
-        Me.Pan_fournisseur1.Controls.Add(Me.Label21)
-        Me.Pan_fournisseur1.Controls.Add(Me.Label22)
-        Me.Pan_fournisseur1.Location = New System.Drawing.Point(234, 13)
-        Me.Pan_fournisseur1.Name = "Pan_fournisseur1"
-        Me.Pan_fournisseur1.Size = New System.Drawing.Size(778, 265)
-        Me.Pan_fournisseur1.TabIndex = 47
-        Me.Pan_fournisseur1.Visible = False
+        Me.Pan_produit.Controls.Add(Me.Button9)
+        Me.Pan_produit.Controls.Add(Me.Button8)
+        Me.Pan_produit.Controls.Add(Me.Label2)
+        Me.Pan_produit.Controls.Add(Me.Txt_prod_1)
+        Me.Pan_produit.Controls.Add(Me.Txt_prod_2)
+        Me.Pan_produit.Controls.Add(Me.Txt_prod_3)
+        Me.Pan_produit.Controls.Add(Me.Txt_prod_4)
+        Me.Pan_produit.Controls.Add(Me.Txt_prod_5)
+        Me.Pan_produit.Controls.Add(Me.Txt_prod_6)
+        Me.Pan_produit.Controls.Add(Me.Txt_prod_7)
+        Me.Pan_produit.Controls.Add(Me.Txt_prod_8)
+        Me.Pan_produit.Controls.Add(Me.Label13)
+        Me.Pan_produit.Controls.Add(Me.Label15)
+        Me.Pan_produit.Controls.Add(Me.Label17)
+        Me.Pan_produit.Controls.Add(Me.Label19)
+        Me.Pan_produit.Controls.Add(Me.Label20)
+        Me.Pan_produit.Controls.Add(Me.Label21)
+        Me.Pan_produit.Controls.Add(Me.Label22)
+        Me.Pan_produit.Location = New System.Drawing.Point(5, 56)
+        Me.Pan_produit.Name = "Pan_produit"
+        Me.Pan_produit.Size = New System.Drawing.Size(778, 265)
+        Me.Pan_produit.TabIndex = 47
+        Me.Pan_produit.Visible = False
         '
         'Label2
         '
@@ -930,29 +930,29 @@ Partial Class Xtreme
         Me.Label22.TabIndex = 26
         Me.Label22.Text = "Classe du produit"
         '
-        'pan_produit
+        'pan_Fournisseur
         '
-        Me.pan_produit.Controls.Add(Me.txt_four_6)
-        Me.pan_produit.Controls.Add(Me.Label32)
-        Me.pan_produit.Controls.Add(Me.Label3)
-        Me.pan_produit.Controls.Add(Me.txt_four_1)
-        Me.pan_produit.Controls.Add(Me.txt_four_2)
-        Me.pan_produit.Controls.Add(Me.Txt_four_3)
-        Me.pan_produit.Controls.Add(Me.Txt_four_4)
-        Me.pan_produit.Controls.Add(Me.Txt_four_5)
-        Me.pan_produit.Controls.Add(Me.Txt_four_7)
-        Me.pan_produit.Controls.Add(Me.Txt_four_8)
-        Me.pan_produit.Controls.Add(Me.Label4)
-        Me.pan_produit.Controls.Add(Me.Label5)
-        Me.pan_produit.Controls.Add(Me.Label7)
-        Me.pan_produit.Controls.Add(Me.Label9)
-        Me.pan_produit.Controls.Add(Me.Label11)
-        Me.pan_produit.Controls.Add(Me.Label31)
-        Me.pan_produit.Location = New System.Drawing.Point(11, 54)
-        Me.pan_produit.Name = "pan_produit"
-        Me.pan_produit.Size = New System.Drawing.Size(775, 263)
-        Me.pan_produit.TabIndex = 49
-        Me.pan_produit.Visible = False
+        Me.pan_Fournisseur.Controls.Add(Me.txt_four_6)
+        Me.pan_Fournisseur.Controls.Add(Me.Label32)
+        Me.pan_Fournisseur.Controls.Add(Me.Label3)
+        Me.pan_Fournisseur.Controls.Add(Me.txt_four_1)
+        Me.pan_Fournisseur.Controls.Add(Me.txt_four_2)
+        Me.pan_Fournisseur.Controls.Add(Me.Txt_four_3)
+        Me.pan_Fournisseur.Controls.Add(Me.Txt_four_4)
+        Me.pan_Fournisseur.Controls.Add(Me.Txt_four_5)
+        Me.pan_Fournisseur.Controls.Add(Me.Txt_four_7)
+        Me.pan_Fournisseur.Controls.Add(Me.Txt_four_8)
+        Me.pan_Fournisseur.Controls.Add(Me.Label4)
+        Me.pan_Fournisseur.Controls.Add(Me.Label5)
+        Me.pan_Fournisseur.Controls.Add(Me.Label7)
+        Me.pan_Fournisseur.Controls.Add(Me.Label9)
+        Me.pan_Fournisseur.Controls.Add(Me.Label11)
+        Me.pan_Fournisseur.Controls.Add(Me.Label31)
+        Me.pan_Fournisseur.Location = New System.Drawing.Point(11, 54)
+        Me.pan_Fournisseur.Name = "pan_Fournisseur"
+        Me.pan_Fournisseur.Size = New System.Drawing.Size(775, 263)
+        Me.pan_Fournisseur.TabIndex = 49
+        Me.pan_Fournisseur.Visible = False
         '
         'txt_four_6
         '
@@ -1152,20 +1152,20 @@ Partial Class Xtreme
         Me.Controls.Add(Me.btn_ElementNext)
         Me.Controls.Add(Me.btn_ElementPreview)
         Me.Controls.Add(Me.btn_ElementFirst)
-        Me.Controls.Add(Me.Pan_fournisseur1)
+        Me.Controls.Add(Me.Pan_produit)
         Me.Controls.Add(Me.Pan_employer)
         Me.Controls.Add(Me.pan_clients)
-        Me.Controls.Add(Me.pan_produit)
+        Me.Controls.Add(Me.pan_Fournisseur)
         Me.Name = "Xtreme"
         Me.Text = "Gestion de Xtreme"
         Me.pan_clients.ResumeLayout(False)
         Me.pan_clients.PerformLayout()
         Me.Pan_employer.ResumeLayout(False)
         Me.Pan_employer.PerformLayout()
-        Me.Pan_fournisseur1.ResumeLayout(False)
-        Me.Pan_fournisseur1.PerformLayout()
-        Me.pan_produit.ResumeLayout(False)
-        Me.pan_produit.PerformLayout()
+        Me.Pan_produit.ResumeLayout(False)
+        Me.Pan_produit.PerformLayout()
+        Me.pan_Fournisseur.ResumeLayout(False)
+        Me.pan_Fournisseur.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1237,7 +1237,7 @@ Partial Class Xtreme
     Friend WithEvents Label27 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
-    Friend WithEvents Pan_fournisseur1 As Panel
+    Friend WithEvents Pan_produit As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Txt_prod_1 As TextBox
     Friend WithEvents Txt_prod_2 As TextBox
@@ -1254,7 +1254,7 @@ Partial Class Xtreme
     Friend WithEvents Label20 As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents Label22 As Label
-    Friend WithEvents pan_produit As Panel
+    Friend WithEvents pan_Fournisseur As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents txt_four_1 As TextBox
     Friend WithEvents txt_four_2 As TextBox
