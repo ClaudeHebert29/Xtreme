@@ -94,6 +94,8 @@ Partial Class Xtreme
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Pan_produit = New System.Windows.Forms.Panel()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Txt_prod_1 = New System.Windows.Forms.TextBox()
         Me.Txt_prod_2 = New System.Windows.Forms.TextBox()
@@ -131,8 +133,6 @@ Partial Class Xtreme
         Me.btn_supprimer = New System.Windows.Forms.Button()
         Me.btn_Modifier = New System.Windows.Forms.Button()
         Me.btn_Ajouter = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_produit.SuspendLayout()
@@ -802,6 +802,24 @@ Partial Class Xtreme
         Me.Pan_produit.TabIndex = 47
         Me.Pan_produit.Visible = False
         '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(335, 146)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(75, 23)
+        Me.Button9.TabIndex = 54
+        Me.Button9.Text = "Ajouter"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(335, 195)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(75, 23)
+        Me.Button8.TabIndex = 54
+        Me.Button8.Text = "Ajouter"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -1118,24 +1136,6 @@ Partial Class Xtreme
         Me.btn_Ajouter.Text = "Ajouter"
         Me.btn_Ajouter.UseVisualStyleBackColor = True
         '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(335, 195)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(75, 23)
-        Me.Button8.TabIndex = 54
-        Me.Button8.Text = "Ajouter"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Button9
-        '
-        Me.Button9.Location = New System.Drawing.Point(335, 146)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(75, 23)
-        Me.Button9.TabIndex = 54
-        Me.Button9.Text = "Ajouter"
-        Me.Button9.UseVisualStyleBackColor = True
-        '
         'Xtreme
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1152,10 +1152,10 @@ Partial Class Xtreme
         Me.Controls.Add(Me.btn_ElementNext)
         Me.Controls.Add(Me.btn_ElementPreview)
         Me.Controls.Add(Me.btn_ElementFirst)
-        Me.Controls.Add(Me.Pan_produit)
-        Me.Controls.Add(Me.Pan_employer)
         Me.Controls.Add(Me.pan_clients)
         Me.Controls.Add(Me.pan_Fournisseur)
+        Me.Controls.Add(Me.Pan_produit)
+        Me.Controls.Add(Me.Pan_employer)
         Me.Name = "Xtreme"
         Me.Text = "Gestion de Xtreme"
         Me.pan_clients.ResumeLayout(False)

@@ -97,7 +97,7 @@ Public Class Xtreme
                     Case "Fournisseurs", "Produits"
                         min = 1
                 End Select
-                max = dsXtreme.Tables(0).Columns.Count - 1
+                max = dsXtreme.Tables(0).Columns.Count - 2
                 RemplirControles()
                 Exit For
             ElseIf ctr = 4 Then
@@ -130,11 +130,12 @@ Public Class Xtreme
         If sender.text = "Ajouter" Then
             Select Case cbx_Nomtable.Text
                 Case "Clients", "Employés"
-                    vider(dsXtreme.Tables(0).Columns.Count - 3)
+                    vider(dsXtreme.Tables(0).Columns.Count - 4)
                 Case "Fournisseurs", "Produits"
-                    vider(dsXtreme.Tables(0).Columns.Count - 2)
+                    vider(dsXtreme.Tables(0).Columns.Count - 3)
             End Select
             sender.text = "Enregistrer"
+            btnOption(True, False, False, True)
         Else
             For c As Integer = 0 To dsXtreme.Tables(0).Columns.Count - 3
                 If listeTXT(table)(c).text Like "" Then
@@ -146,13 +147,14 @@ Public Class Xtreme
             Next
             If b = True Then
                 Select Case cbx_Nomtable.Text
-                    Case "Clients"
-                        Ajouter(dsXtreme.Tables(0).Columns.Count - 3, 2)
-                    Case "Fournisseurs", "Produits", "Employés"
+                    Case "Clients", "Employés"
+                        Ajouter(dsXtreme.Tables(0).Columns.Count - 4, 2)
+                    Case "Fournisseurs", "Produits"
                         Ajouter(dsXtreme.Tables(0).Columns.Count - 3, 1)
                 End Select
                 sender.text = "Ajouter"
-                miseAjourBD()
+                'miseAjourBD()
+                btnOption(True, True, True, False)
             Else
                 MsgBox("Des sections n'ont pas été remplie.")
             End If
@@ -163,13 +165,16 @@ Public Class Xtreme
             listeTXT(table)(c).text = ""
         Next
     End Sub
+
     Sub Ajouter(nbr As Integer, min As Integer)
         Dim drnouvel As DataRow
         Dim c2 As Integer = min
         With dsXtreme.Tables(0)
             drnouvel = .NewRow()
             drnouvel(0) = dsXtreme.Tables(0).Rows.Count + 1
-            drnouvel(1) = 0
+            If table = 0 Then
+                drnouvel(1) = 0
+            End If
             For c As Integer = 0 To nbr
                 drnouvel(c2) = listeTXT(table)(c).text
                 c2 += 1
@@ -184,6 +189,53 @@ Public Class Xtreme
         dsXtreme.Clear()
         daXtreme.Fill(dsXtreme, NomTable(table))
     End Sub
+    Private Sub Annuler(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_annuler.Click
+        ChargerDataset()
+        btnOption(True, True, True, False)
+        RemplirControles()
+        btn_supprimer.Text = "Supprimer"
+        btn_Ajouter.Text = "Ajouter"
+        btn_Modifier.Text = "Modifier"
+    End Sub
+
+    Private Sub btnModifier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Modifier.Click
+        If sender.text = "Modifier" Then
+            btn_Modifier.Text = "Enregistrer"
+            btnOption(False, True, False, True)
+        Else
+            btn_Modifier.Text = "Modifier"
+            Select Case cbx_Nomtable.Text
+                Case "Clients", "Employés"
+                    modifier(dsXtreme.Tables(0).Columns.Count - 4, 2)
+                Case "Fournisseurs", "Produits"
+                    modifier(dsXtreme.Tables(0).Columns.Count - 3, 1)
+            End Select
+            btnOption(True, True, True, False)
+            miseAjourBD()
+        End If
+    End Sub
+
+    Sub modifier(nbr As Integer, min As Integer)
+        For c As Integer = 0 To nbr
+            MsgBox(c & listeTXT(table)(c).text)
+            If table = 3 And c = 7 Then
+                dsXtreme.Tables(0).Rows(position).Item(min) = 0
+            Else
+                dsXtreme.Tables(0).Rows(position).Item(min) = listeTXT(table)(c).text
+            End If
+            min += 1
+        Next
+
+    End Sub
+    Sub btnOption(a As Boolean, b As Boolean, c As Boolean, d As Boolean)
+        btn_Ajouter.Enabled = a
+        btn_Modifier.Enabled = b
+        btn_supprimer.Enabled = c
+        btn_annuler.Enabled = d
+    End Sub
+
+
+
 #End Region
 
 
