@@ -61,6 +61,8 @@ Partial Class Xtreme
         Me.cbx_Nomtable = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Pan_employer = New System.Windows.Forms.Panel()
+        Me.txt_38 = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Txt_31 = New System.Windows.Forms.TextBox()
@@ -107,6 +109,8 @@ Partial Class Xtreme
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.pan_produit = New System.Windows.Forms.Panel()
+        Me.txt_46 = New System.Windows.Forms.TextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_16 = New System.Windows.Forms.TextBox()
         Me.txt_17 = New System.Windows.Forms.TextBox()
@@ -121,8 +125,6 @@ Partial Class Xtreme
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
-        Me.txt_38 = New System.Windows.Forms.TextBox()
-        Me.Label28 = New System.Windows.Forms.Label()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_fournisseur.SuspendLayout()
@@ -508,6 +510,22 @@ Partial Class Xtreme
         Me.Pan_employer.TabIndex = 48
         Me.Pan_employer.Visible = False
         '
+        'txt_38
+        '
+        Me.txt_38.Location = New System.Drawing.Point(490, 45)
+        Me.txt_38.Name = "txt_38"
+        Me.txt_38.Size = New System.Drawing.Size(167, 20)
+        Me.txt_38.TabIndex = 44
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(450, 47)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(34, 13)
+        Me.Label28.TabIndex = 43
+        Me.Label28.Text = "photo"
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -886,6 +904,8 @@ Partial Class Xtreme
         '
         'pan_produit
         '
+        Me.pan_produit.Controls.Add(Me.txt_46)
+        Me.pan_produit.Controls.Add(Me.Label32)
         Me.pan_produit.Controls.Add(Me.Label3)
         Me.pan_produit.Controls.Add(Me.txt_16)
         Me.pan_produit.Controls.Add(Me.txt_17)
@@ -905,6 +925,22 @@ Partial Class Xtreme
         Me.pan_produit.Size = New System.Drawing.Size(775, 263)
         Me.pan_produit.TabIndex = 49
         Me.pan_produit.Visible = False
+        '
+        'txt_46
+        '
+        Me.txt_46.Location = New System.Drawing.Point(157, 143)
+        Me.txt_46.Name = "txt_46"
+        Me.txt_46.Size = New System.Drawing.Size(168, 20)
+        Me.txt_46.TabIndex = 27
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(19, 169)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(30, 13)
+        Me.Label32.TabIndex = 28
+        Me.Label32.Text = "Pays"
         '
         'Label3
         '
@@ -952,14 +988,14 @@ Partial Class Xtreme
         '
         'Txt_21
         '
-        Me.Txt_21.Location = New System.Drawing.Point(158, 147)
+        Me.Txt_21.Location = New System.Drawing.Point(158, 166)
         Me.Txt_21.Name = "Txt_21"
         Me.Txt_21.Size = New System.Drawing.Size(168, 20)
         Me.Txt_21.TabIndex = 5
         '
         'Txt_22
         '
-        Me.Txt_22.Location = New System.Drawing.Point(158, 173)
+        Me.Txt_22.Location = New System.Drawing.Point(158, 192)
         Me.Txt_22.Name = "Txt_22"
         Me.Txt_22.Size = New System.Drawing.Size(168, 20)
         Me.Txt_22.TabIndex = 6
@@ -1003,7 +1039,7 @@ Partial Class Xtreme
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(18, 150)
+        Me.Label11.Location = New System.Drawing.Point(19, 148)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(63, 13)
         Me.Label11.TabIndex = 25
@@ -1012,27 +1048,11 @@ Partial Class Xtreme
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(18, 176)
+        Me.Label31.Location = New System.Drawing.Point(18, 195)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(58, 13)
         Me.Label31.TabIndex = 26
         Me.Label31.Text = "Telephone"
-        '
-        'txt_38
-        '
-        Me.txt_38.Location = New System.Drawing.Point(490, 45)
-        Me.txt_38.Name = "txt_38"
-        Me.txt_38.Size = New System.Drawing.Size(167, 20)
-        Me.txt_38.TabIndex = 44
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(350, 52)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(34, 13)
-        Me.Label28.TabIndex = 43
-        Me.Label28.Text = "photo"
         '
         'Xtreme
         '
@@ -1046,10 +1066,10 @@ Partial Class Xtreme
         Me.Controls.Add(Me.btn_ElementNext)
         Me.Controls.Add(Me.btn_ElementPreview)
         Me.Controls.Add(Me.btn_ElementFirst)
-        Me.Controls.Add(Me.Pan_employer)
-        Me.Controls.Add(Me.pan_clients)
         Me.Controls.Add(Me.pan_produit)
         Me.Controls.Add(Me.Pan_fournisseur)
+        Me.Controls.Add(Me.Pan_employer)
+        Me.Controls.Add(Me.pan_clients)
         Me.Name = "Xtreme"
         Me.Text = "Gestion de Xtreme"
         Me.pan_clients.ResumeLayout(False)
@@ -1165,4 +1185,6 @@ Partial Class Xtreme
     Friend WithEvents Label31 As Label
     Friend WithEvents txt_38 As TextBox
     Friend WithEvents Label28 As Label
+    Friend WithEvents txt_46 As TextBox
+    Friend WithEvents Label32 As Label
 End Class
