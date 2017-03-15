@@ -25,3 +25,10 @@ D:\EnvironnementVB\projet claude\Xtreme\bin\Debug\Xtreme.exe.config
 D:\EnvironnementVB\projet claude\Xtreme\obj\Debug\Xtreme.exe
 D:\EnvironnementVB\projet claude\Xtreme\obj\Debug\Xtreme.xml
 D:\EnvironnementVB\projet claude\Xtreme\obj\Debug\Xtreme.pdb
+D:\EnvironnementVB\projet claude\Xtreme\bin\Debug\Xtreme.exe
+D:\EnvironnementVB\projet claude\Xtreme\bin\Debug\Xtreme.pdb
+D:\EnvironnementVB\projet claude\Xtreme\bin\Debug\Xtreme.xml
+D:\EnvironnementVB\projet claude\Xtreme\obj\Debug\Xtreme.vbprojResolveAssemblyReference.cache
+D:\EnvironnementVB\projet claude\Xtreme\obj\Debug\Xtreme.Xtreme.resources
+D:\EnvironnementVB\projet claude\Xtreme\obj\Debug\Xtreme.Resources.resources
+D:\EnvironnementVB\projet claude\Xtreme\obj\Debug\Xtreme.vbproj.GenerateResource.Cache
