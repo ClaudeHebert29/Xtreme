@@ -149,10 +149,12 @@ Public Class Xtreme
             Next
             If b = True Then
                 Select Case cbx_Nomtable.Text
-                    Case "Clients", "Employés"
+                    Case "Clients"
                         Ajouter(dsXtreme.Tables(0).Columns.Count - 4, 2)
                     Case "Fournisseurs", "Produits"
                         Ajouter(dsXtreme.Tables(0).Columns.Count - 3, 1)
+                    Case "Employés"
+                        Ajouter(dsXtreme.Tables(0).Columns.Count - 2, 2)
                 End Select
                 sender.text = "Ajouter"
                 'miseAjourBD()
@@ -177,6 +179,7 @@ Public Class Xtreme
                 drnouvel(1) = 0
             End If
             For c As Integer = 0 To nbr
+                MsgBox(c)
                 drnouvel(c2) = listeTXT(table)(c).text
                 c2 += 1
             Next
