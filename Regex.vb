@@ -18,6 +18,11 @@ Public Class clsRegex
     Dim regexHeure As New Regex("^(([0-1][0-9])|([2][0-3]))h[0-5][0-9]$")
     Dim regexInitiale As New Regex("^[A-Za-z]{2,5}$")
     Dim regexBraquet As New Regex("[\{\}\[\]<>]")
+    Dim regexddate As New Regex("^\d{1,2}/\d{1,2}/\d{4}$")
+
+    Public Function checkDate(ByVal _date As String)
+        Return regexNomPrenom.IsMatch(_date)
+    End Function
 
     Public Function checkNom(ByVal _nom As String)
         Return regexNomPrenom.IsMatch(_nom)
