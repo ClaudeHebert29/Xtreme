@@ -182,10 +182,6 @@ Public Class Xtreme
         End If
     End Sub
 
-    Private Sub cbx_typeProduit_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbx_typeProduit.SelectedIndexChanged
-
-    End Sub
-
     Sub vider(nbr As Integer)
         For c As Integer = 0 To nbr
             listeTXT(table)(c).text = ""
@@ -228,10 +224,17 @@ Public Class Xtreme
         btn_Modifier.Text = "Modifier"
     End Sub
     Private Sub btnModifier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Modifier.Click
+
         If sender.text = "Modifier" Then
+            cbx_typeProduit.Visible = True
+            For c As Integer = 0 To dsTypeProduit.Tables(0).Rows.Count - 1
+                cbx_typeProduit.Items.Add(dsTypeProduit.Tables(0).Rows(c).Item(1))
+            Next
             btn_Modifier.Text = "Enregistrer"
             btnOption(False, True, False, True)
         Else
+            listeTXT(table)(5).text = cbx_typeProduit.Text
+            cbx_typeProduit.Visible = False
             btn_Modifier.Text = "Modifier"
             Select Case cbx_Nomtable.Text
                 Case "Clients", "Employés"
@@ -248,6 +251,13 @@ Public Class Xtreme
         For c As Integer = 0 To nbr
             If table = 3 And c = 7 Then
                 dsXtreme.Tables(0).Rows(position).Item(min) = 0
+            ElseIf table = 2 And c = 5 Then
+                For c2 As Integer = 0 To dsTypeProduit.Tables(0).Rows.Count - 1
+                    If dsTypeProduit.Tables(0).Rows(c2).Item(1) = listeTXT(table)(5).text Then
+                        dsXtreme.Tables(0).Rows(position).Item(min) = dsTypeProduit.Tables(0).Rows(c2).Item(0)
+                        Exit For
+                    End If
+                Next
             Else
                 dsXtreme.Tables(0).Rows(position).Item(min) = listeTXT(table)(c).text
             End If

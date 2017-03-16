@@ -94,6 +94,7 @@ Partial Class Xtreme
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Pan_produit = New System.Windows.Forms.Panel()
+        Me.cbx_typeProduit = New System.Windows.Forms.ComboBox()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -137,7 +138,6 @@ Partial Class Xtreme
         Me.btn_Non = New System.Windows.Forms.Button()
         Me.btn_Oui = New System.Windows.Forms.Button()
         Me.Label34 = New System.Windows.Forms.Label()
-        Me.cbx_typeProduit = New System.Windows.Forms.ComboBox()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_produit.SuspendLayout()
@@ -784,7 +784,6 @@ Partial Class Xtreme
         '
         'Pan_produit
         '
-        Me.Pan_produit.Controls.Add(Me.cbx_typeProduit)
         Me.Pan_produit.Controls.Add(Me.Button9)
         Me.Pan_produit.Controls.Add(Me.Button8)
         Me.Pan_produit.Controls.Add(Me.Label2)
@@ -803,11 +802,22 @@ Partial Class Xtreme
         Me.Pan_produit.Controls.Add(Me.Label20)
         Me.Pan_produit.Controls.Add(Me.Label21)
         Me.Pan_produit.Controls.Add(Me.Label22)
+        Me.Pan_produit.Controls.Add(Me.cbx_typeProduit)
         Me.Pan_produit.Location = New System.Drawing.Point(5, 56)
         Me.Pan_produit.Name = "Pan_produit"
         Me.Pan_produit.Size = New System.Drawing.Size(781, 265)
         Me.Pan_produit.TabIndex = 47
         Me.Pan_produit.Visible = False
+        '
+        'cbx_typeProduit
+        '
+        Me.cbx_typeProduit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbx_typeProduit.FormattingEnabled = True
+        Me.cbx_typeProduit.Location = New System.Drawing.Point(158, 145)
+        Me.cbx_typeProduit.Name = "cbx_typeProduit"
+        Me.cbx_typeProduit.Size = New System.Drawing.Size(166, 21)
+        Me.cbx_typeProduit.TabIndex = 55
+        Me.cbx_typeProduit.Visible = False
         '
         'Button9
         '
@@ -873,7 +883,7 @@ Partial Class Xtreme
         '
         'Txt_prod_6
         '
-        Me.Txt_prod_6.Location = New System.Drawing.Point(158, 147)
+        Me.Txt_prod_6.Location = New System.Drawing.Point(158, 146)
         Me.Txt_prod_6.Name = "Txt_prod_6"
         Me.Txt_prod_6.Size = New System.Drawing.Size(168, 20)
         Me.Txt_prod_6.TabIndex = 5
@@ -1184,16 +1194,6 @@ Partial Class Xtreme
         Me.Label34.Size = New System.Drawing.Size(246, 13)
         Me.Label34.TabIndex = 0
         Me.Label34.Text = "Est-ce que vous voullez vraiment le suppremation?"
-        '
-        'cbx_typeProduit
-        '
-        Me.cbx_typeProduit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbx_typeProduit.FormattingEnabled = True
-        Me.cbx_typeProduit.Location = New System.Drawing.Point(425, 145)
-        Me.cbx_typeProduit.Name = "cbx_typeProduit"
-        Me.cbx_typeProduit.Size = New System.Drawing.Size(121, 21)
-        Me.cbx_typeProduit.TabIndex = 55
-        Me.cbx_typeProduit.Visible = False
         '
         'Xtreme
         '
