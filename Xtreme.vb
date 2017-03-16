@@ -177,10 +177,15 @@ Public Class Xtreme
                 'miseAjourBD()
                 btnOption(True, True, True, False)
             Else
-                MsgBox("Des sections n'ont pas été remplie.")
+                MsgBox("Des sections n'ont pas été remplies.")
             End If
         End If
     End Sub
+
+    Private Sub cbx_typeProduit_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbx_typeProduit.SelectedIndexChanged
+
+    End Sub
+
     Sub vider(nbr As Integer)
         For c As Integer = 0 To nbr
             listeTXT(table)(c).text = ""

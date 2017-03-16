@@ -137,6 +137,7 @@ Partial Class Xtreme
         Me.btn_Non = New System.Windows.Forms.Button()
         Me.btn_Oui = New System.Windows.Forms.Button()
         Me.Label34 = New System.Windows.Forms.Label()
+        Me.cbx_typeProduit = New System.Windows.Forms.ComboBox()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_produit.SuspendLayout()
@@ -783,6 +784,7 @@ Partial Class Xtreme
         '
         'Pan_produit
         '
+        Me.Pan_produit.Controls.Add(Me.cbx_typeProduit)
         Me.Pan_produit.Controls.Add(Me.Button9)
         Me.Pan_produit.Controls.Add(Me.Button8)
         Me.Pan_produit.Controls.Add(Me.Label2)
@@ -1183,6 +1185,16 @@ Partial Class Xtreme
         Me.Label34.TabIndex = 0
         Me.Label34.Text = "Est-ce que vous voullez vraiment le suppremation?"
         '
+        'cbx_typeProduit
+        '
+        Me.cbx_typeProduit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbx_typeProduit.FormattingEnabled = True
+        Me.cbx_typeProduit.Location = New System.Drawing.Point(425, 145)
+        Me.cbx_typeProduit.Name = "cbx_typeProduit"
+        Me.cbx_typeProduit.Size = New System.Drawing.Size(121, 21)
+        Me.cbx_typeProduit.TabIndex = 55
+        Me.cbx_typeProduit.Visible = False
+        '
         'Xtreme
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1335,4 +1347,5 @@ Partial Class Xtreme
     Friend WithEvents btn_Non As Button
     Friend WithEvents btn_Oui As Button
     Friend WithEvents Label34 As Label
+    Friend WithEvents cbx_typeProduit As ComboBox
 End Class
