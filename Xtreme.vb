@@ -230,17 +230,24 @@ Public Class Xtreme
         btn_Modifier.Text = "Modifier"
     End Sub
     Private Sub btnModifier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Modifier.Click
-
         If sender.text = "Modifier" Then
-            cbx_typeProduit.Visible = True
+            cbx_typeProduit.Items.Clear()
             For c As Integer = 0 To dsTypeProduit.Tables(0).Rows.Count - 1
                 cbx_typeProduit.Items.Add(dsTypeProduit.Tables(0).Rows(c).Item(1))
             Next
+            If table = 2 Then
+                listeTXT(table)(5).visible = False
+                cbx_typeProduit.Visible = True
+                cbx_typeProduit.Text = listeTXT(table)(5).text
+            End If
             btn_Modifier.Text = "Enregistrer"
             btnOption(False, True, False, True)
         Else
-            listeTXT(table)(5).text = cbx_typeProduit.Text
-            cbx_typeProduit.Visible = False
+            If table = 2 Then
+                listeTXT(table)(5).visible = True
+                listeTXT(table)(5).text = cbx_typeProduit.Text
+                cbx_typeProduit.Visible = False
+            End If
             btn_Modifier.Text = "Modifier"
             Select Case cbx_Nomtable.Text
                 Case "Clients", "Employés"
