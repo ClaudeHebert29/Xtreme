@@ -287,7 +287,7 @@ Public Class Xtreme
         Select Case sender.text
             Case "Oui"
                 dsXtreme.Tables(0).Rows(position).Item(dsXtreme.Tables(0).Columns.Count - 1) = False
-                'miseAjourBD()
+                'miseAjourBD()bite
             Case "Non"
                 annuler()
         End Select
