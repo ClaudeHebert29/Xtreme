@@ -1212,10 +1212,10 @@ Partial Class Xtreme
         Me.Controls.Add(Me.btn_ElementNext)
         Me.Controls.Add(Me.btn_ElementPreview)
         Me.Controls.Add(Me.btn_ElementFirst)
+        Me.Controls.Add(Me.Pan_produit)
         Me.Controls.Add(Me.Pan_employer)
         Me.Controls.Add(Me.pan_clients)
         Me.Controls.Add(Me.pan_Fournisseur)
-        Me.Controls.Add(Me.Pan_produit)
         Me.Name = "Xtreme"
         Me.Text = "Gestion de Xtreme"
         Me.pan_clients.ResumeLayout(False)
