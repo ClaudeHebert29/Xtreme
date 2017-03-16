@@ -134,9 +134,9 @@ Partial Class Xtreme
         Me.btn_Modifier = New System.Windows.Forms.Button()
         Me.btn_Ajouter = New System.Windows.Forms.Button()
         Me.gbx_sup = New System.Windows.Forms.GroupBox()
-        Me.Label34 = New System.Windows.Forms.Label()
         Me.btn_Non = New System.Windows.Forms.Button()
         Me.btn_Oui = New System.Windows.Forms.Button()
+        Me.Label34 = New System.Windows.Forms.Label()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_produit.SuspendLayout()
@@ -1154,15 +1154,6 @@ Partial Class Xtreme
         Me.gbx_sup.Text = "Question?"
         Me.gbx_sup.Visible = False
         '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(6, 27)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(246, 13)
-        Me.Label34.TabIndex = 0
-        Me.Label34.Text = "Est-ce que vous voullez vraiment le suppremation?"
-        '
         'btn_Non
         '
         Me.btn_Non.AccessibleRole = System.Windows.Forms.AccessibleRole.WhiteSpace
@@ -1183,6 +1174,15 @@ Partial Class Xtreme
         Me.btn_Oui.Text = "Oui"
         Me.btn_Oui.UseVisualStyleBackColor = True
         '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(6, 27)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(246, 13)
+        Me.Label34.TabIndex = 0
+        Me.Label34.Text = "Est-ce que vous voullez vraiment le suppremation?"
+        '
         'Xtreme
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1200,10 +1200,10 @@ Partial Class Xtreme
         Me.Controls.Add(Me.btn_ElementNext)
         Me.Controls.Add(Me.btn_ElementPreview)
         Me.Controls.Add(Me.btn_ElementFirst)
-        Me.Controls.Add(Me.pan_clients)
-        Me.Controls.Add(Me.pan_Fournisseur)
         Me.Controls.Add(Me.Pan_produit)
         Me.Controls.Add(Me.Pan_employer)
+        Me.Controls.Add(Me.pan_clients)
+        Me.Controls.Add(Me.pan_Fournisseur)
         Me.Name = "Xtreme"
         Me.Text = "Gestion de Xtreme"
         Me.pan_clients.ResumeLayout(False)

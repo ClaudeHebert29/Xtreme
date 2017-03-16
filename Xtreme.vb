@@ -1,8 +1,8 @@
 ﻿Imports System.Data.OleDb
 Public Class Xtreme
     Dim bd As New GestionBD
-    Dim daXtreme As New OleDbDataAdapter
-    Dim dsXtreme As New DataSet
+    Dim daXtreme, daTypeProduit As New OleDbDataAdapter
+    Dim dsXtreme, dsTypeProduit As New DataSet
     Dim gestionoperation As New OleDbCommandBuilder
     Dim position, table, ctrTable, min, max As Integer
     Dim NomTable(), NomtableTout() As String
@@ -38,7 +38,14 @@ Public Class Xtreme
         daXtreme.Fill(dsXtreme, NomTable(table))
         btnOption(True, True, True, False)
     End Sub
-
+    Sub ChargerDataseTypeProduit()
+        Dim cmdTypeProdui As New OleDbCommand
+        dsTypeProduit = New DataSet
+        cmdTypeProdui = bd.cnconnexion.CreateCommand
+        cmdTypeProdui.CommandText = "Select * from " & "Types_de_produit"
+        daTypeProduit.SelectCommand = cmdTypeProdui
+        daTypeProduit.Fill(dsTypeProduit, "Types_de_produit")
+    End Sub
     Sub RemplirControles()
         Dim ctr2 As Integer
         For ctr As Integer = min To max
@@ -53,6 +60,16 @@ Public Class Xtreme
             End If
             ctr2 += 1
         Next
+        If table = 2 Then
+            ChargerDataseTypeProduit()
+            For c As Integer = 0 To dsTypeProduit.Tables(0).Rows.Count - 1
+                If dsTypeProduit.Tables(0).Rows(c).Item(0) = listeTXT(table)(5).text Then
+                    listeTXT(table)(5).text = dsTypeProduit.Tables(0).Rows(c).Item(1)
+                    Exit For
+                End If
+            Next
+
+        End If
     End Sub
 #End Region
 #Region "Déplacement dans les tables"
