@@ -792,6 +792,7 @@ Partial Class Xtreme
         Me.Pan_produit.Controls.Add(Me.Txt_prod_3)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_4)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_5)
+        Me.Pan_produit.Controls.Add(Me.Txt_prod_6)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_7)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_8)
         Me.Pan_produit.Controls.Add(Me.Label13)
@@ -802,7 +803,6 @@ Partial Class Xtreme
         Me.Pan_produit.Controls.Add(Me.Label21)
         Me.Pan_produit.Controls.Add(Me.Label22)
         Me.Pan_produit.Controls.Add(Me.cbx_typeProduit)
-        Me.Pan_produit.Controls.Add(Me.Txt_prod_6)
         Me.Pan_produit.Location = New System.Drawing.Point(5, 56)
         Me.Pan_produit.Name = "Pan_produit"
         Me.Pan_produit.Size = New System.Drawing.Size(781, 265)
@@ -957,6 +957,7 @@ Partial Class Xtreme
         '
         'cbx_typeProduit
         '
+        Me.cbx_typeProduit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbx_typeProduit.FormattingEnabled = True
         Me.cbx_typeProduit.Location = New System.Drawing.Point(158, 145)
         Me.cbx_typeProduit.Name = "cbx_typeProduit"
