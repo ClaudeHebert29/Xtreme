@@ -9,6 +9,7 @@ Public Class Xtreme
     Dim listeTXT_Client(), listeTXT_Four(), listeTXT_Produit(), listeTXT_Employes(), listeTXT_Type_Produit() As TextBox
     Dim listeTXT As Object()
     Dim listPanel() As Panel
+
 #Region "Load"
     Private Sub Xtreme_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         NomtableTout = {"Achats", "Adresses des employés", "Clients", "Commandes", "Détails des commandes", "Employés", "Fournisseurs", "Info Xtreme", "Produits", "Régions", "Types de produit"}
