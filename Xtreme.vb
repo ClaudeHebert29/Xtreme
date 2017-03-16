@@ -22,6 +22,7 @@ Public Class Xtreme
         bd.connexion("..\xtreme.mdb")
         bd.Deconnexion()
         Btn_Element_Bloquer(False, False, False, False)
+        btnOption(False, False, False, False)
         For c As Integer = 0 To 3
             cbx_Nomtable.Items.Add(NomTable(c))
         Next
@@ -32,9 +33,10 @@ Public Class Xtreme
         Dim cmdXtreme As New OleDbCommand
         dsXtreme = New DataSet
         cmdXtreme = bd.cnconnexion.CreateCommand
-        cmdXtreme.CommandText = "Select * from " & NomTable(table)
+        cmdXtreme.CommandText = "Select * from " & NomTable(table) ' & "where Actif = Oui"
         daXtreme.SelectCommand = cmdXtreme
         daXtreme.Fill(dsXtreme, NomTable(table))
+        btnOption(True, True, True, False)
     End Sub
 
     Sub RemplirControles()
@@ -137,7 +139,7 @@ Public Class Xtreme
             sender.text = "Enregistrer"
             btnOption(True, False, False, True)
         Else
-            For c As Integer = 0 To dsXtreme.Tables(0).Columns.Count - 3
+            For c As Integer = 0 To dsXtreme.Tables(0).Columns.Count - 4
                 If listeTXT(table)(c).text Like "" Then
                     b = False
                     Exit For
@@ -165,7 +167,6 @@ Public Class Xtreme
             listeTXT(table)(c).text = ""
         Next
     End Sub
-
     Sub Ajouter(nbr As Integer, min As Integer)
         Dim drnouvel As DataRow
         Dim c2 As Integer = min
@@ -190,6 +191,10 @@ Public Class Xtreme
         daXtreme.Fill(dsXtreme, NomTable(table))
     End Sub
     Private Sub Annuler(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_annuler.Click
+        annuler()
+    End Sub
+
+    Sub annuler()
         ChargerDataset()
         btnOption(True, True, True, False)
         RemplirControles()
@@ -197,7 +202,6 @@ Public Class Xtreme
         btn_Ajouter.Text = "Ajouter"
         btn_Modifier.Text = "Modifier"
     End Sub
-
     Private Sub btnModifier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Modifier.Click
         If sender.text = "Modifier" Then
             btn_Modifier.Text = "Enregistrer"
@@ -226,6 +230,22 @@ Public Class Xtreme
         Next
     End Sub
 
+    Private Sub btnSupprimer_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_supprimer.Click
+        btnOption(False, False, False, True)
+        gbx_sup.Visible = True
+    End Sub
+
+    Private Sub btn_Oui_Click(sender As Object, e As EventArgs) Handles btn_Oui.Click, btn_Non.Click
+        Select Case sender.text
+            Case "Oui"
+                dsXtreme.Tables(0).Rows(position).Item(dsXtreme.Tables(0).Columns.Count - 1) = False
+                'miseAjourBD()
+            Case "Non"
+                annuler()
+        End Select
+        gbx_sup.Visible = False
+    End Sub
+
     Sub btnOption(a As Boolean, b As Boolean, c As Boolean, d As Boolean)
         btn_Ajouter.Enabled = a
         btn_Modifier.Enabled = b
@@ -233,5 +253,6 @@ Public Class Xtreme
         btn_annuler.Enabled = d
     End Sub
 #End Region
+
 End Class
 
