@@ -133,10 +133,15 @@ Partial Class Xtreme
         Me.btn_supprimer = New System.Windows.Forms.Button()
         Me.btn_Modifier = New System.Windows.Forms.Button()
         Me.btn_Ajouter = New System.Windows.Forms.Button()
+        Me.gbx_sup = New System.Windows.Forms.GroupBox()
+        Me.btn_Non = New System.Windows.Forms.Button()
+        Me.btn_Oui = New System.Windows.Forms.Button()
+        Me.Label34 = New System.Windows.Forms.Label()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_produit.SuspendLayout()
         Me.pan_Fournisseur.SuspendLayout()
+        Me.gbx_sup.SuspendLayout()
         Me.SuspendLayout()
         '
         'btn_ElementLast
@@ -1136,11 +1141,54 @@ Partial Class Xtreme
         Me.btn_Ajouter.Text = "Ajouter"
         Me.btn_Ajouter.UseVisualStyleBackColor = True
         '
+        'gbx_sup
+        '
+        Me.gbx_sup.Controls.Add(Me.btn_Non)
+        Me.gbx_sup.Controls.Add(Me.btn_Oui)
+        Me.gbx_sup.Controls.Add(Me.Label34)
+        Me.gbx_sup.Location = New System.Drawing.Point(254, 22)
+        Me.gbx_sup.Name = "gbx_sup"
+        Me.gbx_sup.Size = New System.Drawing.Size(259, 100)
+        Me.gbx_sup.TabIndex = 54
+        Me.gbx_sup.TabStop = False
+        Me.gbx_sup.Text = "Question?"
+        Me.gbx_sup.Visible = False
+        '
+        'btn_Non
+        '
+        Me.btn_Non.AccessibleRole = System.Windows.Forms.AccessibleRole.WhiteSpace
+        Me.btn_Non.Location = New System.Drawing.Point(132, 57)
+        Me.btn_Non.Name = "btn_Non"
+        Me.btn_Non.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Non.TabIndex = 56
+        Me.btn_Non.Text = "Non"
+        Me.btn_Non.UseVisualStyleBackColor = True
+        '
+        'btn_Oui
+        '
+        Me.btn_Oui.AccessibleRole = System.Windows.Forms.AccessibleRole.WhiteSpace
+        Me.btn_Oui.Location = New System.Drawing.Point(52, 57)
+        Me.btn_Oui.Name = "btn_Oui"
+        Me.btn_Oui.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Oui.TabIndex = 55
+        Me.btn_Oui.Text = "Oui"
+        Me.btn_Oui.UseVisualStyleBackColor = True
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(6, 27)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(246, 13)
+        Me.Label34.TabIndex = 0
+        Me.Label34.Text = "Est-ce que vous voullez vraiment le suppremation?"
+        '
         'Xtreme
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(812, 388)
+        Me.Controls.Add(Me.gbx_sup)
         Me.Controls.Add(Me.btn_annuler)
         Me.Controls.Add(Me.btn_supprimer)
         Me.Controls.Add(Me.btn_Modifier)
@@ -1152,10 +1200,10 @@ Partial Class Xtreme
         Me.Controls.Add(Me.btn_ElementNext)
         Me.Controls.Add(Me.btn_ElementPreview)
         Me.Controls.Add(Me.btn_ElementFirst)
-        Me.Controls.Add(Me.pan_clients)
-        Me.Controls.Add(Me.pan_Fournisseur)
         Me.Controls.Add(Me.Pan_produit)
         Me.Controls.Add(Me.Pan_employer)
+        Me.Controls.Add(Me.pan_clients)
+        Me.Controls.Add(Me.pan_Fournisseur)
         Me.Name = "Xtreme"
         Me.Text = "Gestion de Xtreme"
         Me.pan_clients.ResumeLayout(False)
@@ -1166,6 +1214,8 @@ Partial Class Xtreme
         Me.Pan_produit.PerformLayout()
         Me.pan_Fournisseur.ResumeLayout(False)
         Me.pan_Fournisseur.PerformLayout()
+        Me.gbx_sup.ResumeLayout(False)
+        Me.gbx_sup.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1281,4 +1331,8 @@ Partial Class Xtreme
     Friend WithEvents btn_supprimer As Button
     Friend WithEvents btn_Modifier As Button
     Friend WithEvents btn_Ajouter As Button
+    Friend WithEvents gbx_sup As GroupBox
+    Friend WithEvents btn_Non As Button
+    Friend WithEvents btn_Oui As Button
+    Friend WithEvents Label34 As Label
 End Class

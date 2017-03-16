@@ -1,8 +1,8 @@
 ﻿Imports System.Data.OleDb
 Public Class Xtreme
     Dim bd As New GestionBD
-    Dim daXtreme As New OleDbDataAdapter
-    Dim dsXtreme As New DataSet
+    Dim daXtreme, daTypeProduit As New OleDbDataAdapter
+    Dim dsXtreme, dsTypeProduit As New DataSet
     Dim gestionoperation As New OleDbCommandBuilder
     Dim position, table, ctrTable, min, max As Integer
     Dim NomTable(), NomtableTout() As String
@@ -22,6 +22,7 @@ Public Class Xtreme
         bd.connexion("..\xtreme.mdb")
         bd.Deconnexion()
         Btn_Element_Bloquer(False, False, False, False)
+        btnOption(False, False, False, False)
         For c As Integer = 0 To 3
             cbx_Nomtable.Items.Add(NomTable(c))
         Next
@@ -32,11 +33,19 @@ Public Class Xtreme
         Dim cmdXtreme As New OleDbCommand
         dsXtreme = New DataSet
         cmdXtreme = bd.cnconnexion.CreateCommand
-        cmdXtreme.CommandText = "Select * from " & NomTable(table)
+        cmdXtreme.CommandText = "Select * from " & NomTable(table) ' & "where Actif = Oui"
         daXtreme.SelectCommand = cmdXtreme
         daXtreme.Fill(dsXtreme, NomTable(table))
+        btnOption(True, True, True, False)
     End Sub
-
+    Sub ChargerDataseTypeProduit()
+        Dim cmdTypeProdui As New OleDbCommand
+        dsTypeProduit = New DataSet
+        cmdTypeProdui = bd.cnconnexion.CreateCommand
+        cmdTypeProdui.CommandText = "Select * from " & "Types_de_produit"
+        daTypeProduit.SelectCommand = cmdTypeProdui
+        daTypeProduit.Fill(dsTypeProduit, "Types_de_produit")
+    End Sub
     Sub RemplirControles()
         Dim ctr2 As Integer
         For ctr As Integer = min To max
@@ -51,6 +60,16 @@ Public Class Xtreme
             End If
             ctr2 += 1
         Next
+        If table = 2 Then
+            ChargerDataseTypeProduit()
+            For c As Integer = 0 To dsTypeProduit.Tables(0).Rows.Count - 1
+                If dsTypeProduit.Tables(0).Rows(c).Item(0) = listeTXT(table)(5).text Then
+                    listeTXT(table)(5).text = dsTypeProduit.Tables(0).Rows(c).Item(1)
+                    Exit For
+                End If
+            Next
+
+        End If
     End Sub
 #End Region
 #Region "Déplacement dans les tables"
@@ -137,7 +156,7 @@ Public Class Xtreme
             sender.text = "Enregistrer"
             btnOption(True, False, False, True)
         Else
-            For c As Integer = 0 To dsXtreme.Tables(0).Columns.Count - 3
+            For c As Integer = 0 To dsXtreme.Tables(0).Columns.Count - 4
                 If listeTXT(table)(c).text Like "" Then
                     b = False
                     Exit For
@@ -147,10 +166,12 @@ Public Class Xtreme
             Next
             If b = True Then
                 Select Case cbx_Nomtable.Text
-                    Case "Clients", "Employés"
+                    Case "Clients"
                         Ajouter(dsXtreme.Tables(0).Columns.Count - 4, 2)
                     Case "Fournisseurs", "Produits"
                         Ajouter(dsXtreme.Tables(0).Columns.Count - 3, 1)
+                    Case "Employés"
+                        Ajouter(dsXtreme.Tables(0).Columns.Count - 2, 2)
                 End Select
                 sender.text = "Ajouter"
                 'miseAjourBD()
@@ -165,7 +186,6 @@ Public Class Xtreme
             listeTXT(table)(c).text = ""
         Next
     End Sub
-
     Sub Ajouter(nbr As Integer, min As Integer)
         Dim drnouvel As DataRow
         Dim c2 As Integer = min
@@ -176,6 +196,7 @@ Public Class Xtreme
                 drnouvel(1) = 0
             End If
             For c As Integer = 0 To nbr
+                MsgBox(c)
                 drnouvel(c2) = listeTXT(table)(c).text
                 c2 += 1
             Next
@@ -190,6 +211,10 @@ Public Class Xtreme
         daXtreme.Fill(dsXtreme, NomTable(table))
     End Sub
     Private Sub Annuler(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_annuler.Click
+        annuler()
+    End Sub
+
+    Sub annuler()
         ChargerDataset()
         btnOption(True, True, True, False)
         RemplirControles()
@@ -197,7 +222,6 @@ Public Class Xtreme
         btn_Ajouter.Text = "Ajouter"
         btn_Modifier.Text = "Modifier"
     End Sub
-
     Private Sub btnModifier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Modifier.Click
         If sender.text = "Modifier" Then
             btn_Modifier.Text = "Enregistrer"
@@ -226,6 +250,22 @@ Public Class Xtreme
         Next
     End Sub
 
+    Private Sub btnSupprimer_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_supprimer.Click
+        btnOption(False, False, False, True)
+        gbx_sup.Visible = True
+    End Sub
+
+    Private Sub btn_Oui_Click(sender As Object, e As EventArgs) Handles btn_Oui.Click, btn_Non.Click
+        Select Case sender.text
+            Case "Oui"
+                dsXtreme.Tables(0).Rows(position).Item(dsXtreme.Tables(0).Columns.Count - 1) = False
+                'miseAjourBD()
+            Case "Non"
+                annuler()
+        End Select
+        gbx_sup.Visible = False
+    End Sub
+
     Sub btnOption(a As Boolean, b As Boolean, c As Boolean, d As Boolean)
         btn_Ajouter.Enabled = a
         btn_Modifier.Enabled = b
@@ -233,5 +273,6 @@ Public Class Xtreme
         btn_annuler.Enabled = d
     End Sub
 #End Region
+
 End Class
 
