@@ -147,6 +147,7 @@ Public Class Xtreme
 
 #End Region
 #Region "C.A.M.E."
+#Region "Bouton ajouter"
     Private Sub btn_Ajouter_Click(sender As Object, e As EventArgs) Handles btn_Ajouter.Click
         Dim b As Boolean
         If sender.text = "Ajouter" Then
@@ -185,11 +186,6 @@ Public Class Xtreme
         End If
     End Sub
 
-    Sub vider(nbr As Integer)
-        For c As Integer = 0 To nbr
-            listeTXT(table)(c).text = ""
-        Next
-    End Sub
     Sub Ajouter(nbr As Integer, min As Integer)
         Dim drnouvel As DataRow
         Dim c2 As Integer = min
@@ -207,38 +203,23 @@ Public Class Xtreme
         End With
 
     End Sub
-    Sub miseAjourBD()
-        gestionoperation = New OleDbCommandBuilder(daXtreme)
-        daXtreme.Update(dsXtreme, NomTable(table))
-        dsXtreme.Clear()
-        daXtreme.Fill(dsXtreme, NomTable(table))
-    End Sub
-    Private Sub Annuler(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_annuler.Click
-        annuler()
-    End Sub
 
-    Sub annuler()
-        ChargerDataset()
-        btnOption(True, True, True, False)
-        RemplirControles()
-        btn_supprimer.Text = "Supprimer"
-        btn_Ajouter.Text = "Ajouter"
-        btn_Modifier.Text = "Modifier"
-        If table = 2 Then
-            listeTXT(table)(5).visible = True
-            cbx_typeProduit.Visible = False
-        End If
-    End Sub
+#End Region
+#Region "Bouton Modifier"
+
     Private Sub btnModifier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Modifier.Click
+
         If sender.text = "Modifier" Then
             cbx_typeProduit.Items.Clear()
-            For c As Integer = 0 To dsTypeProduit.Tables(0).Rows.Count - 1
-                cbx_typeProduit.Items.Add(dsTypeProduit.Tables(0).Rows(c).Item(1))
-            Next
+
             If table = 2 Then
+                For c As Integer = 0 To dsTypeProduit.Tables(0).Rows.Count - 1
+                    cbx_typeProduit.Items.Add(dsTypeProduit.Tables(0).Rows(c).Item(1))
+                Next
                 listeTXT(table)(5).visible = False
                 cbx_typeProduit.Visible = True
                 cbx_typeProduit.Text = listeTXT(table)(5).text
+                btn_Ajouter_type_prod.Visible = True
             End If
             btn_Modifier.Text = "Enregistrer"
             btnOption(False, True, False, True)
@@ -277,10 +258,12 @@ Public Class Xtreme
             min += 1
         Next
     End Sub
-
+#End Region
+#Region "Bouton Supprimer"
     Private Sub btnSupprimer_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_supprimer.Click
         btnOption(False, False, False, True)
         gbx_sup.Visible = True
+        EnableDurantoption(False)
     End Sub
 
     Private Sub btn_Oui_Click(sender As Object, e As EventArgs) Handles btn_Oui.Click, btn_Non.Click
@@ -292,21 +275,44 @@ Public Class Xtreme
                 annuler()
         End Select
         gbx_sup.Visible = False
+        EnableDurantoption(True)
     End Sub
 
-    Sub btnOption(a As Boolean, b As Boolean, c As Boolean, d As Boolean)
-        btn_Ajouter.Enabled = a
-        btn_Modifier.Enabled = b
-        btn_supprimer.Enabled = c
-        btn_annuler.Enabled = d
+#End Region
+#Region "Bouton Annuler"
+
+    Private Sub Annuler(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_annuler.Click
+        annuler()
+        EnableDurantoption(True)
     End Sub
 
+    Sub annuler()
+        ChargerDataset()
+        btnOption(True, True, True, False)
+        RemplirControles()
+        btn_supprimer.Text = "Supprimer"
+        btn_Ajouter.Text = "Ajouter"
+        btn_Modifier.Text = "Modifier"
+        If table = 2 Then
+            listeTXT(table)(5).visible = True
+            cbx_typeProduit.Visible = False
+        End If
+    End Sub
+#End Region
+#Region "Ajouter un type de produits"
     Private Sub Ajouter_Type_produit(sender As Object, e As EventArgs) Handles btn_Ajouter_type_prod.Click
         Pan_Type_produit.Visible = True
+        Pan_produit.Visible = False
+        btn_Ajouter_type_prod.Visible = False
+        TPVisiblePas(False)
+        For c As Integer = 0 To 2
+            listeTXT_Type_Produit(c).Text = ""
+        Next
     End Sub
 
     Private Sub btn_Enregistrer_Type_Click(sender As Object, e As EventArgs) Handles btn_Enregistrer_Type.Click
         Pan_Type_produit.Visible = False
+        Pan_produit.Visible = True
         Dim drnouvel As DataRow
         Dim c2 As Integer = 1
         With dsTypeProduit.Tables(0)
@@ -319,14 +325,66 @@ Public Class Xtreme
                 drnouvel(c2) = listeTXT_Type_Produit(c).Text
                 c2 += 1
             Next
+            drnouvel(3) = 2
             .Rows.Add(drnouvel)
         End With
-        cbx_typeProduit.Items.Add(dsTypeProduit.Tables(0).Rows(dsTypeProduit.Tables(0).Columns.Count).Item(1))
+        cbx_typeProduit.Items.Add(listeTXT_Type_Produit(0).Text)
         cbx_typeProduit.Text = listeTXT_Type_Produit(0).Text
-
+        TPVisiblePas(True)
+        'miseAjourBD_TP()
+    End Sub
+    Sub miseAjourBD_TP()
+        gestionoperation = New OleDbCommandBuilder(daTypeProduit)
+        daTypeProduit.Update(dsTypeProduit, "Types_de_produit")
+        dsTypeProduit.Clear()
+        daTypeProduit.Fill(dsTypeProduit, "Types_de_produit")
+    End Sub
+    Private Sub btn_annuler_tp_Click(sender As Object, e As EventArgs) Handles btn_annuler_tp.Click
+        TPVisiblePas(True)
+        Pan_Type_produit.Visible = False
+        Pan_produit.Visible = True
     End Sub
 
 #End Region
+#Region "Option"
+    Sub miseAjourBD()
+        gestionoperation = New OleDbCommandBuilder(daXtreme)
+        daXtreme.Update(dsXtreme, NomTable(table))
+        dsXtreme.Clear()
+        daXtreme.Fill(dsXtreme, NomTable(table))
+    End Sub
+    Sub vider(nbr As Integer)
+        For c As Integer = 0 To nbr
+            listeTXT(table)(c).text = ""
+        Next
+    End Sub
 
+    Sub btnOption(a As Boolean, b As Boolean, c As Boolean, d As Boolean)
+        btn_Ajouter.Enabled = a
+        btn_Modifier.Enabled = b
+        btn_supprimer.Enabled = c
+        btn_annuler.Enabled = d
+    End Sub
+
+    Sub TPVisiblePas(b As Boolean)
+        btn_Ajouter.Visible = b
+        btn_Modifier.Visible = b
+        btn_supprimer.Visible = b
+        btn_annuler.Visible = b
+        btn_ElementFirst.Visible = b
+        btn_ElementPreview.Visible = b
+        btn_ElementLast.Visible = b
+        btn_ElementNext.Visible = b
+    End Sub
+    Sub EnableDurantoption(b As Boolean)
+        cbx_Nomtable.Visible = b
+        btn_ChangerTable.Visible = b
+        btn_ElementFirst.Visible = b
+        btn_ElementPreview.Visible = b
+        btn_ElementLast.Visible = b
+        btn_ElementNext.Visible = b
+    End Sub
+#End Region
+#End Region
 End Class
 

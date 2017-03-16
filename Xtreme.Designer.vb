@@ -95,7 +95,6 @@ Partial Class Xtreme
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Pan_produit = New System.Windows.Forms.Panel()
         Me.btn_Ajouter_type_prod = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Txt_prod_1 = New System.Windows.Forms.TextBox()
         Me.Txt_prod_2 = New System.Windows.Forms.TextBox()
@@ -146,6 +145,7 @@ Partial Class Xtreme
         Me.Txt_Type_Prod_4 = New System.Windows.Forms.TextBox()
         Me.Pan_Type_produit = New System.Windows.Forms.Panel()
         Me.btn_Enregistrer_Type = New System.Windows.Forms.Button()
+        Me.btn_annuler_tp = New System.Windows.Forms.Button()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_produit.SuspendLayout()
@@ -794,14 +794,12 @@ Partial Class Xtreme
         'Pan_produit
         '
         Me.Pan_produit.Controls.Add(Me.btn_Ajouter_type_prod)
-        Me.Pan_produit.Controls.Add(Me.Button8)
         Me.Pan_produit.Controls.Add(Me.Label2)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_1)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_2)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_3)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_4)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_5)
-        Me.Pan_produit.Controls.Add(Me.Txt_prod_6)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_7)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_8)
         Me.Pan_produit.Controls.Add(Me.Label13)
@@ -812,6 +810,7 @@ Partial Class Xtreme
         Me.Pan_produit.Controls.Add(Me.Label21)
         Me.Pan_produit.Controls.Add(Me.Label22)
         Me.Pan_produit.Controls.Add(Me.cbx_typeProduit)
+        Me.Pan_produit.Controls.Add(Me.Txt_prod_6)
         Me.Pan_produit.Location = New System.Drawing.Point(5, 56)
         Me.Pan_produit.Name = "Pan_produit"
         Me.Pan_produit.Size = New System.Drawing.Size(781, 265)
@@ -826,15 +825,7 @@ Partial Class Xtreme
         Me.btn_Ajouter_type_prod.TabIndex = 54
         Me.btn_Ajouter_type_prod.Text = "Ajouter"
         Me.btn_Ajouter_type_prod.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(335, 195)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(75, 23)
-        Me.Button8.TabIndex = 54
-        Me.Button8.Text = "Ajouter"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.btn_Ajouter_type_prod.Visible = False
         '
         'Label2
         '
@@ -966,7 +957,6 @@ Partial Class Xtreme
         '
         'cbx_typeProduit
         '
-        Me.cbx_typeProduit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbx_typeProduit.FormattingEnabled = True
         Me.cbx_typeProduit.Location = New System.Drawing.Point(158, 145)
         Me.cbx_typeProduit.Name = "cbx_typeProduit"
@@ -1257,6 +1247,7 @@ Partial Class Xtreme
         '
         'Pan_Type_produit
         '
+        Me.Pan_Type_produit.Controls.Add(Me.btn_annuler_tp)
         Me.Pan_Type_produit.Controls.Add(Me.btn_Enregistrer_Type)
         Me.Pan_Type_produit.Controls.Add(Me.Txt_Type_Prod_4)
         Me.Pan_Type_produit.Controls.Add(Me.Txt_Type_Prod_3)
@@ -1279,6 +1270,15 @@ Partial Class Xtreme
         Me.btn_Enregistrer_Type.TabIndex = 56
         Me.btn_Enregistrer_Type.Text = "Enregistrer"
         Me.btn_Enregistrer_Type.UseVisualStyleBackColor = True
+        '
+        'btn_annuler_tp
+        '
+        Me.btn_annuler_tp.Location = New System.Drawing.Point(691, 205)
+        Me.btn_annuler_tp.Name = "btn_annuler_tp"
+        Me.btn_annuler_tp.Size = New System.Drawing.Size(75, 23)
+        Me.btn_annuler_tp.TabIndex = 56
+        Me.btn_annuler_tp.Text = "Annuler"
+        Me.btn_annuler_tp.UseVisualStyleBackColor = True
         '
         'Xtreme
         '
@@ -1426,7 +1426,6 @@ Partial Class Xtreme
     Friend WithEvents Txt_Emp_16 As TextBox
     Friend WithEvents Label33 As Label
     Friend WithEvents btn_Ajouter_type_prod As Button
-    Friend WithEvents Button8 As Button
     Friend WithEvents btn_annuler As Button
     Friend WithEvents btn_supprimer As Button
     Friend WithEvents btn_Modifier As Button
@@ -1444,4 +1443,5 @@ Partial Class Xtreme
     Friend WithEvents Txt_Type_Prod_4 As TextBox
     Friend WithEvents Pan_Type_produit As Panel
     Friend WithEvents btn_Enregistrer_Type As Button
+    Friend WithEvents btn_annuler_tp As Button
 End Class
