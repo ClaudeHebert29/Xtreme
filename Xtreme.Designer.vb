@@ -94,7 +94,6 @@ Partial Class Xtreme
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Pan_produit = New System.Windows.Forms.Panel()
-        Me.cbx_typeProduit = New System.Windows.Forms.ComboBox()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -113,6 +112,7 @@ Partial Class Xtreme
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
+        Me.cbx_typeProduit = New System.Windows.Forms.ComboBox()
         Me.pan_Fournisseur = New System.Windows.Forms.Panel()
         Me.txt_four_6 = New System.Windows.Forms.TextBox()
         Me.Label32 = New System.Windows.Forms.Label()
@@ -792,7 +792,6 @@ Partial Class Xtreme
         Me.Pan_produit.Controls.Add(Me.Txt_prod_3)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_4)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_5)
-        Me.Pan_produit.Controls.Add(Me.Txt_prod_6)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_7)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_8)
         Me.Pan_produit.Controls.Add(Me.Label13)
@@ -803,21 +802,12 @@ Partial Class Xtreme
         Me.Pan_produit.Controls.Add(Me.Label21)
         Me.Pan_produit.Controls.Add(Me.Label22)
         Me.Pan_produit.Controls.Add(Me.cbx_typeProduit)
+        Me.Pan_produit.Controls.Add(Me.Txt_prod_6)
         Me.Pan_produit.Location = New System.Drawing.Point(5, 56)
         Me.Pan_produit.Name = "Pan_produit"
         Me.Pan_produit.Size = New System.Drawing.Size(781, 265)
         Me.Pan_produit.TabIndex = 47
         Me.Pan_produit.Visible = False
-        '
-        'cbx_typeProduit
-        '
-        Me.cbx_typeProduit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbx_typeProduit.FormattingEnabled = True
-        Me.cbx_typeProduit.Location = New System.Drawing.Point(158, 145)
-        Me.cbx_typeProduit.Name = "cbx_typeProduit"
-        Me.cbx_typeProduit.Size = New System.Drawing.Size(166, 21)
-        Me.cbx_typeProduit.TabIndex = 55
-        Me.cbx_typeProduit.Visible = False
         '
         'Button9
         '
@@ -883,7 +873,7 @@ Partial Class Xtreme
         '
         'Txt_prod_6
         '
-        Me.Txt_prod_6.Location = New System.Drawing.Point(158, 146)
+        Me.Txt_prod_6.Location = New System.Drawing.Point(156, 147)
         Me.Txt_prod_6.Name = "Txt_prod_6"
         Me.Txt_prod_6.Size = New System.Drawing.Size(168, 20)
         Me.Txt_prod_6.TabIndex = 5
@@ -964,6 +954,15 @@ Partial Class Xtreme
         Me.Label22.Size = New System.Drawing.Size(88, 13)
         Me.Label22.TabIndex = 26
         Me.Label22.Text = "Classe du produit"
+        '
+        'cbx_typeProduit
+        '
+        Me.cbx_typeProduit.FormattingEnabled = True
+        Me.cbx_typeProduit.Location = New System.Drawing.Point(158, 145)
+        Me.cbx_typeProduit.Name = "cbx_typeProduit"
+        Me.cbx_typeProduit.Size = New System.Drawing.Size(166, 21)
+        Me.cbx_typeProduit.TabIndex = 55
+        Me.cbx_typeProduit.Visible = False
         '
         'pan_Fournisseur
         '
@@ -1158,7 +1157,7 @@ Partial Class Xtreme
         Me.gbx_sup.Controls.Add(Me.btn_Non)
         Me.gbx_sup.Controls.Add(Me.btn_Oui)
         Me.gbx_sup.Controls.Add(Me.Label34)
-        Me.gbx_sup.Location = New System.Drawing.Point(254, 22)
+        Me.gbx_sup.Location = New System.Drawing.Point(257, 22)
         Me.gbx_sup.Name = "gbx_sup"
         Me.gbx_sup.Size = New System.Drawing.Size(259, 100)
         Me.gbx_sup.TabIndex = 54
