@@ -94,7 +94,6 @@ Partial Class Xtreme
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Pan_produit = New System.Windows.Forms.Panel()
-        Me.cbx_typeProduit = New System.Windows.Forms.ComboBox()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -113,6 +112,7 @@ Partial Class Xtreme
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
+        Me.cbx_typeProduit = New System.Windows.Forms.ComboBox()
         Me.pan_Fournisseur = New System.Windows.Forms.Panel()
         Me.txt_four_6 = New System.Windows.Forms.TextBox()
         Me.Label32 = New System.Windows.Forms.Label()
@@ -809,16 +809,6 @@ Partial Class Xtreme
         Me.Pan_produit.TabIndex = 47
         Me.Pan_produit.Visible = False
         '
-        'cbx_typeProduit
-        '
-        Me.cbx_typeProduit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbx_typeProduit.FormattingEnabled = True
-        Me.cbx_typeProduit.Location = New System.Drawing.Point(158, 145)
-        Me.cbx_typeProduit.Name = "cbx_typeProduit"
-        Me.cbx_typeProduit.Size = New System.Drawing.Size(166, 21)
-        Me.cbx_typeProduit.TabIndex = 55
-        Me.cbx_typeProduit.Visible = False
-        '
         'Button9
         '
         Me.Button9.Location = New System.Drawing.Point(335, 146)
@@ -964,6 +954,16 @@ Partial Class Xtreme
         Me.Label22.Size = New System.Drawing.Size(88, 13)
         Me.Label22.TabIndex = 26
         Me.Label22.Text = "Classe du produit"
+        '
+        'cbx_typeProduit
+        '
+        Me.cbx_typeProduit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbx_typeProduit.FormattingEnabled = True
+        Me.cbx_typeProduit.Location = New System.Drawing.Point(158, 145)
+        Me.cbx_typeProduit.Name = "cbx_typeProduit"
+        Me.cbx_typeProduit.Size = New System.Drawing.Size(166, 21)
+        Me.cbx_typeProduit.TabIndex = 55
+        Me.cbx_typeProduit.Visible = False
         '
         'pan_Fournisseur
         '

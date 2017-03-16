@@ -19,6 +19,7 @@ Public Class Xtreme
         listeTXT_Client = {txt_Clients_1, txt_Clients_2, txt_Clients_3, txt_Clients_4, txt_Clients_5, txt_Clients_6, txt_Clients_7, txt_Clients_8, txt_Clients_9, txt_Clients_10, txt_Clients_11, txt_Clients_12, txt_Clients_13, txt_Clients_14, txt_Clients_15}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         listeTXT = {listeTXT_Client, listeTXT_Four, listeTXT_Employes}
 =======
@@ -27,9 +28,12 @@ Public Class Xtreme
 >>>>>>> parent of fcbb474... fuckoff
         listPanel = {pan_clients, pan_Fournisseur, Type_prod_4, Pan_employer}
 =======
+=======
+        listeTXT = {listeTXT_Client, listeTXT_Four, listeTXT_Employes}
+        listPanel = {pan_clients, pan_Fournisseur, Pan_produit, Pan_employer}
+>>>>>>> origin/master
         listeTXT = {listeTXT_Client, listeTXT_Four, listeTXT_Produit, listeTXT_Employes}
         listPanel = {pan_clients, pan_Fournisseur, Pan_produit, Pan_employer}
->>>>>>> 136e4a9f1a8cfdb959e9ef3fe9fc6430d07da6ac
         bd.connexion("..\xtreme.mdb")
         bd.Deconnexion()
         Btn_Element_Bloquer(False, False, False, False)
@@ -235,17 +239,24 @@ Public Class Xtreme
         btn_Modifier.Text = "Modifier"
     End Sub
     Private Sub btnModifier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Modifier.Click
-
         If sender.text = "Modifier" Then
-            cbx_typeProduit.Visible = True
+            cbx_typeProduit.Items.Clear()
             For c As Integer = 0 To dsTypeProduit.Tables(0).Rows.Count - 1
                 cbx_typeProduit.Items.Add(dsTypeProduit.Tables(0).Rows(c).Item(1))
             Next
+            If table = 2 Then
+                listeTXT(table)(5).visible = False
+                cbx_typeProduit.Visible = True
+                cbx_typeProduit.Text = listeTXT(table)(5).text
+            End If
             btn_Modifier.Text = "Enregistrer"
             btnOption(False, True, False, True)
         Else
-            listeTXT(table)(5).text = cbx_typeProduit.Text
-            cbx_typeProduit.Visible = False
+            If table = 2 Then
+                listeTXT(table)(5).visible = True
+                listeTXT(table)(5).text = cbx_typeProduit.Text
+                cbx_typeProduit.Visible = False
+            End If
             btn_Modifier.Text = "Modifier"
             Select Case cbx_Nomtable.Text
                 Case "Clients", "Employés"
