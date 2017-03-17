@@ -147,6 +147,7 @@ Partial Class Xtreme
         Me.btn_Enregistrer_Type = New System.Windows.Forms.Button()
         Me.btn_annuler_tp = New System.Windows.Forms.Button()
         Me.cbx_fournisseur = New System.Windows.Forms.ComboBox()
+        Me.cbx_Sup = New System.Windows.Forms.ComboBox()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_produit.SuspendLayout()
@@ -498,6 +499,7 @@ Partial Class Xtreme
         '
         'Pan_employer
         '
+        Me.Pan_employer.Controls.Add(Me.cbx_Sup)
         Me.Pan_employer.Controls.Add(Me.Txt_Emp_16)
         Me.Pan_employer.Controls.Add(Me.Label33)
         Me.Pan_employer.Controls.Add(Me.txt_Emp_10)
@@ -1159,7 +1161,7 @@ Partial Class Xtreme
         Me.gbx_sup.Controls.Add(Me.btn_Non)
         Me.gbx_sup.Controls.Add(Me.btn_Oui)
         Me.gbx_sup.Controls.Add(Me.Label34)
-        Me.gbx_sup.Location = New System.Drawing.Point(254, 22)
+        Me.gbx_sup.Location = New System.Drawing.Point(252, 14)
         Me.gbx_sup.Name = "gbx_sup"
         Me.gbx_sup.Size = New System.Drawing.Size(259, 100)
         Me.gbx_sup.TabIndex = 54
@@ -1291,6 +1293,15 @@ Partial Class Xtreme
         Me.cbx_fournisseur.TabIndex = 56
         Me.cbx_fournisseur.Visible = False
         '
+        'cbx_Sup
+        '
+        Me.cbx_Sup.FormattingEnabled = True
+        Me.cbx_Sup.Location = New System.Drawing.Point(157, 225)
+        Me.cbx_Sup.Name = "cbx_Sup"
+        Me.cbx_Sup.Size = New System.Drawing.Size(166, 21)
+        Me.cbx_Sup.TabIndex = 56
+        Me.cbx_Sup.Visible = False
+        '
         'Xtreme
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1308,11 +1319,11 @@ Partial Class Xtreme
         Me.Controls.Add(Me.btn_ElementNext)
         Me.Controls.Add(Me.btn_ElementPreview)
         Me.Controls.Add(Me.btn_ElementFirst)
-        Me.Controls.Add(Me.Pan_produit)
         Me.Controls.Add(Me.Pan_employer)
         Me.Controls.Add(Me.pan_clients)
         Me.Controls.Add(Me.pan_Fournisseur)
         Me.Controls.Add(Me.Pan_Type_produit)
+        Me.Controls.Add(Me.Pan_produit)
         Me.Name = "Xtreme"
         Me.Text = "Gestion de Xtreme"
         Me.pan_clients.ResumeLayout(False)
@@ -1456,4 +1467,5 @@ Partial Class Xtreme
     Friend WithEvents btn_Enregistrer_Type As Button
     Friend WithEvents btn_annuler_tp As Button
     Friend WithEvents cbx_fournisseur As ComboBox
+    Friend WithEvents cbx_Sup As ComboBox
 End Class

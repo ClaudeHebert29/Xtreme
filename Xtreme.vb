@@ -88,6 +88,7 @@ Public Class Xtreme
             Next
 
         End If
+
     End Sub
 #End Region
 #Region "Déplacement dans les tables"
@@ -121,6 +122,7 @@ Public Class Xtreme
     End Sub
 
     Private Sub ChangerDeTable(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_ChangerTable.Click
+        TPVisiblePas(True)
         For ctr As Integer = 0 To 4
             If NomTable(ctr) Like cbx_Nomtable.Text And ctr < 4 Then
                 changerPanel(ctr)
@@ -245,6 +247,14 @@ Public Class Xtreme
                 cbx_fournisseur.Text = listeTXT(table)(7).text
                 btn_Ajouter_type_prod.Visible = True
             End If
+            If table = 3 Then
+                For c As Integer = 0 To dsXtreme.Tables(0).Rows.Count - 1
+                    cbx_Sup.Items.Add(dsXtreme.Tables(0).Rows(c).Item(3))
+                Next
+                listeTXT(table)(9).visible = False
+                cbx_Sup.Visible = True
+                cbx_Sup.Text = listeTXT(table)(0).text
+            End If
             btn_Modifier.Text = "Enregistrer"
             btnOption(False, True, False, True)
         Else
@@ -284,6 +294,13 @@ Public Class Xtreme
                 For c2 As Integer = 0 To dsFournisseur.Tables(0).Rows.Count - 1
                     If dsFournisseur.Tables(0).Rows(c2).Item(1) = listeTXT(table)(7).text Then
                         dsXtreme.Tables(0).Rows(position).Item(min) = dsFournisseur.Tables(0).Rows(c2).Item(0)
+                        Exit For
+                    End If
+                Next
+            ElseIf table = 3 And c = 9 Then
+                For c2 As Integer = 0 To dsXtreme.Tables(0).Rows.Count - 1
+                    If dsXtreme.Tables(0).Rows(c2).Item(2) = listeTXT(table)(9).text Then
+                        dsXtreme.Tables(0).Rows(position).Item(min) = dsXtreme.Tables(0).Rows(c2).Item(0)
                         Exit For
                     End If
                 Next
@@ -419,6 +436,11 @@ Public Class Xtreme
         btn_ElementPreview.Visible = b
         btn_ElementLast.Visible = b
         btn_ElementNext.Visible = b
+    End Sub
+
+
+    Private Sub cbx_Nomtable_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbx_Nomtable.SelectedIndexChanged
+        TPVisiblePas(False)
     End Sub
 #End Region
 #End Region
