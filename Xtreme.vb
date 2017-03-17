@@ -62,12 +62,12 @@ Public Class Xtreme
         For ctr As Integer = min To max
             If IsDBNull(dsXtreme.Tables(0).Rows(position).Item(ctr)) = False Then
                 If table = 3 And ctr = 9 Then
-                    listeTXT(table)(ctr2).text = "Null"
+                    listeTXT(table)(ctr2).text = "-"
                 Else
                     listeTXT(table)(ctr2).text = dsXtreme.Tables(0).Rows(position).Item(ctr)
                 End If
             Else
-                listeTXT(table)(ctr2).text = "Null"
+                listeTXT(table)(ctr2).text = "-"
             End If
             ctr2 += 1
         Next
@@ -86,7 +86,16 @@ Public Class Xtreme
                     Exit For
                 End If
             Next
-
+        ElseIf table = 3 Then
+            For c As Integer = 0 To dsXtreme.Tables(0).Rows.Count - 1
+                If listeTXT(table)(9).text = "-" Then
+                    listeTXT(table)(9).text = "-"
+                    Exit For
+                ElseIf dsXtreme.Tables(0).Rows(c).Item(0) = listeTXT(table)(9).text Then
+                    listeTXT(table)(9).text = dsXtreme.Tables(0).Rows(c).Item(2)
+                    Exit For
+                End If
+            Next
         End If
 
     End Sub
@@ -169,6 +178,14 @@ Public Class Xtreme
     Private Sub btn_Ajouter_Click(sender As Object, e As EventArgs) Handles btn_Ajouter.Click
         Dim b As Boolean
         If sender.text = "Ajouter" Then
+            If table = 2 Then
+                Remplir_cbx_table_2()
+                option_Cbx_table_2(False, True, True)
+            End If
+            If table = 3 Then
+                Remplir_cbx_table_3()
+                option_Cbx_table_3(False, True, True)
+            End If
             EnableDurantoption(False)
             Select Case cbx_Nomtable.Text
                 Case "Clients", "Employés"
@@ -179,6 +196,12 @@ Public Class Xtreme
             sender.text = "Enregistrer"
             btnOption(True, False, False, True)
         Else
+            If table = 2 Then
+                option_Cbx_table_2(True, False, False)
+            End If
+            If table = 3 Then
+                option_Cbx_table_3(True, False, False)
+            End If
             EnableDurantoption(True)
             For c As Integer = 0 To dsXtreme.Tables(0).Columns.Count - 4
                 If listeTXT(table)(c).text Like "" Then
@@ -190,12 +213,10 @@ Public Class Xtreme
             Next
             If b = True Then
                 Select Case cbx_Nomtable.Text
-                    Case "Clients"
+                    Case "Clients", "Employés"
                         Ajouter(dsXtreme.Tables(0).Columns.Count - 4, 2)
                     Case "Fournisseurs", "Produits"
                         Ajouter(dsXtreme.Tables(0).Columns.Count - 3, 1)
-                    Case "Employés"
-                        Ajouter(dsXtreme.Tables(0).Columns.Count - 2, 2)
                 End Select
                 sender.text = "Ajouter"
                 'miseAjourBD()
@@ -215,8 +236,37 @@ Public Class Xtreme
             If table = 0 Then
                 drnouvel(1) = 0
             End If
-            For c As Integer = 0 To nbr
-                drnouvel(c2) = listeTXT(table)(c).text
+            For c3 As Integer = 0 To nbr
+                If table = 2 And c3 = 5 Then
+                    For c As Integer = 0 To dsTypeProduit.Tables(0).Rows.Count - 1
+                        If dsTypeProduit.Tables(0).Rows(c).Item(1) = cbx_typeProduit.Text Then
+                            drnouvel(c2) = dsTypeProduit.Tables(0).Rows(c).Item(0)
+                            Exit For
+                        End If
+                    Next
+                ElseIf table = 2 And c3 = 7 Then
+                    For c As Integer = 0 To dsFournisseur.Tables(0).Rows.Count - 1
+                        If dsFournisseur.Tables(0).Rows(c).Item(1) = cbx_fournisseur.Text Then
+                            drnouvel(c2) = dsFournisseur.Tables(0).Rows(c).Item(0)
+                            Exit For
+                        End If
+                    Next
+                ElseIf table = 3 And c3 = 9 Then
+                    For c As Integer = 0 To dsXtreme.Tables(0).Rows.Count - 1
+                        If cbx_Sup.Text = "-" Then
+                            drnouvel(c2) = DBNull.Value
+                            Exit For
+                        ElseIf dsXtreme.Tables(0).Rows(c).Item(2) = cbx_Sup.Text Then
+                            drnouvel(c2) = dsXtreme.Tables(0).Rows(c).Item(0)
+                            Exit For
+                        End If
+                    Next
+                ElseIf table = 3 And c3 = 7 Then
+                    drnouvel(c2) = 0
+                Else
+                    drnouvel(c2) = listeTXT(table)(c3).text
+                End If
+
                 c2 += 1
             Next
             .Rows.Add(drnouvel)
@@ -230,41 +280,22 @@ Public Class Xtreme
     Private Sub btnModifier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Modifier.Click
         EnableDurantoption(False)
         If sender.text = "Modifier" Then
-            cbx_typeProduit.Items.Clear()
-
             If table = 2 Then
-                For c As Integer = 0 To dsTypeProduit.Tables(0).Rows.Count - 1
-                    cbx_typeProduit.Items.Add(dsTypeProduit.Tables(0).Rows(c).Item(1))
-                Next
-                For c As Integer = 0 To dsFournisseur.Tables(0).Rows.Count - 1
-                    cbx_fournisseur.Items.Add(dsFournisseur.Tables(0).Rows(c).Item(1))
-                Next
-                listeTXT(table)(5).visible = False
-                cbx_typeProduit.Visible = True
-                cbx_typeProduit.Text = listeTXT(table)(5).text
-                listeTXT(table)(7).visible = False
-                cbx_fournisseur.Visible = True
-                cbx_fournisseur.Text = listeTXT(table)(7).text
-                btn_Ajouter_type_prod.Visible = True
+                Remplir_cbx_table_2()
+                option_Cbx_table_2(False, True, True)
             End If
             If table = 3 Then
-                For c As Integer = 0 To dsXtreme.Tables(0).Rows.Count - 1
-                    cbx_Sup.Items.Add(dsXtreme.Tables(0).Rows(c).Item(3))
-                Next
-                listeTXT(table)(9).visible = False
-                cbx_Sup.Visible = True
-                cbx_Sup.Text = listeTXT(table)(0).text
+                Remplir_cbx_table_3()
+                option_Cbx_table_3(False, True, True)
             End If
             btn_Modifier.Text = "Enregistrer"
             btnOption(False, True, False, True)
         Else
             If table = 2 Then
-                listeTXT(table)(5).visible = True
-                listeTXT(table)(7).visible = True
-                listeTXT(table)(5).text = cbx_typeProduit.Text
-                cbx_typeProduit.Visible = False
-                cbx_fournisseur.Visible = False
-                listeTXT(table)(7).text = cbx_fournisseur.Text
+                option_Cbx_table_2(True, False, False)
+            End If
+            If table = 3 Then
+                option_Cbx_table_3(True, False, False)
             End If
             btn_Modifier.Text = "Modifier"
             Select Case cbx_Nomtable.Text
@@ -347,8 +378,10 @@ Public Class Xtreme
         EnableDurantoption(True)
         gbx_sup.Visible = False
         If table = 2 Then
-            listeTXT(table)(5).visible = True
-            cbx_typeProduit.Visible = False
+            option_Cbx_table_2(True, False, False)
+        End If
+        If table = 3 Then
+            option_Cbx_table_3(True, False, False)
         End If
     End Sub
 #End Region
@@ -441,6 +474,45 @@ Public Class Xtreme
 
     Private Sub cbx_Nomtable_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbx_Nomtable.SelectedIndexChanged
         TPVisiblePas(False)
+    End Sub
+    Sub Remplir_cbx_table_2()
+        cbx_typeProduit.Items.Clear()
+        For c As Integer = 0 To dsTypeProduit.Tables(0).Rows.Count - 1
+            cbx_typeProduit.Items.Add(dsTypeProduit.Tables(0).Rows(c).Item(1))
+        Next
+        For c As Integer = 0 To dsFournisseur.Tables(0).Rows.Count - 1
+            cbx_fournisseur.Items.Add(dsFournisseur.Tables(0).Rows(c).Item(1))
+        Next
+    End Sub
+    Sub Remplir_cbx_table_3()
+        cbx_Sup.Items.Clear()
+        For c As Integer = 0 To dsXtreme.Tables(0).Rows.Count - 1
+            cbx_Sup.Items.Add(dsXtreme.Tables(0).Rows(c).Item(3))
+        Next
+        cbx_Sup.Items.Add("-")
+    End Sub
+    Sub option_Cbx_table_2(b_liste As Boolean, b_cbx As Boolean, b As Boolean)
+        listeTXT(table)(5).visible = b_liste
+        listeTXT(table)(7).visible = b_liste
+        cbx_typeProduit.Visible = b_cbx
+        cbx_fournisseur.Visible = b_cbx
+        btn_Ajouter_type_prod.Visible = b_cbx
+        If b = True Then
+            cbx_typeProduit.Text = listeTXT(table)(5).text
+            cbx_fournisseur.Text = listeTXT(table)(7).text
+        Else
+            listeTXT(table)(5).text = cbx_typeProduit.Text
+            listeTXT(table)(7).text = cbx_fournisseur.Text
+        End If
+    End Sub
+    Sub option_Cbx_table_3(b_liste As Boolean, b_cbx As Boolean, b As Boolean)
+        listeTXT(table)(9).visible = b_liste
+        cbx_Sup.Visible = b_cbx
+        If b = True Then
+            cbx_Sup.Text = listeTXT(table)(9).text
+        Else
+            listeTXT(table)(9).text = cbx_Sup.Text
+        End If
     End Sub
 #End Region
 #End Region
