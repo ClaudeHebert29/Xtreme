@@ -146,6 +146,7 @@ Partial Class Xtreme
         Me.Pan_Type_produit = New System.Windows.Forms.Panel()
         Me.btn_Enregistrer_Type = New System.Windows.Forms.Button()
         Me.btn_annuler_tp = New System.Windows.Forms.Button()
+        Me.cbx_fournisseur = New System.Windows.Forms.ComboBox()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_produit.SuspendLayout()
@@ -793,6 +794,7 @@ Partial Class Xtreme
         '
         'Pan_produit
         '
+        Me.Pan_produit.Controls.Add(Me.cbx_fournisseur)
         Me.Pan_produit.Controls.Add(Me.btn_Ajouter_type_prod)
         Me.Pan_produit.Controls.Add(Me.Label2)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_1)
@@ -1280,6 +1282,15 @@ Partial Class Xtreme
         Me.btn_annuler_tp.Text = "Annuler"
         Me.btn_annuler_tp.UseVisualStyleBackColor = True
         '
+        'cbx_fournisseur
+        '
+        Me.cbx_fournisseur.FormattingEnabled = True
+        Me.cbx_fournisseur.Location = New System.Drawing.Point(158, 199)
+        Me.cbx_fournisseur.Name = "cbx_fournisseur"
+        Me.cbx_fournisseur.Size = New System.Drawing.Size(166, 21)
+        Me.cbx_fournisseur.TabIndex = 56
+        Me.cbx_fournisseur.Visible = False
+        '
         'Xtreme
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1297,11 +1308,11 @@ Partial Class Xtreme
         Me.Controls.Add(Me.btn_ElementNext)
         Me.Controls.Add(Me.btn_ElementPreview)
         Me.Controls.Add(Me.btn_ElementFirst)
-        Me.Controls.Add(Me.Pan_Type_produit)
         Me.Controls.Add(Me.Pan_produit)
         Me.Controls.Add(Me.Pan_employer)
         Me.Controls.Add(Me.pan_clients)
         Me.Controls.Add(Me.pan_Fournisseur)
+        Me.Controls.Add(Me.Pan_Type_produit)
         Me.Name = "Xtreme"
         Me.Text = "Gestion de Xtreme"
         Me.pan_clients.ResumeLayout(False)
@@ -1444,4 +1455,5 @@ Partial Class Xtreme
     Friend WithEvents Pan_Type_produit As Panel
     Friend WithEvents btn_Enregistrer_Type As Button
     Friend WithEvents btn_annuler_tp As Button
+    Friend WithEvents cbx_fournisseur As ComboBox
 End Class

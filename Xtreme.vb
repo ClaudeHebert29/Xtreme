@@ -1,8 +1,8 @@
 ﻿Imports System.Data.OleDb
 Public Class Xtreme
     Dim bd As New GestionBD
-    Dim daXtreme, daTypeProduit As New OleDbDataAdapter
-    Dim dsXtreme, dsTypeProduit As New DataSet
+    Dim daXtreme, daTypeProduit, daFournisseur As New OleDbDataAdapter
+    Dim dsXtreme, dsTypeProduit, dsFournisseur As New DataSet
     Dim gestionoperation As New OleDbCommandBuilder
     Dim position, table, ctrTable, min, max As Integer
     Dim NomTable(), NomtableTout() As String
@@ -48,6 +48,15 @@ Public Class Xtreme
         daTypeProduit.SelectCommand = cmdTypeProdui
         daTypeProduit.Fill(dsTypeProduit, "Types_de_produit")
     End Sub
+    Sub ChargerDatasetFournisseur()
+        Dim cmdFournisseur As New OleDbCommand
+        dsFournisseur = New DataSet
+        cmdFournisseur = bd.cnconnexion.CreateCommand
+        cmdFournisseur.CommandText = "Select ID_fournisseur,Nom_du_fournisseur from Fournisseurs"
+        daFournisseur.SelectCommand = cmdFournisseur
+        daFournisseur.Fill(dsFournisseur, "Fournisseurs")
+    End Sub
+
     Sub RemplirControles()
         Dim ctr2 As Integer
         For ctr As Integer = min To max
@@ -67,6 +76,13 @@ Public Class Xtreme
             For c As Integer = 0 To dsTypeProduit.Tables(0).Rows.Count - 1
                 If dsTypeProduit.Tables(0).Rows(c).Item(0) = listeTXT(table)(5).text Then
                     listeTXT(table)(5).text = dsTypeProduit.Tables(0).Rows(c).Item(1)
+                    Exit For
+                End If
+            Next
+            ChargerDatasetFournisseur()
+            For c As Integer = 0 To dsFournisseur.Tables(0).Rows.Count - 1
+                If dsFournisseur.Tables(0).Rows(c).Item(0) = listeTXT(table)(7).text Then
+                    listeTXT(table)(7).text = dsFournisseur.Tables(0).Rows(c).Item(1)
                     Exit For
                 End If
             Next
@@ -151,6 +167,7 @@ Public Class Xtreme
     Private Sub btn_Ajouter_Click(sender As Object, e As EventArgs) Handles btn_Ajouter.Click
         Dim b As Boolean
         If sender.text = "Ajouter" Then
+            EnableDurantoption(False)
             Select Case cbx_Nomtable.Text
                 Case "Clients", "Employés"
                     vider(dsXtreme.Tables(0).Columns.Count - 4)
@@ -160,6 +177,7 @@ Public Class Xtreme
             sender.text = "Enregistrer"
             btnOption(True, False, False, True)
         Else
+            EnableDurantoption(True)
             For c As Integer = 0 To dsXtreme.Tables(0).Columns.Count - 4
                 If listeTXT(table)(c).text Like "" Then
                     b = False
@@ -208,7 +226,7 @@ Public Class Xtreme
 #Region "Bouton Modifier"
 
     Private Sub btnModifier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Modifier.Click
-
+        EnableDurantoption(False)
         If sender.text = "Modifier" Then
             cbx_typeProduit.Items.Clear()
 
@@ -216,9 +234,15 @@ Public Class Xtreme
                 For c As Integer = 0 To dsTypeProduit.Tables(0).Rows.Count - 1
                     cbx_typeProduit.Items.Add(dsTypeProduit.Tables(0).Rows(c).Item(1))
                 Next
+                For c As Integer = 0 To dsFournisseur.Tables(0).Rows.Count - 1
+                    cbx_fournisseur.Items.Add(dsFournisseur.Tables(0).Rows(c).Item(1))
+                Next
                 listeTXT(table)(5).visible = False
                 cbx_typeProduit.Visible = True
                 cbx_typeProduit.Text = listeTXT(table)(5).text
+                listeTXT(table)(7).visible = False
+                cbx_fournisseur.Visible = True
+                cbx_fournisseur.Text = listeTXT(table)(5).text
                 btn_Ajouter_type_prod.Visible = True
             End If
             btn_Modifier.Text = "Enregistrer"
@@ -226,8 +250,11 @@ Public Class Xtreme
         Else
             If table = 2 Then
                 listeTXT(table)(5).visible = True
+                listeTXT(table)(7).visible = True
                 listeTXT(table)(5).text = cbx_typeProduit.Text
                 cbx_typeProduit.Visible = False
+                cbx_fournisseur.Visible = False
+                listeTXT(table)(7).text = cbx_fournisseur.Text
             End If
             btn_Modifier.Text = "Modifier"
             Select Case cbx_Nomtable.Text
@@ -236,6 +263,7 @@ Public Class Xtreme
                 Case "Fournisseurs", "Produits"
                     modifier(dsXtreme.Tables(0).Columns.Count - 3, 1)
             End Select
+            EnableDurantoption(True)
             btnOption(True, True, True, False)
             'miseAjourBD()
         End If
@@ -249,6 +277,13 @@ Public Class Xtreme
                 For c2 As Integer = 0 To dsTypeProduit.Tables(0).Rows.Count - 1
                     If dsTypeProduit.Tables(0).Rows(c2).Item(1) = listeTXT(table)(5).text Then
                         dsXtreme.Tables(0).Rows(position).Item(min) = dsTypeProduit.Tables(0).Rows(c2).Item(0)
+                        Exit For
+                    End If
+                Next
+            ElseIf table = 2 And c = 7 Then
+                For c2 As Integer = 0 To dsFournisseur.Tables(0).Rows.Count - 1
+                    If dsFournisseur.Tables(0).Rows(c2).Item(1) = listeTXT(table)(7).text Then
+                        dsXtreme.Tables(0).Rows(position).Item(min) = dsFournisseur.Tables(0).Rows(c2).Item(0)
                         Exit For
                     End If
                 Next
@@ -270,6 +305,7 @@ Public Class Xtreme
         Select Case sender.text
             Case "Oui"
                 dsXtreme.Tables(0).Rows(position).Item(dsXtreme.Tables(0).Columns.Count - 1) = False
+                btnOption(True, True, True, False)
                 'miseAjourBD()bite
             Case "Non"
                 annuler()
