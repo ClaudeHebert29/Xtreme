@@ -5,14 +5,17 @@ Public Class Xtreme
     Dim dsXtreme, dsTypeProduit, dsFournisseur As New DataSet
     Dim gestionoperation As New OleDbCommandBuilder
     Dim position, table, ctrTable, min, max As Integer
-    Dim NomTable(), NomtableTout() As String
+    Dim NomTable(), NomtableTout(), nomColonne() As String
     Dim listeTXT_Client(), listeTXT_Four(), listeTXT_Produit(), listeTXT_Employes(), listeTXT_Type_Produit() As TextBox
     Dim listeTXT As Object()
     Dim listPanel() As Panel
 #Region "Load"
+
     Private Sub Xtreme_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        PictureBox1.BackgroundImage = Image.FromFile("travail.png")
         NomtableTout = {"Achats", "Adresses des employés", "Clients", "Commandes", "Détails des commandes", "Employés", "Fournisseurs", "Info Xtreme", "Produits", "Régions", "Types de produit"}
         NomTable = {"Clients", "Fournisseurs", "Produits", "Employés", "Types de produit"}
+        nomColonne = {"Nom_du_client", "Nom_du_fournisseur", "Nom_du_produit", "Nom"}
         listeTXT_Four = {txt_four_1, txt_four_2, Txt_four_3, Txt_four_4, Txt_four_5, Txt_four_7, txt_four_6, Txt_four_8}
         listeTXT_Produit = {Txt_prod_1, Txt_prod_2, Txt_prod_3, Txt_prod_4, Txt_prod_5, Txt_prod_6, Txt_prod_7, Txt_prod_8}
         listeTXT_Employes = {Txt_Emp_1, Txt_Emp_2, Txt_Emp_3, Txt_Emp_4, Txt_Emp_5, Txt_Emp_6, Txt_Emp_7, txt_Emp_10, Txt_Emp_8, Txt_Emp_9, Txt_Emp_11, Txt_Emp_12, Txt_Emp_16, Txt_Emp_13, Txt_Emp_14, Txt_Emp_15}
@@ -25,6 +28,7 @@ Public Class Xtreme
         bd.Deconnexion()
         Btn_Element_Bloquer(False, False, False, False)
         btnOption(False, False, False, False)
+        TPVisiblePas(False)
         For c As Integer = 0 To 3
             cbx_Nomtable.Items.Add(NomTable(c))
         Next
@@ -35,7 +39,7 @@ Public Class Xtreme
         Dim cmdXtreme As New OleDbCommand
         dsXtreme = New DataSet
         cmdXtreme = bd.cnconnexion.CreateCommand
-        cmdXtreme.CommandText = "Select * from " & NomTable(table) '& "where Actif = true"
+        cmdXtreme.CommandText = "Select * from " & NomTable(table) '& "order by " & nomColonne(table) & " asc"
         daXtreme.SelectCommand = cmdXtreme
         daXtreme.Fill(dsXtreme, NomTable(table))
         btnOption(True, True, True, False)
@@ -150,7 +154,7 @@ Public Class Xtreme
                 RemplirControles()
                 Exit For
             ElseIf ctr = 4 Then
-                MsgBox("Erreur")
+                MsgBox("Voyez selectionner une table.")
                 Exit For
             End If
         Next
@@ -505,6 +509,7 @@ Public Class Xtreme
         cbx_typeProduit.Visible = b_cbx
         cbx_fournisseur.Visible = b_cbx
         btn_Ajouter_type_prod.Visible = b_cbx
+        lab_TypeProd.Visible = b_cbx
         If b = True Then
             cbx_typeProduit.Text = listeTXT(table)(5).text
             cbx_fournisseur.Text = listeTXT(table)(7).text
@@ -540,8 +545,6 @@ Public Class Xtreme
             c.ReadOnly = b
         Next
     End Sub
-
-
 
 End Class
 

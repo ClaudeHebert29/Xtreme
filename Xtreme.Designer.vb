@@ -22,6 +22,7 @@ Partial Class Xtreme
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Xtreme))
         Me.btn_ElementLast = New System.Windows.Forms.Button()
         Me.btn_ElementNext = New System.Windows.Forms.Button()
         Me.btn_ElementPreview = New System.Windows.Forms.Button()
@@ -61,6 +62,11 @@ Partial Class Xtreme
         Me.cbx_Nomtable = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Pan_employer = New System.Windows.Forms.Panel()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.dtp_Embauche = New System.Windows.Forms.DateTimePicker()
+        Me.dtp_Naissance = New System.Windows.Forms.DateTimePicker()
         Me.cbx_Sup = New System.Windows.Forms.ComboBox()
         Me.Txt_Emp_16 = New System.Windows.Forms.TextBox()
         Me.Label33 = New System.Windows.Forms.Label()
@@ -95,7 +101,7 @@ Partial Class Xtreme
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Pan_produit = New System.Windows.Forms.Panel()
-        Me.cbx_fournisseur = New System.Windows.Forms.ComboBox()
+        Me.lab_TypeProd = New System.Windows.Forms.Label()
         Me.btn_Ajouter_type_prod = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Txt_prod_1 = New System.Windows.Forms.TextBox()
@@ -112,9 +118,11 @@ Partial Class Xtreme
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.cbx_typeProduit = New System.Windows.Forms.ComboBox()
         Me.Txt_prod_6 = New System.Windows.Forms.TextBox()
+        Me.cbx_typeProduit = New System.Windows.Forms.ComboBox()
+        Me.cbx_fournisseur = New System.Windows.Forms.ComboBox()
         Me.pan_Fournisseur = New System.Windows.Forms.Panel()
+        Me.Label42 = New System.Windows.Forms.Label()
         Me.txt_four_6 = New System.Windows.Forms.TextBox()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -146,21 +154,33 @@ Partial Class Xtreme
         Me.Txt_Type_Prod_3 = New System.Windows.Forms.TextBox()
         Me.Txt_Type_Prod_4 = New System.Windows.Forms.TextBox()
         Me.Pan_Type_produit = New System.Windows.Forms.Panel()
+        Me.Label41 = New System.Windows.Forms.Label()
         Me.btn_annuler_tp = New System.Windows.Forms.Button()
         Me.btn_Enregistrer_Type = New System.Windows.Forms.Button()
-        Me.dtp_Naissance = New System.Windows.Forms.DateTimePicker()
-        Me.dtp_Embauche = New System.Windows.Forms.DateTimePicker()
+        Me.tbc_Menu = New System.Windows.Forms.TabControl()
+        Me.tabMenu = New System.Windows.Forms.TabPage()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.tabGestionTable = New System.Windows.Forms.TabPage()
+        Me.tabCommandes = New System.Windows.Forms.TabPage()
+        Me.tabRechGene = New System.Windows.Forms.TabPage()
+        Me.tabRechProduit = New System.Windows.Forms.TabPage()
+        Me.Label43 = New System.Windows.Forms.Label()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_produit.SuspendLayout()
         Me.pan_Fournisseur.SuspendLayout()
         Me.gbx_sup.SuspendLayout()
         Me.Pan_Type_produit.SuspendLayout()
+        Me.tbc_Menu.SuspendLayout()
+        Me.tabMenu.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabGestionTable.SuspendLayout()
         Me.SuspendLayout()
         '
         'btn_ElementLast
         '
-        Me.btn_ElementLast.Location = New System.Drawing.Point(254, 326)
+        Me.btn_ElementLast.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btn_ElementLast.Location = New System.Drawing.Point(410, 396)
         Me.btn_ElementLast.Name = "btn_ElementLast"
         Me.btn_ElementLast.Size = New System.Drawing.Size(75, 23)
         Me.btn_ElementLast.TabIndex = 18
@@ -169,7 +189,8 @@ Partial Class Xtreme
         '
         'btn_ElementNext
         '
-        Me.btn_ElementNext.Location = New System.Drawing.Point(173, 326)
+        Me.btn_ElementNext.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btn_ElementNext.Location = New System.Drawing.Point(329, 396)
         Me.btn_ElementNext.Name = "btn_ElementNext"
         Me.btn_ElementNext.Size = New System.Drawing.Size(75, 23)
         Me.btn_ElementNext.TabIndex = 17
@@ -178,7 +199,8 @@ Partial Class Xtreme
         '
         'btn_ElementPreview
         '
-        Me.btn_ElementPreview.Location = New System.Drawing.Point(92, 326)
+        Me.btn_ElementPreview.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btn_ElementPreview.Location = New System.Drawing.Point(248, 396)
         Me.btn_ElementPreview.Name = "btn_ElementPreview"
         Me.btn_ElementPreview.Size = New System.Drawing.Size(75, 23)
         Me.btn_ElementPreview.TabIndex = 16
@@ -187,7 +209,8 @@ Partial Class Xtreme
         '
         'btn_ElementFirst
         '
-        Me.btn_ElementFirst.Location = New System.Drawing.Point(12, 326)
+        Me.btn_ElementFirst.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btn_ElementFirst.Location = New System.Drawing.Point(168, 396)
         Me.btn_ElementFirst.Name = "btn_ElementFirst"
         Me.btn_ElementFirst.Size = New System.Drawing.Size(75, 23)
         Me.btn_ElementFirst.TabIndex = 15
@@ -226,16 +249,16 @@ Partial Class Xtreme
         Me.pan_clients.Controls.Add(Me.Lab_adresse2)
         Me.pan_clients.Controls.Add(Me.Lab_vente)
         Me.pan_clients.Controls.Add(Me.Lab_adresse)
-        Me.pan_clients.Location = New System.Drawing.Point(11, 55)
+        Me.pan_clients.Location = New System.Drawing.Point(7, 48)
         Me.pan_clients.Name = "pan_clients"
-        Me.pan_clients.Size = New System.Drawing.Size(775, 266)
+        Me.pan_clients.Size = New System.Drawing.Size(979, 324)
         Me.pan_clients.TabIndex = 44
         Me.pan_clients.Visible = False
         '
         'Lab_nom
         '
         Me.Lab_nom.AutoSize = True
-        Me.Lab_nom.Location = New System.Drawing.Point(20, 21)
+        Me.Lab_nom.Location = New System.Drawing.Point(180, 30)
         Me.Lab_nom.Name = "Lab_nom"
         Me.Lab_nom.Size = New System.Drawing.Size(72, 13)
         Me.Lab_nom.TabIndex = 20
@@ -244,7 +267,7 @@ Partial Class Xtreme
         'Lab_region
         '
         Me.Lab_region.AutoSize = True
-        Me.Lab_region.Location = New System.Drawing.Point(372, 20)
+        Me.Lab_region.Location = New System.Drawing.Point(695, 180)
         Me.Lab_region.Name = "Lab_region"
         Me.Lab_region.Size = New System.Drawing.Size(41, 13)
         Me.Lab_region.TabIndex = 42
@@ -252,99 +275,99 @@ Partial Class Xtreme
         '
         'txt_Clients_1
         '
-        Me.txt_Clients_1.Location = New System.Drawing.Point(160, 18)
+        Me.txt_Clients_1.Location = New System.Drawing.Point(180, 50)
         Me.txt_Clients_1.Name = "txt_Clients_1"
-        Me.txt_Clients_1.Size = New System.Drawing.Size(167, 20)
+        Me.txt_Clients_1.Size = New System.Drawing.Size(136, 20)
         Me.txt_Clients_1.TabIndex = 0
         '
         'txt_Clients_10
         '
-        Me.txt_Clients_10.Location = New System.Drawing.Point(511, 17)
+        Me.txt_Clients_10.Location = New System.Drawing.Point(695, 200)
         Me.txt_Clients_10.Name = "txt_Clients_10"
-        Me.txt_Clients_10.Size = New System.Drawing.Size(168, 20)
+        Me.txt_Clients_10.Size = New System.Drawing.Size(145, 20)
         Me.txt_Clients_10.TabIndex = 41
         '
         'txt_Clients_2
         '
-        Me.txt_Clients_2.Location = New System.Drawing.Point(160, 44)
+        Me.txt_Clients_2.Location = New System.Drawing.Point(350, 50)
         Me.txt_Clients_2.Name = "txt_Clients_2"
-        Me.txt_Clients_2.Size = New System.Drawing.Size(168, 20)
+        Me.txt_Clients_2.Size = New System.Drawing.Size(128, 20)
         Me.txt_Clients_2.TabIndex = 1
         '
         'txt_Clients_15
         '
-        Me.txt_Clients_15.Location = New System.Drawing.Point(512, 147)
+        Me.txt_Clients_15.Location = New System.Drawing.Point(350, 250)
         Me.txt_Clients_15.Name = "txt_Clients_15"
-        Me.txt_Clients_15.Size = New System.Drawing.Size(167, 20)
+        Me.txt_Clients_15.Size = New System.Drawing.Size(127, 20)
         Me.txt_Clients_15.TabIndex = 40
         '
         'txt_Clients_3
         '
-        Me.txt_Clients_3.Location = New System.Drawing.Point(160, 73)
+        Me.txt_Clients_3.Location = New System.Drawing.Point(180, 100)
         Me.txt_Clients_3.Name = "txt_Clients_3"
-        Me.txt_Clients_3.Size = New System.Drawing.Size(168, 20)
+        Me.txt_Clients_3.Size = New System.Drawing.Size(136, 20)
         Me.txt_Clients_3.TabIndex = 2
         '
         'txt_Clients_13
         '
-        Me.txt_Clients_13.Location = New System.Drawing.Point(512, 95)
+        Me.txt_Clients_13.Location = New System.Drawing.Point(180, 200)
         Me.txt_Clients_13.Name = "txt_Clients_13"
-        Me.txt_Clients_13.Size = New System.Drawing.Size(167, 20)
+        Me.txt_Clients_13.Size = New System.Drawing.Size(136, 20)
         Me.txt_Clients_13.TabIndex = 39
         '
         'txt_Clients_4
         '
-        Me.txt_Clients_4.Location = New System.Drawing.Point(160, 99)
+        Me.txt_Clients_4.Location = New System.Drawing.Point(350, 100)
         Me.txt_Clients_4.Name = "txt_Clients_4"
-        Me.txt_Clients_4.Size = New System.Drawing.Size(167, 20)
+        Me.txt_Clients_4.Size = New System.Drawing.Size(39, 20)
         Me.txt_Clients_4.TabIndex = 3
         '
         'txt_Clients_14
         '
-        Me.txt_Clients_14.Location = New System.Drawing.Point(512, 121)
+        Me.txt_Clients_14.Location = New System.Drawing.Point(180, 250)
         Me.txt_Clients_14.Name = "txt_Clients_14"
-        Me.txt_Clients_14.Size = New System.Drawing.Size(167, 20)
+        Me.txt_Clients_14.Size = New System.Drawing.Size(136, 20)
         Me.txt_Clients_14.TabIndex = 38
         '
         'txt_Clients_5
         '
-        Me.txt_Clients_5.Location = New System.Drawing.Point(160, 125)
+        Me.txt_Clients_5.Location = New System.Drawing.Point(180, 150)
         Me.txt_Clients_5.Name = "txt_Clients_5"
-        Me.txt_Clients_5.Size = New System.Drawing.Size(168, 20)
+        Me.txt_Clients_5.Size = New System.Drawing.Size(136, 20)
         Me.txt_Clients_5.TabIndex = 4
         '
         'txt_Clients_12
         '
-        Me.txt_Clients_12.Location = New System.Drawing.Point(512, 69)
+        Me.txt_Clients_12.Location = New System.Drawing.Point(525, 150)
         Me.txt_Clients_12.Name = "txt_Clients_12"
-        Me.txt_Clients_12.Size = New System.Drawing.Size(167, 20)
+        Me.txt_Clients_12.Size = New System.Drawing.Size(136, 20)
         Me.txt_Clients_12.TabIndex = 37
         '
         'txt_Clients_6
         '
-        Me.txt_Clients_6.Location = New System.Drawing.Point(160, 151)
+        Me.txt_Clients_6.Location = New System.Drawing.Point(525, 250)
         Me.txt_Clients_6.Name = "txt_Clients_6"
-        Me.txt_Clients_6.Size = New System.Drawing.Size(168, 20)
+        Me.txt_Clients_6.Size = New System.Drawing.Size(136, 20)
         Me.txt_Clients_6.TabIndex = 5
         '
         'txt_Clients_11
         '
-        Me.txt_Clients_11.Location = New System.Drawing.Point(512, 43)
+        Me.txt_Clients_11.Location = New System.Drawing.Point(525, 200)
         Me.txt_Clients_11.Name = "txt_Clients_11"
-        Me.txt_Clients_11.Size = New System.Drawing.Size(167, 20)
+        Me.txt_Clients_11.Size = New System.Drawing.Size(136, 20)
         Me.txt_Clients_11.TabIndex = 36
         '
         'txt_Clients_7
         '
-        Me.txt_Clients_7.Location = New System.Drawing.Point(160, 177)
+        Me.txt_Clients_7.Location = New System.Drawing.Point(525, 100)
         Me.txt_Clients_7.Name = "txt_Clients_7"
-        Me.txt_Clients_7.Size = New System.Drawing.Size(168, 20)
+        Me.txt_Clients_7.Size = New System.Drawing.Size(136, 20)
         Me.txt_Clients_7.TabIndex = 6
         '
         'Lab_fax
         '
         Me.Lab_fax.AutoSize = True
-        Me.Lab_fax.Location = New System.Drawing.Point(372, 154)
+        Me.Lab_fax.Location = New System.Drawing.Point(350, 230)
         Me.Lab_fax.Name = "Lab_fax"
         Me.Lab_fax.Size = New System.Drawing.Size(24, 13)
         Me.Lab_fax.TabIndex = 34
@@ -352,15 +375,15 @@ Partial Class Xtreme
         '
         'txt_Clients_8
         '
-        Me.txt_Clients_8.Location = New System.Drawing.Point(160, 203)
+        Me.txt_Clients_8.Location = New System.Drawing.Point(695, 100)
         Me.txt_Clients_8.Name = "txt_Clients_8"
-        Me.txt_Clients_8.Size = New System.Drawing.Size(168, 20)
+        Me.txt_Clients_8.Size = New System.Drawing.Size(145, 20)
         Me.txt_Clients_8.TabIndex = 7
         '
         'Lab_telephone
         '
         Me.Lab_telephone.AutoSize = True
-        Me.Lab_telephone.Location = New System.Drawing.Point(372, 128)
+        Me.Lab_telephone.Location = New System.Drawing.Point(180, 230)
         Me.Lab_telephone.Name = "Lab_telephone"
         Me.Lab_telephone.Size = New System.Drawing.Size(58, 13)
         Me.Lab_telephone.TabIndex = 33
@@ -368,15 +391,15 @@ Partial Class Xtreme
         '
         'txt_Clients_9
         '
-        Me.txt_Clients_9.Location = New System.Drawing.Point(160, 229)
+        Me.txt_Clients_9.Location = New System.Drawing.Point(695, 150)
         Me.txt_Clients_9.Name = "txt_Clients_9"
-        Me.txt_Clients_9.Size = New System.Drawing.Size(168, 20)
+        Me.txt_Clients_9.Size = New System.Drawing.Size(145, 20)
         Me.txt_Clients_9.TabIndex = 8
         '
         'Lab_AElec
         '
         Me.Lab_AElec.AutoSize = True
-        Me.Lab_AElec.Location = New System.Drawing.Point(372, 102)
+        Me.Lab_AElec.Location = New System.Drawing.Point(180, 180)
         Me.Lab_AElec.Name = "Lab_AElec"
         Me.Lab_AElec.Size = New System.Drawing.Size(103, 13)
         Me.Lab_AElec.TabIndex = 32
@@ -385,7 +408,7 @@ Partial Class Xtreme
         'Lab_prenom
         '
         Me.Lab_prenom.AutoSize = True
-        Me.Lab_prenom.Location = New System.Drawing.Point(20, 48)
+        Me.Lab_prenom.Location = New System.Drawing.Point(350, 30)
         Me.Lab_prenom.Name = "Lab_prenom"
         Me.Lab_prenom.Size = New System.Drawing.Size(86, 13)
         Me.Lab_prenom.TabIndex = 21
@@ -394,7 +417,7 @@ Partial Class Xtreme
         'Lab_Cpostal
         '
         Me.Lab_Cpostal.AutoSize = True
-        Me.Lab_Cpostal.Location = New System.Drawing.Point(372, 76)
+        Me.Lab_Cpostal.Location = New System.Drawing.Point(525, 180)
         Me.Lab_Cpostal.Name = "Lab_Cpostal"
         Me.Lab_Cpostal.Size = New System.Drawing.Size(63, 13)
         Me.Lab_Cpostal.TabIndex = 31
@@ -403,7 +426,7 @@ Partial Class Xtreme
         'Lab_nomcontact
         '
         Me.Lab_nomcontact.AutoSize = True
-        Me.Lab_nomcontact.Location = New System.Drawing.Point(20, 77)
+        Me.Lab_nomcontact.Location = New System.Drawing.Point(180, 80)
         Me.Lab_nomcontact.Name = "Lab_nomcontact"
         Me.Lab_nomcontact.Size = New System.Drawing.Size(83, 13)
         Me.Lab_nomcontact.TabIndex = 22
@@ -412,7 +435,7 @@ Partial Class Xtreme
         'Lab_pays
         '
         Me.Lab_pays.AutoSize = True
-        Me.Lab_pays.Location = New System.Drawing.Point(372, 50)
+        Me.Lab_pays.Location = New System.Drawing.Point(525, 130)
         Me.Lab_pays.Name = "Lab_pays"
         Me.Lab_pays.Size = New System.Drawing.Size(30, 13)
         Me.Lab_pays.TabIndex = 30
@@ -421,7 +444,7 @@ Partial Class Xtreme
         'Lab_titre
         '
         Me.Lab_titre.AutoSize = True
-        Me.Lab_titre.Location = New System.Drawing.Point(20, 103)
+        Me.Lab_titre.Location = New System.Drawing.Point(350, 80)
         Me.Lab_titre.Name = "Lab_titre"
         Me.Lab_titre.Size = New System.Drawing.Size(28, 13)
         Me.Lab_titre.TabIndex = 23
@@ -430,7 +453,7 @@ Partial Class Xtreme
         'Lab_ville
         '
         Me.Lab_ville.AutoSize = True
-        Me.Lab_ville.Location = New System.Drawing.Point(20, 232)
+        Me.Lab_ville.Location = New System.Drawing.Point(695, 130)
         Me.Lab_ville.Name = "Lab_ville"
         Me.Lab_ville.Size = New System.Drawing.Size(26, 13)
         Me.Lab_ville.TabIndex = 28
@@ -439,7 +462,7 @@ Partial Class Xtreme
         'Lab_poste
         '
         Me.Lab_poste.AutoSize = True
-        Me.Lab_poste.Location = New System.Drawing.Point(20, 129)
+        Me.Lab_poste.Location = New System.Drawing.Point(180, 130)
         Me.Lab_poste.Name = "Lab_poste"
         Me.Lab_poste.Size = New System.Drawing.Size(76, 13)
         Me.Lab_poste.TabIndex = 24
@@ -448,7 +471,7 @@ Partial Class Xtreme
         'Lab_adresse2
         '
         Me.Lab_adresse2.AutoSize = True
-        Me.Lab_adresse2.Location = New System.Drawing.Point(20, 206)
+        Me.Lab_adresse2.Location = New System.Drawing.Point(695, 80)
         Me.Lab_adresse2.Name = "Lab_adresse2"
         Me.Lab_adresse2.Size = New System.Drawing.Size(54, 13)
         Me.Lab_adresse2.TabIndex = 27
@@ -457,7 +480,7 @@ Partial Class Xtreme
         'Lab_vente
         '
         Me.Lab_vente.AutoSize = True
-        Me.Lab_vente.Location = New System.Drawing.Point(20, 154)
+        Me.Lab_vente.Location = New System.Drawing.Point(525, 230)
         Me.Lab_vente.Name = "Lab_vente"
         Me.Lab_vente.Size = New System.Drawing.Size(127, 13)
         Me.Lab_vente.TabIndex = 25
@@ -466,7 +489,7 @@ Partial Class Xtreme
         'Lab_adresse
         '
         Me.Lab_adresse.AutoSize = True
-        Me.Lab_adresse.Location = New System.Drawing.Point(20, 180)
+        Me.Lab_adresse.Location = New System.Drawing.Point(525, 80)
         Me.Lab_adresse.Name = "Lab_adresse"
         Me.Lab_adresse.Size = New System.Drawing.Size(54, 13)
         Me.Lab_adresse.TabIndex = 26
@@ -474,7 +497,7 @@ Partial Class Xtreme
         '
         'btn_ChangerTable
         '
-        Me.btn_ChangerTable.Location = New System.Drawing.Point(140, 25)
+        Me.btn_ChangerTable.Location = New System.Drawing.Point(143, 19)
         Me.btn_ChangerTable.Name = "btn_ChangerTable"
         Me.btn_ChangerTable.Size = New System.Drawing.Size(27, 23)
         Me.btn_ChangerTable.TabIndex = 45
@@ -485,7 +508,7 @@ Partial Class Xtreme
         '
         Me.cbx_Nomtable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbx_Nomtable.FormattingEnabled = True
-        Me.cbx_Nomtable.Location = New System.Drawing.Point(13, 27)
+        Me.cbx_Nomtable.Location = New System.Drawing.Point(16, 21)
         Me.cbx_Nomtable.Name = "cbx_Nomtable"
         Me.cbx_Nomtable.Size = New System.Drawing.Size(121, 21)
         Me.cbx_Nomtable.TabIndex = 46
@@ -493,7 +516,7 @@ Partial Class Xtreme
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Location = New System.Drawing.Point(15, 3)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(34, 13)
         Me.Label1.TabIndex = 47
@@ -501,6 +524,9 @@ Partial Class Xtreme
         '
         'Pan_employer
         '
+        Me.Pan_employer.Controls.Add(Me.Label40)
+        Me.Pan_employer.Controls.Add(Me.Label39)
+        Me.Pan_employer.Controls.Add(Me.Label35)
         Me.Pan_employer.Controls.Add(Me.dtp_Embauche)
         Me.Pan_employer.Controls.Add(Me.dtp_Naissance)
         Me.Pan_employer.Controls.Add(Me.cbx_Sup)
@@ -536,16 +562,68 @@ Partial Class Xtreme
         Me.Pan_employer.Controls.Add(Me.Label27)
         Me.Pan_employer.Controls.Add(Me.Label29)
         Me.Pan_employer.Controls.Add(Me.Label30)
-        Me.Pan_employer.Location = New System.Drawing.Point(11, 54)
+        Me.Pan_employer.Location = New System.Drawing.Point(3, 48)
         Me.Pan_employer.Name = "Pan_employer"
-        Me.Pan_employer.Size = New System.Drawing.Size(773, 266)
+        Me.Pan_employer.Size = New System.Drawing.Size(980, 342)
         Me.Pan_employer.TabIndex = 48
         Me.Pan_employer.Visible = False
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.Location = New System.Drawing.Point(530, 2)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(158, 20)
+        Me.Label40.TabIndex = 61
+        Me.Label40.Text = "Information employer"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.Location = New System.Drawing.Point(174, 2)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(164, 20)
+        Me.Label39.TabIndex = 60
+        Me.Label39.Text = "Information personnel"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(171, 222)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(132, 20)
+        Me.Label35.TabIndex = 59
+        Me.Label35.Text = "En cas d'urgence"
+        '
+        'dtp_Embauche
+        '
+        Me.dtp_Embauche.Location = New System.Drawing.Point(530, 95)
+        Me.dtp_Embauche.MaxDate = New Date(2020, 1, 1, 0, 0, 0, 0)
+        Me.dtp_Embauche.MinDate = New Date(1940, 1, 1, 0, 0, 0, 0)
+        Me.dtp_Embauche.Name = "dtp_Embauche"
+        Me.dtp_Embauche.Size = New System.Drawing.Size(139, 20)
+        Me.dtp_Embauche.TabIndex = 58
+        Me.dtp_Embauche.Value = New Date(2017, 3, 17, 16, 15, 3, 0)
+        Me.dtp_Embauche.Visible = False
+        '
+        'dtp_Naissance
+        '
+        Me.dtp_Naissance.Location = New System.Drawing.Point(175, 95)
+        Me.dtp_Naissance.MaxDate = New Date(2017, 3, 17, 0, 0, 0, 0)
+        Me.dtp_Naissance.MinDate = New Date(1910, 1, 1, 0, 0, 0, 0)
+        Me.dtp_Naissance.Name = "dtp_Naissance"
+        Me.dtp_Naissance.Size = New System.Drawing.Size(131, 20)
+        Me.dtp_Naissance.TabIndex = 57
+        Me.dtp_Naissance.Value = New Date(2017, 3, 17, 0, 0, 0, 0)
+        Me.dtp_Naissance.Visible = False
         '
         'cbx_Sup
         '
         Me.cbx_Sup.FormattingEnabled = True
-        Me.cbx_Sup.Location = New System.Drawing.Point(157, 225)
+        Me.cbx_Sup.Location = New System.Drawing.Point(530, 145)
         Me.cbx_Sup.Name = "cbx_Sup"
         Me.cbx_Sup.Size = New System.Drawing.Size(166, 21)
         Me.cbx_Sup.TabIndex = 56
@@ -553,23 +631,23 @@ Partial Class Xtreme
         '
         'Txt_Emp_16
         '
-        Me.Txt_Emp_16.Location = New System.Drawing.Point(490, 140)
+        Me.Txt_Emp_16.Location = New System.Drawing.Point(330, 265)
         Me.Txt_Emp_16.Name = "Txt_Emp_16"
-        Me.Txt_Emp_16.Size = New System.Drawing.Size(167, 20)
+        Me.Txt_Emp_16.Size = New System.Drawing.Size(123, 20)
         Me.Txt_Emp_16.TabIndex = 46
         '
         'Label33
         '
         Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(350, 147)
+        Me.Label33.Location = New System.Drawing.Point(330, 245)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(135, 13)
+        Me.Label33.Size = New System.Drawing.Size(43, 13)
         Me.Label33.TabIndex = 45
-        Me.Label33.Text = "En cas d'urgence - Prenom"
+        Me.Label33.Text = "Prenom"
         '
         'txt_Emp_10
         '
-        Me.txt_Emp_10.Location = New System.Drawing.Point(490, 45)
+        Me.txt_Emp_10.Location = New System.Drawing.Point(800, 45)
         Me.txt_Emp_10.Name = "txt_Emp_10"
         Me.txt_Emp_10.Size = New System.Drawing.Size(167, 20)
         Me.txt_Emp_10.TabIndex = 44
@@ -577,7 +655,7 @@ Partial Class Xtreme
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(450, 47)
+        Me.Label28.Location = New System.Drawing.Point(800, 25)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(34, 13)
         Me.Label28.TabIndex = 43
@@ -586,7 +664,7 @@ Partial Class Xtreme
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(18, 17)
+        Me.Label6.Location = New System.Drawing.Point(175, 25)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(74, 13)
         Me.Label6.TabIndex = 20
@@ -595,7 +673,7 @@ Partial Class Xtreme
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(18, 229)
+        Me.Label8.Location = New System.Drawing.Point(530, 125)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(113, 13)
         Me.Label8.TabIndex = 42
@@ -603,133 +681,135 @@ Partial Class Xtreme
         '
         'Txt_Emp_1
         '
-        Me.Txt_Emp_1.Location = New System.Drawing.Point(158, 14)
+        Me.Txt_Emp_1.Location = New System.Drawing.Point(330, 45)
         Me.Txt_Emp_1.Name = "Txt_Emp_1"
-        Me.Txt_Emp_1.Size = New System.Drawing.Size(167, 20)
+        Me.Txt_Emp_1.Size = New System.Drawing.Size(123, 20)
         Me.Txt_Emp_1.TabIndex = 0
         '
         'Txt_Emp_9
         '
-        Me.Txt_Emp_9.Location = New System.Drawing.Point(157, 226)
+        Me.Txt_Emp_9.Location = New System.Drawing.Point(530, 145)
         Me.Txt_Emp_9.Name = "Txt_Emp_9"
         Me.Txt_Emp_9.Size = New System.Drawing.Size(168, 20)
         Me.Txt_Emp_9.TabIndex = 41
         '
         'Txt_Emp_2
         '
-        Me.Txt_Emp_2.Location = New System.Drawing.Point(158, 40)
+        Me.Txt_Emp_2.Location = New System.Drawing.Point(175, 45)
         Me.Txt_Emp_2.Name = "Txt_Emp_2"
-        Me.Txt_Emp_2.Size = New System.Drawing.Size(168, 20)
+        Me.Txt_Emp_2.Size = New System.Drawing.Size(131, 20)
         Me.Txt_Emp_2.TabIndex = 1
         '
         'Txt_Emp_15
         '
-        Me.Txt_Emp_15.Location = New System.Drawing.Point(529, 222)
+        Me.Txt_Emp_15.Location = New System.Drawing.Point(175, 315)
         Me.Txt_Emp_15.Name = "Txt_Emp_15"
-        Me.Txt_Emp_15.Size = New System.Drawing.Size(167, 20)
+        Me.Txt_Emp_15.Size = New System.Drawing.Size(131, 20)
         Me.Txt_Emp_15.TabIndex = 40
         '
         'Txt_Emp_3
         '
-        Me.Txt_Emp_3.Location = New System.Drawing.Point(158, 69)
+        Me.Txt_Emp_3.Location = New System.Drawing.Point(530, 45)
         Me.Txt_Emp_3.Name = "Txt_Emp_3"
         Me.Txt_Emp_3.Size = New System.Drawing.Size(168, 20)
         Me.Txt_Emp_3.TabIndex = 2
         '
         'Txt_Emp_13
         '
-        Me.Txt_Emp_13.Location = New System.Drawing.Point(490, 166)
+        Me.Txt_Emp_13.Location = New System.Drawing.Point(175, 265)
         Me.Txt_Emp_13.Name = "Txt_Emp_13"
-        Me.Txt_Emp_13.Size = New System.Drawing.Size(167, 20)
+        Me.Txt_Emp_13.Size = New System.Drawing.Size(130, 20)
         Me.Txt_Emp_13.TabIndex = 39
         '
         'Txt_Emp_4
         '
-        Me.Txt_Emp_4.Location = New System.Drawing.Point(158, 95)
+        Me.Txt_Emp_4.Location = New System.Drawing.Point(175, 95)
         Me.Txt_Emp_4.Name = "Txt_Emp_4"
-        Me.Txt_Emp_4.Size = New System.Drawing.Size(167, 20)
+        Me.Txt_Emp_4.Size = New System.Drawing.Size(130, 20)
         Me.Txt_Emp_4.TabIndex = 3
         '
         'Txt_Emp_14
         '
-        Me.Txt_Emp_14.Location = New System.Drawing.Point(529, 196)
+        Me.Txt_Emp_14.Location = New System.Drawing.Point(330, 315)
         Me.Txt_Emp_14.Name = "Txt_Emp_14"
-        Me.Txt_Emp_14.Size = New System.Drawing.Size(167, 20)
+        Me.Txt_Emp_14.Size = New System.Drawing.Size(123, 20)
         Me.Txt_Emp_14.TabIndex = 38
         '
         'Txt_Emp_5
         '
-        Me.Txt_Emp_5.Location = New System.Drawing.Point(158, 121)
+        Me.Txt_Emp_5.Location = New System.Drawing.Point(530, 95)
         Me.Txt_Emp_5.Name = "Txt_Emp_5"
-        Me.Txt_Emp_5.Size = New System.Drawing.Size(168, 20)
+        Me.Txt_Emp_5.Size = New System.Drawing.Size(139, 20)
         Me.Txt_Emp_5.TabIndex = 4
         '
         'Txt_Emp_12
         '
-        Me.Txt_Emp_12.Location = New System.Drawing.Point(490, 103)
+        Me.Txt_Emp_12.Location = New System.Drawing.Point(175, 195)
         Me.Txt_Emp_12.Name = "Txt_Emp_12"
-        Me.Txt_Emp_12.Size = New System.Drawing.Size(167, 20)
+        Me.Txt_Emp_12.Size = New System.Drawing.Size(131, 20)
         Me.Txt_Emp_12.TabIndex = 37
         '
         'Txt_Emp_6
         '
-        Me.Txt_Emp_6.Location = New System.Drawing.Point(158, 147)
+        Me.Txt_Emp_6.Location = New System.Drawing.Point(175, 145)
         Me.Txt_Emp_6.Name = "Txt_Emp_6"
-        Me.Txt_Emp_6.Size = New System.Drawing.Size(168, 20)
+        Me.Txt_Emp_6.Size = New System.Drawing.Size(130, 20)
         Me.Txt_Emp_6.TabIndex = 5
         '
         'Txt_Emp_11
         '
-        Me.Txt_Emp_11.Location = New System.Drawing.Point(490, 77)
+        Me.Txt_Emp_11.Location = New System.Drawing.Point(530, 195)
         Me.Txt_Emp_11.Name = "Txt_Emp_11"
         Me.Txt_Emp_11.Size = New System.Drawing.Size(167, 20)
         Me.Txt_Emp_11.TabIndex = 36
         '
         'Txt_Emp_7
         '
-        Me.Txt_Emp_7.Location = New System.Drawing.Point(158, 173)
+        Me.Txt_Emp_7.Location = New System.Drawing.Point(330, 145)
         Me.Txt_Emp_7.Name = "Txt_Emp_7"
-        Me.Txt_Emp_7.Size = New System.Drawing.Size(168, 20)
+        Me.Txt_Emp_7.Size = New System.Drawing.Size(123, 20)
         Me.Txt_Emp_7.TabIndex = 6
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(350, 225)
+        Me.Label10.Location = New System.Drawing.Point(175, 295)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(150, 13)
+        Me.Label10.Size = New System.Drawing.Size(58, 13)
         Me.Label10.TabIndex = 34
-        Me.Label10.Text = "En cas d'urgence - Telephone"
+        Me.Label10.Text = "Telephone"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(350, 199)
+        Me.Label12.Location = New System.Drawing.Point(330, 295)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(173, 13)
+        Me.Label12.Size = New System.Drawing.Size(81, 13)
         Me.Label12.TabIndex = 33
-        Me.Label12.Text = "En cas d'urgence - Lien de parente"
+        Me.Label12.Text = "Lien de parente"
         '
         'Txt_Emp_8
         '
-        Me.Txt_Emp_8.Location = New System.Drawing.Point(157, 200)
+        Me.Txt_Emp_8.Location = New System.Drawing.Point(530, 250)
+        Me.Txt_Emp_8.Multiline = True
         Me.Txt_Emp_8.Name = "Txt_Emp_8"
-        Me.Txt_Emp_8.Size = New System.Drawing.Size(168, 20)
+        Me.Txt_Emp_8.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.Txt_Emp_8.Size = New System.Drawing.Size(412, 85)
         Me.Txt_Emp_8.TabIndex = 8
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(350, 173)
+        Me.Label14.Location = New System.Drawing.Point(175, 245)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(121, 13)
+        Me.Label14.Size = New System.Drawing.Size(29, 13)
         Me.Label14.TabIndex = 32
-        Me.Label14.Text = "En cas d'urgence - Nom"
+        Me.Label14.Text = "Nom"
         '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(18, 44)
+        Me.Label16.Location = New System.Drawing.Point(330, 25)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(43, 13)
         Me.Label16.TabIndex = 21
@@ -738,7 +818,7 @@ Partial Class Xtreme
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(350, 110)
+        Me.Label18.Location = New System.Drawing.Point(175, 175)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(135, 13)
         Me.Label18.TabIndex = 31
@@ -747,7 +827,7 @@ Partial Class Xtreme
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(18, 73)
+        Me.Label23.Location = New System.Drawing.Point(530, 25)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(76, 13)
         Me.Label23.TabIndex = 22
@@ -756,7 +836,7 @@ Partial Class Xtreme
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(441, 84)
+        Me.Label24.Location = New System.Drawing.Point(530, 175)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(39, 13)
         Me.Label24.TabIndex = 30
@@ -765,7 +845,7 @@ Partial Class Xtreme
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(18, 99)
+        Me.Label25.Location = New System.Drawing.Point(175, 75)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(96, 13)
         Me.Label25.TabIndex = 23
@@ -774,16 +854,17 @@ Partial Class Xtreme
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(17, 203)
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(530, 225)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(35, 13)
+        Me.Label26.Size = New System.Drawing.Size(51, 20)
         Me.Label26.TabIndex = 28
         Me.Label26.Text = "Notes"
         '
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(18, 125)
+        Me.Label27.Location = New System.Drawing.Point(530, 75)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(91, 13)
         Me.Label27.TabIndex = 24
@@ -792,7 +873,7 @@ Partial Class Xtreme
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(18, 150)
+        Me.Label29.Location = New System.Drawing.Point(175, 125)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(107, 13)
         Me.Label29.TabIndex = 25
@@ -801,7 +882,7 @@ Partial Class Xtreme
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(18, 176)
+        Me.Label30.Location = New System.Drawing.Point(330, 125)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(34, 13)
         Me.Label30.TabIndex = 26
@@ -809,7 +890,8 @@ Partial Class Xtreme
         '
         'Pan_produit
         '
-        Me.Pan_produit.Controls.Add(Me.cbx_fournisseur)
+        Me.Pan_produit.Controls.Add(Me.Label43)
+        Me.Pan_produit.Controls.Add(Me.lab_TypeProd)
         Me.Pan_produit.Controls.Add(Me.btn_Ajouter_type_prod)
         Me.Pan_produit.Controls.Add(Me.Label2)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_1)
@@ -826,28 +908,30 @@ Partial Class Xtreme
         Me.Pan_produit.Controls.Add(Me.Label20)
         Me.Pan_produit.Controls.Add(Me.Label21)
         Me.Pan_produit.Controls.Add(Me.Label22)
-        Me.Pan_produit.Controls.Add(Me.cbx_typeProduit)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_6)
-        Me.Pan_produit.Location = New System.Drawing.Point(5, 56)
+        Me.Pan_produit.Controls.Add(Me.cbx_typeProduit)
+        Me.Pan_produit.Controls.Add(Me.cbx_fournisseur)
+        Me.Pan_produit.Location = New System.Drawing.Point(7, 48)
         Me.Pan_produit.Name = "Pan_produit"
-        Me.Pan_produit.Size = New System.Drawing.Size(781, 265)
+        Me.Pan_produit.Size = New System.Drawing.Size(972, 324)
         Me.Pan_produit.TabIndex = 47
         Me.Pan_produit.Visible = False
         '
-        'cbx_fournisseur
+        'lab_TypeProd
         '
-        Me.cbx_fournisseur.FormattingEnabled = True
-        Me.cbx_fournisseur.Location = New System.Drawing.Point(158, 199)
-        Me.cbx_fournisseur.Name = "cbx_fournisseur"
-        Me.cbx_fournisseur.Size = New System.Drawing.Size(166, 21)
-        Me.cbx_fournisseur.TabIndex = 56
-        Me.cbx_fournisseur.Visible = False
+        Me.lab_TypeProd.AutoSize = True
+        Me.lab_TypeProd.Location = New System.Drawing.Point(699, 112)
+        Me.lab_TypeProd.Name = "lab_TypeProd"
+        Me.lab_TypeProd.Size = New System.Drawing.Size(128, 13)
+        Me.lab_TypeProd.TabIndex = 57
+        Me.lab_TypeProd.Text = "Ajouter un type de produit"
+        Me.lab_TypeProd.Visible = False
         '
         'btn_Ajouter_type_prod
         '
-        Me.btn_Ajouter_type_prod.Location = New System.Drawing.Point(335, 146)
+        Me.btn_Ajouter_type_prod.Location = New System.Drawing.Point(735, 130)
         Me.btn_Ajouter_type_prod.Name = "btn_Ajouter_type_prod"
-        Me.btn_Ajouter_type_prod.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Ajouter_type_prod.Size = New System.Drawing.Size(58, 23)
         Me.btn_Ajouter_type_prod.TabIndex = 54
         Me.btn_Ajouter_type_prod.Text = "Ajouter"
         Me.btn_Ajouter_type_prod.UseVisualStyleBackColor = True
@@ -856,7 +940,7 @@ Partial Class Xtreme
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 17)
+        Me.Label2.Location = New System.Drawing.Point(310, 60)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 13)
         Me.Label2.TabIndex = 20
@@ -864,49 +948,49 @@ Partial Class Xtreme
         '
         'Txt_prod_1
         '
-        Me.Txt_prod_1.Location = New System.Drawing.Point(158, 14)
+        Me.Txt_prod_1.Location = New System.Drawing.Point(310, 80)
         Me.Txt_prod_1.Name = "Txt_prod_1"
         Me.Txt_prod_1.Size = New System.Drawing.Size(167, 20)
         Me.Txt_prod_1.TabIndex = 0
         '
         'Txt_prod_2
         '
-        Me.Txt_prod_2.Location = New System.Drawing.Point(158, 40)
+        Me.Txt_prod_2.Location = New System.Drawing.Point(310, 130)
         Me.Txt_prod_2.Name = "Txt_prod_2"
         Me.Txt_prod_2.Size = New System.Drawing.Size(168, 20)
         Me.Txt_prod_2.TabIndex = 1
         '
         'Txt_prod_3
         '
-        Me.Txt_prod_3.Location = New System.Drawing.Point(158, 69)
+        Me.Txt_prod_3.Location = New System.Drawing.Point(310, 180)
         Me.Txt_prod_3.Name = "Txt_prod_3"
         Me.Txt_prod_3.Size = New System.Drawing.Size(168, 20)
         Me.Txt_prod_3.TabIndex = 2
         '
         'Txt_prod_4
         '
-        Me.Txt_prod_4.Location = New System.Drawing.Point(158, 95)
+        Me.Txt_prod_4.Location = New System.Drawing.Point(310, 230)
         Me.Txt_prod_4.Name = "Txt_prod_4"
         Me.Txt_prod_4.Size = New System.Drawing.Size(167, 20)
         Me.Txt_prod_4.TabIndex = 3
         '
         'Txt_prod_5
         '
-        Me.Txt_prod_5.Location = New System.Drawing.Point(158, 121)
+        Me.Txt_prod_5.Location = New System.Drawing.Point(520, 80)
         Me.Txt_prod_5.Name = "Txt_prod_5"
         Me.Txt_prod_5.Size = New System.Drawing.Size(168, 20)
         Me.Txt_prod_5.TabIndex = 4
         '
         'Txt_prod_7
         '
-        Me.Txt_prod_7.Location = New System.Drawing.Point(158, 173)
+        Me.Txt_prod_7.Location = New System.Drawing.Point(520, 180)
         Me.Txt_prod_7.Name = "Txt_prod_7"
         Me.Txt_prod_7.Size = New System.Drawing.Size(168, 20)
         Me.Txt_prod_7.TabIndex = 6
         '
         'Txt_prod_8
         '
-        Me.Txt_prod_8.Location = New System.Drawing.Point(158, 199)
+        Me.Txt_prod_8.Location = New System.Drawing.Point(520, 230)
         Me.Txt_prod_8.Name = "Txt_prod_8"
         Me.Txt_prod_8.Size = New System.Drawing.Size(168, 20)
         Me.Txt_prod_8.TabIndex = 7
@@ -914,7 +998,7 @@ Partial Class Xtreme
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(18, 44)
+        Me.Label13.Location = New System.Drawing.Point(310, 110)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(43, 13)
         Me.Label13.TabIndex = 21
@@ -923,7 +1007,7 @@ Partial Class Xtreme
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(18, 73)
+        Me.Label15.Location = New System.Drawing.Point(310, 160)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(32, 13)
         Me.Label15.TabIndex = 22
@@ -932,7 +1016,7 @@ Partial Class Xtreme
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(18, 99)
+        Me.Label17.Location = New System.Drawing.Point(310, 210)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(26, 13)
         Me.Label17.TabIndex = 23
@@ -941,7 +1025,7 @@ Partial Class Xtreme
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(18, 125)
+        Me.Label19.Location = New System.Drawing.Point(520, 60)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(71, 13)
         Me.Label19.TabIndex = 24
@@ -950,7 +1034,7 @@ Partial Class Xtreme
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(18, 202)
+        Me.Label20.Location = New System.Drawing.Point(520, 210)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(61, 13)
         Me.Label20.TabIndex = 27
@@ -959,39 +1043,49 @@ Partial Class Xtreme
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(18, 150)
+        Me.Label21.Location = New System.Drawing.Point(520, 110)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(89, 13)
+        Me.Label21.Size = New System.Drawing.Size(81, 13)
         Me.Label21.TabIndex = 25
-        Me.Label21.Text = "Id type de produit"
+        Me.Label21.Text = "Type de produit"
         '
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(18, 176)
+        Me.Label22.Location = New System.Drawing.Point(520, 160)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(88, 13)
         Me.Label22.TabIndex = 26
         Me.Label22.Text = "Classe du produit"
         '
-        'cbx_typeProduit
-        '
-        Me.cbx_typeProduit.FormattingEnabled = True
-        Me.cbx_typeProduit.Location = New System.Drawing.Point(158, 145)
-        Me.cbx_typeProduit.Name = "cbx_typeProduit"
-        Me.cbx_typeProduit.Size = New System.Drawing.Size(166, 21)
-        Me.cbx_typeProduit.TabIndex = 55
-        Me.cbx_typeProduit.Visible = False
-        '
         'Txt_prod_6
         '
-        Me.Txt_prod_6.Location = New System.Drawing.Point(158, 146)
+        Me.Txt_prod_6.Location = New System.Drawing.Point(520, 130)
         Me.Txt_prod_6.Name = "Txt_prod_6"
         Me.Txt_prod_6.Size = New System.Drawing.Size(168, 20)
         Me.Txt_prod_6.TabIndex = 5
         '
+        'cbx_typeProduit
+        '
+        Me.cbx_typeProduit.FormattingEnabled = True
+        Me.cbx_typeProduit.Location = New System.Drawing.Point(520, 130)
+        Me.cbx_typeProduit.Name = "cbx_typeProduit"
+        Me.cbx_typeProduit.Size = New System.Drawing.Size(168, 21)
+        Me.cbx_typeProduit.TabIndex = 55
+        Me.cbx_typeProduit.Visible = False
+        '
+        'cbx_fournisseur
+        '
+        Me.cbx_fournisseur.FormattingEnabled = True
+        Me.cbx_fournisseur.Location = New System.Drawing.Point(520, 230)
+        Me.cbx_fournisseur.Name = "cbx_fournisseur"
+        Me.cbx_fournisseur.Size = New System.Drawing.Size(168, 21)
+        Me.cbx_fournisseur.TabIndex = 56
+        Me.cbx_fournisseur.Visible = False
+        '
         'pan_Fournisseur
         '
+        Me.pan_Fournisseur.Controls.Add(Me.Label42)
         Me.pan_Fournisseur.Controls.Add(Me.txt_four_6)
         Me.pan_Fournisseur.Controls.Add(Me.Label32)
         Me.pan_Fournisseur.Controls.Add(Me.Label3)
@@ -1008,15 +1102,25 @@ Partial Class Xtreme
         Me.pan_Fournisseur.Controls.Add(Me.Label9)
         Me.pan_Fournisseur.Controls.Add(Me.Label11)
         Me.pan_Fournisseur.Controls.Add(Me.Label31)
-        Me.pan_Fournisseur.Location = New System.Drawing.Point(11, 54)
+        Me.pan_Fournisseur.Location = New System.Drawing.Point(6, 48)
         Me.pan_Fournisseur.Name = "pan_Fournisseur"
-        Me.pan_Fournisseur.Size = New System.Drawing.Size(775, 263)
+        Me.pan_Fournisseur.Size = New System.Drawing.Size(976, 324)
         Me.pan_Fournisseur.TabIndex = 49
         Me.pan_Fournisseur.Visible = False
         '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.Location = New System.Drawing.Point(296, 26)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(195, 20)
+        Me.Label42.TabIndex = 61
+        Me.Label42.Text = "Information du fournisseur"
+        '
         'txt_four_6
         '
-        Me.txt_four_6.Location = New System.Drawing.Point(158, 143)
+        Me.txt_four_6.Location = New System.Drawing.Point(300, 183)
         Me.txt_four_6.Name = "txt_four_6"
         Me.txt_four_6.Size = New System.Drawing.Size(168, 20)
         Me.txt_four_6.TabIndex = 27
@@ -1024,7 +1128,7 @@ Partial Class Xtreme
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(19, 169)
+        Me.Label32.Location = New System.Drawing.Point(300, 213)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(30, 13)
         Me.Label32.TabIndex = 28
@@ -1033,7 +1137,7 @@ Partial Class Xtreme
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(18, 17)
+        Me.Label3.Location = New System.Drawing.Point(300, 63)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(98, 13)
         Me.Label3.TabIndex = 20
@@ -1041,49 +1145,49 @@ Partial Class Xtreme
         '
         'txt_four_1
         '
-        Me.txt_four_1.Location = New System.Drawing.Point(158, 14)
+        Me.txt_four_1.Location = New System.Drawing.Point(300, 83)
         Me.txt_four_1.Name = "txt_four_1"
         Me.txt_four_1.Size = New System.Drawing.Size(167, 20)
         Me.txt_four_1.TabIndex = 0
         '
         'txt_four_2
         '
-        Me.txt_four_2.Location = New System.Drawing.Point(158, 40)
+        Me.txt_four_2.Location = New System.Drawing.Point(300, 133)
         Me.txt_four_2.Name = "txt_four_2"
         Me.txt_four_2.Size = New System.Drawing.Size(168, 20)
         Me.txt_four_2.TabIndex = 1
         '
         'Txt_four_3
         '
-        Me.Txt_four_3.Location = New System.Drawing.Point(158, 69)
+        Me.Txt_four_3.Location = New System.Drawing.Point(520, 133)
         Me.Txt_four_3.Name = "Txt_four_3"
         Me.Txt_four_3.Size = New System.Drawing.Size(168, 20)
         Me.Txt_four_3.TabIndex = 2
         '
         'Txt_four_4
         '
-        Me.Txt_four_4.Location = New System.Drawing.Point(158, 95)
+        Me.Txt_four_4.Location = New System.Drawing.Point(520, 183)
         Me.Txt_four_4.Name = "Txt_four_4"
         Me.Txt_four_4.Size = New System.Drawing.Size(167, 20)
         Me.Txt_four_4.TabIndex = 3
         '
         'Txt_four_5
         '
-        Me.Txt_four_5.Location = New System.Drawing.Point(158, 121)
+        Me.Txt_four_5.Location = New System.Drawing.Point(520, 233)
         Me.Txt_four_5.Name = "Txt_four_5"
         Me.Txt_four_5.Size = New System.Drawing.Size(168, 20)
         Me.Txt_four_5.TabIndex = 4
         '
         'Txt_four_7
         '
-        Me.Txt_four_7.Location = New System.Drawing.Point(158, 166)
+        Me.Txt_four_7.Location = New System.Drawing.Point(300, 233)
         Me.Txt_four_7.Name = "Txt_four_7"
         Me.Txt_four_7.Size = New System.Drawing.Size(168, 20)
         Me.Txt_four_7.TabIndex = 5
         '
         'Txt_four_8
         '
-        Me.Txt_four_8.Location = New System.Drawing.Point(158, 192)
+        Me.Txt_four_8.Location = New System.Drawing.Point(520, 83)
         Me.Txt_four_8.Name = "Txt_four_8"
         Me.Txt_four_8.Size = New System.Drawing.Size(168, 20)
         Me.Txt_four_8.TabIndex = 6
@@ -1091,7 +1195,7 @@ Partial Class Xtreme
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(18, 44)
+        Me.Label4.Location = New System.Drawing.Point(300, 113)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(54, 13)
         Me.Label4.TabIndex = 21
@@ -1100,7 +1204,7 @@ Partial Class Xtreme
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(18, 73)
+        Me.Label5.Location = New System.Drawing.Point(520, 113)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(54, 13)
         Me.Label5.TabIndex = 22
@@ -1109,7 +1213,7 @@ Partial Class Xtreme
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(18, 99)
+        Me.Label7.Location = New System.Drawing.Point(520, 163)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(26, 13)
         Me.Label7.TabIndex = 23
@@ -1118,7 +1222,7 @@ Partial Class Xtreme
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(18, 125)
+        Me.Label9.Location = New System.Drawing.Point(520, 213)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(41, 13)
         Me.Label9.TabIndex = 24
@@ -1127,7 +1231,7 @@ Partial Class Xtreme
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(19, 148)
+        Me.Label11.Location = New System.Drawing.Point(300, 163)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(63, 13)
         Me.Label11.TabIndex = 25
@@ -1136,7 +1240,7 @@ Partial Class Xtreme
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(18, 195)
+        Me.Label31.Location = New System.Drawing.Point(520, 63)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(58, 13)
         Me.Label31.TabIndex = 26
@@ -1144,7 +1248,8 @@ Partial Class Xtreme
         '
         'btn_annuler
         '
-        Me.btn_annuler.Location = New System.Drawing.Point(616, 326)
+        Me.btn_annuler.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btn_annuler.Location = New System.Drawing.Point(772, 396)
         Me.btn_annuler.Name = "btn_annuler"
         Me.btn_annuler.Size = New System.Drawing.Size(75, 23)
         Me.btn_annuler.TabIndex = 53
@@ -1153,7 +1258,8 @@ Partial Class Xtreme
         '
         'btn_supprimer
         '
-        Me.btn_supprimer.Location = New System.Drawing.Point(535, 326)
+        Me.btn_supprimer.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btn_supprimer.Location = New System.Drawing.Point(691, 396)
         Me.btn_supprimer.Name = "btn_supprimer"
         Me.btn_supprimer.Size = New System.Drawing.Size(75, 23)
         Me.btn_supprimer.TabIndex = 52
@@ -1162,7 +1268,8 @@ Partial Class Xtreme
         '
         'btn_Modifier
         '
-        Me.btn_Modifier.Location = New System.Drawing.Point(454, 326)
+        Me.btn_Modifier.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btn_Modifier.Location = New System.Drawing.Point(610, 396)
         Me.btn_Modifier.Name = "btn_Modifier"
         Me.btn_Modifier.Size = New System.Drawing.Size(75, 23)
         Me.btn_Modifier.TabIndex = 51
@@ -1171,7 +1278,8 @@ Partial Class Xtreme
         '
         'btn_Ajouter
         '
-        Me.btn_Ajouter.Location = New System.Drawing.Point(374, 326)
+        Me.btn_Ajouter.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btn_Ajouter.Location = New System.Drawing.Point(530, 396)
         Me.btn_Ajouter.Name = "btn_Ajouter"
         Me.btn_Ajouter.Size = New System.Drawing.Size(75, 23)
         Me.btn_Ajouter.TabIndex = 50
@@ -1180,10 +1288,11 @@ Partial Class Xtreme
         '
         'gbx_sup
         '
+        Me.gbx_sup.BackColor = System.Drawing.Color.White
         Me.gbx_sup.Controls.Add(Me.btn_Non)
         Me.gbx_sup.Controls.Add(Me.btn_Oui)
         Me.gbx_sup.Controls.Add(Me.Label34)
-        Me.gbx_sup.Location = New System.Drawing.Point(252, 14)
+        Me.gbx_sup.Location = New System.Drawing.Point(881, 14)
         Me.gbx_sup.Name = "gbx_sup"
         Me.gbx_sup.Size = New System.Drawing.Size(259, 100)
         Me.gbx_sup.TabIndex = 54
@@ -1223,7 +1332,7 @@ Partial Class Xtreme
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(26, 19)
+        Me.Label36.Location = New System.Drawing.Point(354, 90)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(102, 13)
         Me.Label36.TabIndex = 23
@@ -1232,7 +1341,7 @@ Partial Class Xtreme
         'Label37
         '
         Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(26, 46)
+        Me.Label37.Location = New System.Drawing.Point(354, 140)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(60, 13)
         Me.Label37.TabIndex = 24
@@ -1241,7 +1350,7 @@ Partial Class Xtreme
         'Label38
         '
         Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(26, 73)
+        Me.Label38.Location = New System.Drawing.Point(537, 88)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(35, 13)
         Me.Label38.TabIndex = 25
@@ -1249,7 +1358,7 @@ Partial Class Xtreme
         '
         'Txt_Type_Prod_2
         '
-        Me.Txt_Type_Prod_2.Location = New System.Drawing.Point(166, 16)
+        Me.Txt_Type_Prod_2.Location = New System.Drawing.Point(354, 110)
         Me.Txt_Type_Prod_2.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Type_Prod_2.Name = "Txt_Type_Prod_2"
         Me.Txt_Type_Prod_2.Size = New System.Drawing.Size(127, 20)
@@ -1257,15 +1366,17 @@ Partial Class Xtreme
         '
         'Txt_Type_Prod_3
         '
-        Me.Txt_Type_Prod_3.Location = New System.Drawing.Point(166, 44)
+        Me.Txt_Type_Prod_3.Location = New System.Drawing.Point(354, 160)
         Me.Txt_Type_Prod_3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Txt_Type_Prod_3.Multiline = True
         Me.Txt_Type_Prod_3.Name = "Txt_Type_Prod_3"
-        Me.Txt_Type_Prod_3.Size = New System.Drawing.Size(127, 20)
+        Me.Txt_Type_Prod_3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.Txt_Type_Prod_3.Size = New System.Drawing.Size(302, 68)
         Me.Txt_Type_Prod_3.TabIndex = 28
         '
         'Txt_Type_Prod_4
         '
-        Me.Txt_Type_Prod_4.Location = New System.Drawing.Point(166, 71)
+        Me.Txt_Type_Prod_4.Location = New System.Drawing.Point(529, 110)
         Me.Txt_Type_Prod_4.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Type_Prod_4.Name = "Txt_Type_Prod_4"
         Me.Txt_Type_Prod_4.Size = New System.Drawing.Size(127, 20)
@@ -1273,6 +1384,7 @@ Partial Class Xtreme
         '
         'Pan_Type_produit
         '
+        Me.Pan_Type_produit.Controls.Add(Me.Label41)
         Me.Pan_Type_produit.Controls.Add(Me.btn_annuler_tp)
         Me.Pan_Type_produit.Controls.Add(Me.btn_Enregistrer_Type)
         Me.Pan_Type_produit.Controls.Add(Me.Txt_Type_Prod_4)
@@ -1281,16 +1393,26 @@ Partial Class Xtreme
         Me.Pan_Type_produit.Controls.Add(Me.Label38)
         Me.Pan_Type_produit.Controls.Add(Me.Label37)
         Me.Pan_Type_produit.Controls.Add(Me.Label36)
-        Me.Pan_Type_produit.Location = New System.Drawing.Point(5, 56)
+        Me.Pan_Type_produit.Location = New System.Drawing.Point(6, 48)
         Me.Pan_Type_produit.Margin = New System.Windows.Forms.Padding(2)
         Me.Pan_Type_produit.Name = "Pan_Type_produit"
-        Me.Pan_Type_produit.Size = New System.Drawing.Size(781, 267)
+        Me.Pan_Type_produit.Size = New System.Drawing.Size(976, 324)
         Me.Pan_Type_produit.TabIndex = 55
         Me.Pan_Type_produit.Visible = False
         '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.Location = New System.Drawing.Point(350, 48)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(199, 20)
+        Me.Label41.TabIndex = 57
+        Me.Label41.Text = "Information type de produit"
+        '
         'btn_annuler_tp
         '
-        Me.btn_annuler_tp.Location = New System.Drawing.Point(691, 205)
+        Me.btn_annuler_tp.Location = New System.Drawing.Point(525, 248)
         Me.btn_annuler_tp.Name = "btn_annuler_tp"
         Me.btn_annuler_tp.Size = New System.Drawing.Size(75, 23)
         Me.btn_annuler_tp.TabIndex = 56
@@ -1299,57 +1421,120 @@ Partial Class Xtreme
         '
         'btn_Enregistrer_Type
         '
-        Me.btn_Enregistrer_Type.Location = New System.Drawing.Point(610, 205)
+        Me.btn_Enregistrer_Type.Location = New System.Drawing.Point(405, 248)
         Me.btn_Enregistrer_Type.Name = "btn_Enregistrer_Type"
         Me.btn_Enregistrer_Type.Size = New System.Drawing.Size(75, 23)
         Me.btn_Enregistrer_Type.TabIndex = 56
         Me.btn_Enregistrer_Type.Text = "Enregistrer"
         Me.btn_Enregistrer_Type.UseVisualStyleBackColor = True
         '
-        'dtp_Naissance
+        'tbc_Menu
         '
-        Me.dtp_Naissance.Location = New System.Drawing.Point(157, 95)
-        Me.dtp_Naissance.MaxDate = New Date(2017, 3, 17, 0, 0, 0, 0)
-        Me.dtp_Naissance.MinDate = New Date(1910, 1, 1, 0, 0, 0, 0)
-        Me.dtp_Naissance.Name = "dtp_Naissance"
-        Me.dtp_Naissance.Size = New System.Drawing.Size(168, 20)
-        Me.dtp_Naissance.TabIndex = 57
-        Me.dtp_Naissance.Value = New Date(2017, 3, 17, 0, 0, 0, 0)
-        Me.dtp_Naissance.Visible = False
+        Me.tbc_Menu.Controls.Add(Me.tabMenu)
+        Me.tbc_Menu.Controls.Add(Me.tabGestionTable)
+        Me.tbc_Menu.Controls.Add(Me.tabCommandes)
+        Me.tbc_Menu.Controls.Add(Me.tabRechGene)
+        Me.tbc_Menu.Controls.Add(Me.tabRechProduit)
+        Me.tbc_Menu.Location = New System.Drawing.Point(1, 0)
+        Me.tbc_Menu.Name = "tbc_Menu"
+        Me.tbc_Menu.SelectedIndex = 0
+        Me.tbc_Menu.Size = New System.Drawing.Size(990, 451)
+        Me.tbc_Menu.TabIndex = 56
         '
-        'dtp_Embauche
+        'tabMenu
         '
-        Me.dtp_Embauche.Location = New System.Drawing.Point(159, 121)
-        Me.dtp_Embauche.MaxDate = New Date(2020, 1, 1, 0, 0, 0, 0)
-        Me.dtp_Embauche.MinDate = New Date(1940, 1, 1, 0, 0, 0, 0)
-        Me.dtp_Embauche.Name = "dtp_Embauche"
-        Me.dtp_Embauche.Size = New System.Drawing.Size(168, 20)
-        Me.dtp_Embauche.TabIndex = 58
-        Me.dtp_Embauche.Value = New Date(2017, 3, 17, 16, 15, 3, 0)
-        Me.dtp_Embauche.Visible = False
+        Me.tabMenu.BackColor = System.Drawing.Color.Silver
+        Me.tabMenu.Controls.Add(Me.PictureBox1)
+        Me.tabMenu.Location = New System.Drawing.Point(4, 22)
+        Me.tabMenu.Name = "tabMenu"
+        Me.tabMenu.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabMenu.Size = New System.Drawing.Size(982, 425)
+        Me.tabMenu.TabIndex = 1
+        Me.tabMenu.Text = "Menu"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(7, 15)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(250, 250)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'tabGestionTable
+        '
+        Me.tabGestionTable.BackColor = System.Drawing.Color.Silver
+        Me.tabGestionTable.Controls.Add(Me.Label1)
+        Me.tabGestionTable.Controls.Add(Me.gbx_sup)
+        Me.tabGestionTable.Controls.Add(Me.btn_annuler)
+        Me.tabGestionTable.Controls.Add(Me.btn_supprimer)
+        Me.tabGestionTable.Controls.Add(Me.btn_Modifier)
+        Me.tabGestionTable.Controls.Add(Me.btn_Ajouter)
+        Me.tabGestionTable.Controls.Add(Me.btn_ElementFirst)
+        Me.tabGestionTable.Controls.Add(Me.cbx_Nomtable)
+        Me.tabGestionTable.Controls.Add(Me.btn_ElementPreview)
+        Me.tabGestionTable.Controls.Add(Me.btn_ChangerTable)
+        Me.tabGestionTable.Controls.Add(Me.btn_ElementNext)
+        Me.tabGestionTable.Controls.Add(Me.btn_ElementLast)
+        Me.tabGestionTable.Controls.Add(Me.Pan_produit)
+        Me.tabGestionTable.Controls.Add(Me.pan_clients)
+        Me.tabGestionTable.Controls.Add(Me.Pan_employer)
+        Me.tabGestionTable.Controls.Add(Me.Pan_Type_produit)
+        Me.tabGestionTable.Controls.Add(Me.pan_Fournisseur)
+        Me.tabGestionTable.Location = New System.Drawing.Point(4, 22)
+        Me.tabGestionTable.Name = "tabGestionTable"
+        Me.tabGestionTable.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabGestionTable.Size = New System.Drawing.Size(982, 425)
+        Me.tabGestionTable.TabIndex = 0
+        Me.tabGestionTable.Text = "Gestion table"
+        '
+        'tabCommandes
+        '
+        Me.tabCommandes.Location = New System.Drawing.Point(4, 22)
+        Me.tabCommandes.Name = "tabCommandes"
+        Me.tabCommandes.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabCommandes.Size = New System.Drawing.Size(982, 425)
+        Me.tabCommandes.TabIndex = 2
+        Me.tabCommandes.Text = "Commandes"
+        Me.tabCommandes.UseVisualStyleBackColor = True
+        '
+        'tabRechGene
+        '
+        Me.tabRechGene.Location = New System.Drawing.Point(4, 22)
+        Me.tabRechGene.Name = "tabRechGene"
+        Me.tabRechGene.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabRechGene.Size = New System.Drawing.Size(982, 425)
+        Me.tabRechGene.TabIndex = 3
+        Me.tabRechGene.Text = "Recherches générales"
+        Me.tabRechGene.UseVisualStyleBackColor = True
+        '
+        'tabRechProduit
+        '
+        Me.tabRechProduit.Location = New System.Drawing.Point(4, 22)
+        Me.tabRechProduit.Name = "tabRechProduit"
+        Me.tabRechProduit.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabRechProduit.Size = New System.Drawing.Size(982, 425)
+        Me.tabRechProduit.TabIndex = 4
+        Me.tabRechProduit.Text = " Recherches avec produits"
+        Me.tabRechProduit.UseVisualStyleBackColor = True
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.Location = New System.Drawing.Point(306, 23)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(191, 20)
+        Me.Label43.TabIndex = 61
+        Me.Label43.Text = "Information sur un produit"
         '
         'Xtreme
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(812, 388)
-        Me.Controls.Add(Me.gbx_sup)
-        Me.Controls.Add(Me.btn_annuler)
-        Me.Controls.Add(Me.btn_supprimer)
-        Me.Controls.Add(Me.btn_Modifier)
-        Me.Controls.Add(Me.btn_Ajouter)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.cbx_Nomtable)
-        Me.Controls.Add(Me.btn_ChangerTable)
-        Me.Controls.Add(Me.btn_ElementLast)
-        Me.Controls.Add(Me.btn_ElementNext)
-        Me.Controls.Add(Me.btn_ElementPreview)
-        Me.Controls.Add(Me.btn_ElementFirst)
-        Me.Controls.Add(Me.Pan_employer)
-        Me.Controls.Add(Me.pan_clients)
-        Me.Controls.Add(Me.pan_Fournisseur)
-        Me.Controls.Add(Me.Pan_Type_produit)
-        Me.Controls.Add(Me.Pan_produit)
+        Me.BackColor = System.Drawing.SystemColors.GrayText
+        Me.ClientSize = New System.Drawing.Size(992, 453)
+        Me.Controls.Add(Me.tbc_Menu)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Xtreme"
         Me.Text = "Gestion de Xtreme"
         Me.pan_clients.ResumeLayout(False)
@@ -1364,8 +1549,12 @@ Partial Class Xtreme
         Me.gbx_sup.PerformLayout()
         Me.Pan_Type_produit.ResumeLayout(False)
         Me.Pan_Type_produit.PerformLayout()
+        Me.tbc_Menu.ResumeLayout(False)
+        Me.tabMenu.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabGestionTable.ResumeLayout(False)
+        Me.tabGestionTable.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents btn_ElementLast As Button
@@ -1496,4 +1685,18 @@ Partial Class Xtreme
     Friend WithEvents cbx_Sup As ComboBox
     Friend WithEvents dtp_Embauche As DateTimePicker
     Friend WithEvents dtp_Naissance As DateTimePicker
+    Friend WithEvents tbc_Menu As TabControl
+    Friend WithEvents tabGestionTable As TabPage
+    Friend WithEvents tabMenu As TabPage
+    Friend WithEvents tabCommandes As TabPage
+    Friend WithEvents tabRechGene As TabPage
+    Friend WithEvents tabRechProduit As TabPage
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lab_TypeProd As Label
+    Friend WithEvents Label40 As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Label42 As Label
+    Friend WithEvents Label43 As Label
 End Class
