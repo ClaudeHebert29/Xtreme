@@ -61,6 +61,7 @@ Partial Class Xtreme
         Me.cbx_Nomtable = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Pan_employer = New System.Windows.Forms.Panel()
+        Me.cbx_Sup = New System.Windows.Forms.ComboBox()
         Me.Txt_Emp_16 = New System.Windows.Forms.TextBox()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.txt_Emp_10 = New System.Windows.Forms.TextBox()
@@ -94,6 +95,7 @@ Partial Class Xtreme
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Pan_produit = New System.Windows.Forms.Panel()
+        Me.cbx_fournisseur = New System.Windows.Forms.ComboBox()
         Me.btn_Ajouter_type_prod = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Txt_prod_1 = New System.Windows.Forms.TextBox()
@@ -101,7 +103,6 @@ Partial Class Xtreme
         Me.Txt_prod_3 = New System.Windows.Forms.TextBox()
         Me.Txt_prod_4 = New System.Windows.Forms.TextBox()
         Me.Txt_prod_5 = New System.Windows.Forms.TextBox()
-        Me.Txt_prod_6 = New System.Windows.Forms.TextBox()
         Me.Txt_prod_7 = New System.Windows.Forms.TextBox()
         Me.Txt_prod_8 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -112,6 +113,7 @@ Partial Class Xtreme
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.cbx_typeProduit = New System.Windows.Forms.ComboBox()
+        Me.Txt_prod_6 = New System.Windows.Forms.TextBox()
         Me.pan_Fournisseur = New System.Windows.Forms.Panel()
         Me.txt_four_6 = New System.Windows.Forms.TextBox()
         Me.Label32 = New System.Windows.Forms.Label()
@@ -144,10 +146,10 @@ Partial Class Xtreme
         Me.Txt_Type_Prod_3 = New System.Windows.Forms.TextBox()
         Me.Txt_Type_Prod_4 = New System.Windows.Forms.TextBox()
         Me.Pan_Type_produit = New System.Windows.Forms.Panel()
-        Me.btn_Enregistrer_Type = New System.Windows.Forms.Button()
         Me.btn_annuler_tp = New System.Windows.Forms.Button()
-        Me.cbx_fournisseur = New System.Windows.Forms.ComboBox()
-        Me.cbx_Sup = New System.Windows.Forms.ComboBox()
+        Me.btn_Enregistrer_Type = New System.Windows.Forms.Button()
+        Me.dtp_Naissance = New System.Windows.Forms.DateTimePicker()
+        Me.dtp_Embauche = New System.Windows.Forms.DateTimePicker()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_produit.SuspendLayout()
@@ -499,6 +501,8 @@ Partial Class Xtreme
         '
         'Pan_employer
         '
+        Me.Pan_employer.Controls.Add(Me.dtp_Embauche)
+        Me.Pan_employer.Controls.Add(Me.dtp_Naissance)
         Me.Pan_employer.Controls.Add(Me.cbx_Sup)
         Me.Pan_employer.Controls.Add(Me.Txt_Emp_16)
         Me.Pan_employer.Controls.Add(Me.Label33)
@@ -537,6 +541,15 @@ Partial Class Xtreme
         Me.Pan_employer.Size = New System.Drawing.Size(773, 266)
         Me.Pan_employer.TabIndex = 48
         Me.Pan_employer.Visible = False
+        '
+        'cbx_Sup
+        '
+        Me.cbx_Sup.FormattingEnabled = True
+        Me.cbx_Sup.Location = New System.Drawing.Point(157, 225)
+        Me.cbx_Sup.Name = "cbx_Sup"
+        Me.cbx_Sup.Size = New System.Drawing.Size(166, 21)
+        Me.cbx_Sup.TabIndex = 56
+        Me.cbx_Sup.Visible = False
         '
         'Txt_Emp_16
         '
@@ -821,6 +834,15 @@ Partial Class Xtreme
         Me.Pan_produit.TabIndex = 47
         Me.Pan_produit.Visible = False
         '
+        'cbx_fournisseur
+        '
+        Me.cbx_fournisseur.FormattingEnabled = True
+        Me.cbx_fournisseur.Location = New System.Drawing.Point(158, 199)
+        Me.cbx_fournisseur.Name = "cbx_fournisseur"
+        Me.cbx_fournisseur.Size = New System.Drawing.Size(166, 21)
+        Me.cbx_fournisseur.TabIndex = 56
+        Me.cbx_fournisseur.Visible = False
+        '
         'btn_Ajouter_type_prod
         '
         Me.btn_Ajouter_type_prod.Location = New System.Drawing.Point(335, 146)
@@ -874,13 +896,6 @@ Partial Class Xtreme
         Me.Txt_prod_5.Name = "Txt_prod_5"
         Me.Txt_prod_5.Size = New System.Drawing.Size(168, 20)
         Me.Txt_prod_5.TabIndex = 4
-        '
-        'Txt_prod_6
-        '
-        Me.Txt_prod_6.Location = New System.Drawing.Point(158, 146)
-        Me.Txt_prod_6.Name = "Txt_prod_6"
-        Me.Txt_prod_6.Size = New System.Drawing.Size(168, 20)
-        Me.Txt_prod_6.TabIndex = 5
         '
         'Txt_prod_7
         '
@@ -967,6 +982,13 @@ Partial Class Xtreme
         Me.cbx_typeProduit.Size = New System.Drawing.Size(166, 21)
         Me.cbx_typeProduit.TabIndex = 55
         Me.cbx_typeProduit.Visible = False
+        '
+        'Txt_prod_6
+        '
+        Me.Txt_prod_6.Location = New System.Drawing.Point(158, 146)
+        Me.Txt_prod_6.Name = "Txt_prod_6"
+        Me.Txt_prod_6.Size = New System.Drawing.Size(168, 20)
+        Me.Txt_prod_6.TabIndex = 5
         '
         'pan_Fournisseur
         '
@@ -1266,15 +1288,6 @@ Partial Class Xtreme
         Me.Pan_Type_produit.TabIndex = 55
         Me.Pan_Type_produit.Visible = False
         '
-        'btn_Enregistrer_Type
-        '
-        Me.btn_Enregistrer_Type.Location = New System.Drawing.Point(610, 205)
-        Me.btn_Enregistrer_Type.Name = "btn_Enregistrer_Type"
-        Me.btn_Enregistrer_Type.Size = New System.Drawing.Size(75, 23)
-        Me.btn_Enregistrer_Type.TabIndex = 56
-        Me.btn_Enregistrer_Type.Text = "Enregistrer"
-        Me.btn_Enregistrer_Type.UseVisualStyleBackColor = True
-        '
         'btn_annuler_tp
         '
         Me.btn_annuler_tp.Location = New System.Drawing.Point(691, 205)
@@ -1284,23 +1297,36 @@ Partial Class Xtreme
         Me.btn_annuler_tp.Text = "Annuler"
         Me.btn_annuler_tp.UseVisualStyleBackColor = True
         '
-        'cbx_fournisseur
+        'btn_Enregistrer_Type
         '
-        Me.cbx_fournisseur.FormattingEnabled = True
-        Me.cbx_fournisseur.Location = New System.Drawing.Point(158, 199)
-        Me.cbx_fournisseur.Name = "cbx_fournisseur"
-        Me.cbx_fournisseur.Size = New System.Drawing.Size(166, 21)
-        Me.cbx_fournisseur.TabIndex = 56
-        Me.cbx_fournisseur.Visible = False
+        Me.btn_Enregistrer_Type.Location = New System.Drawing.Point(610, 205)
+        Me.btn_Enregistrer_Type.Name = "btn_Enregistrer_Type"
+        Me.btn_Enregistrer_Type.Size = New System.Drawing.Size(75, 23)
+        Me.btn_Enregistrer_Type.TabIndex = 56
+        Me.btn_Enregistrer_Type.Text = "Enregistrer"
+        Me.btn_Enregistrer_Type.UseVisualStyleBackColor = True
         '
-        'cbx_Sup
+        'dtp_Naissance
         '
-        Me.cbx_Sup.FormattingEnabled = True
-        Me.cbx_Sup.Location = New System.Drawing.Point(157, 225)
-        Me.cbx_Sup.Name = "cbx_Sup"
-        Me.cbx_Sup.Size = New System.Drawing.Size(166, 21)
-        Me.cbx_Sup.TabIndex = 56
-        Me.cbx_Sup.Visible = False
+        Me.dtp_Naissance.Location = New System.Drawing.Point(157, 95)
+        Me.dtp_Naissance.MaxDate = New Date(2017, 3, 17, 0, 0, 0, 0)
+        Me.dtp_Naissance.MinDate = New Date(1910, 1, 1, 0, 0, 0, 0)
+        Me.dtp_Naissance.Name = "dtp_Naissance"
+        Me.dtp_Naissance.Size = New System.Drawing.Size(168, 20)
+        Me.dtp_Naissance.TabIndex = 57
+        Me.dtp_Naissance.Value = New Date(2017, 3, 17, 0, 0, 0, 0)
+        Me.dtp_Naissance.Visible = False
+        '
+        'dtp_Embauche
+        '
+        Me.dtp_Embauche.Location = New System.Drawing.Point(159, 121)
+        Me.dtp_Embauche.MaxDate = New Date(2020, 1, 1, 0, 0, 0, 0)
+        Me.dtp_Embauche.MinDate = New Date(1940, 1, 1, 0, 0, 0, 0)
+        Me.dtp_Embauche.Name = "dtp_Embauche"
+        Me.dtp_Embauche.Size = New System.Drawing.Size(168, 20)
+        Me.dtp_Embauche.TabIndex = 58
+        Me.dtp_Embauche.Value = New Date(2017, 3, 17, 16, 15, 3, 0)
+        Me.dtp_Embauche.Visible = False
         '
         'Xtreme
         '
@@ -1468,4 +1494,6 @@ Partial Class Xtreme
     Friend WithEvents btn_annuler_tp As Button
     Friend WithEvents cbx_fournisseur As ComboBox
     Friend WithEvents cbx_Sup As ComboBox
+    Friend WithEvents dtp_Embauche As DateTimePicker
+    Friend WithEvents dtp_Naissance As DateTimePicker
 End Class

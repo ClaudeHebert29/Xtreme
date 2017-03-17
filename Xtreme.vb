@@ -35,7 +35,7 @@ Public Class Xtreme
         Dim cmdXtreme As New OleDbCommand
         dsXtreme = New DataSet
         cmdXtreme = bd.cnconnexion.CreateCommand
-        cmdXtreme.CommandText = "Select * from " & NomTable(table) ' & "where Actif = Oui"
+        cmdXtreme.CommandText = "Select * from " & NomTable(table) '& "where Actif = true"
         daXtreme.SelectCommand = cmdXtreme
         daXtreme.Fill(dsXtreme, NomTable(table))
         btnOption(True, True, True, False)
@@ -58,6 +58,7 @@ Public Class Xtreme
     End Sub
 
     Sub RemplirControles()
+        PosEcrireListBox(True)
         Dim ctr2 As Integer
         For ctr As Integer = min To max
             If IsDBNull(dsXtreme.Tables(0).Rows(position).Item(ctr)) = False Then
@@ -178,6 +179,7 @@ Public Class Xtreme
     Private Sub btn_Ajouter_Click(sender As Object, e As EventArgs) Handles btn_Ajouter.Click
         Dim b As Boolean
         If sender.text = "Ajouter" Then
+            PosEcrireListBox(False)
             If table = 2 Then
                 Remplir_cbx_table_2()
                 option_Cbx_table_2(False, True, True)
@@ -185,6 +187,9 @@ Public Class Xtreme
             If table = 3 Then
                 Remplir_cbx_table_3()
                 option_Cbx_table_3(False, True, True)
+                cbx_Sup.Text = "-"
+                dtp_Naissance.Text = Date.Today
+                dtp_Embauche.Text = Date.Today
             End If
             EnableDurantoption(False)
             Select Case cbx_Nomtable.Text
@@ -196,6 +201,7 @@ Public Class Xtreme
             sender.text = "Enregistrer"
             btnOption(True, False, False, True)
         Else
+            PosEcrireListBox(True)
             If table = 2 Then
                 option_Cbx_table_2(True, False, False)
             End If
@@ -276,10 +282,10 @@ Public Class Xtreme
 
 #End Region
 #Region "Bouton Modifier"
-
     Private Sub btnModifier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Modifier.Click
         EnableDurantoption(False)
         If sender.text = "Modifier" Then
+            PosEcrireListBox(False)
             If table = 2 Then
                 Remplir_cbx_table_2()
                 option_Cbx_table_2(False, True, True)
@@ -291,6 +297,7 @@ Public Class Xtreme
             btn_Modifier.Text = "Enregistrer"
             btnOption(False, True, False, True)
         Else
+            PosEcrireListBox(True)
             If table = 2 Then
                 option_Cbx_table_2(True, False, False)
             End If
@@ -369,6 +376,7 @@ Public Class Xtreme
     End Sub
 
     Sub annuler()
+        PosEcrireListBox(True)
         ChargerDataset()
         btnOption(True, True, True, False)
         RemplirControles()
@@ -381,7 +389,7 @@ Public Class Xtreme
             option_Cbx_table_2(True, False, False)
         End If
         If table = 3 Then
-            option_Cbx_table_3(True, False, False)
+            Vis_table_3(True, False)
         End If
     End Sub
 #End Region
@@ -506,15 +514,34 @@ Public Class Xtreme
         End If
     End Sub
     Sub option_Cbx_table_3(b_liste As Boolean, b_cbx As Boolean, b As Boolean)
-        listeTXT(table)(9).visible = b_liste
-        cbx_Sup.Visible = b_cbx
+        Vis_table_3(b_liste, b_cbx)
         If b = True Then
+            dtp_Naissance.Text = listeTXT(table)(3).text
+            dtp_Embauche.Text = listeTXT(table)(4).text
             cbx_Sup.Text = listeTXT(table)(9).text
         Else
+            listeTXT(table)(3).text = dtp_Naissance.Text
+            listeTXT(table)(4).text = dtp_Embauche.Text
             listeTXT(table)(9).text = cbx_Sup.Text
         End If
     End Sub
+    Sub Vis_table_3(b_liste As Boolean, b_cbx As Boolean)
+        listeTXT(table)(3).visible = b_liste
+        listeTXT(table)(4).visible = b_liste
+        listeTXT(table)(9).visible = b_liste
+        cbx_Sup.Visible = b_cbx
+        dtp_Embauche.Visible = b_cbx
+        dtp_Naissance.Visible = b_cbx
+    End Sub
 #End Region
 #End Region
+    Sub PosEcrireListBox(b As Boolean)
+        For Each c As Object In listeTXT(table)
+            c.ReadOnly = b
+        Next
+    End Sub
+
+
+
 End Class
 
