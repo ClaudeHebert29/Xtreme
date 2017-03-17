@@ -242,7 +242,7 @@ Public Class Xtreme
                 cbx_typeProduit.Text = listeTXT(table)(5).text
                 listeTXT(table)(7).visible = False
                 cbx_fournisseur.Visible = True
-                cbx_fournisseur.Text = listeTXT(table)(5).text
+                cbx_fournisseur.Text = listeTXT(table)(7).text
                 btn_Ajouter_type_prod.Visible = True
             End If
             btn_Modifier.Text = "Enregistrer"
@@ -316,10 +316,8 @@ Public Class Xtreme
 
 #End Region
 #Region "Bouton Annuler"
-
     Private Sub Annuler(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_annuler.Click
         annuler()
-        EnableDurantoption(True)
     End Sub
 
     Sub annuler()
@@ -329,6 +327,8 @@ Public Class Xtreme
         btn_supprimer.Text = "Supprimer"
         btn_Ajouter.Text = "Ajouter"
         btn_Modifier.Text = "Modifier"
+        EnableDurantoption(True)
+        gbx_sup.Visible = False
         If table = 2 Then
             listeTXT(table)(5).visible = True
             cbx_typeProduit.Visible = False
