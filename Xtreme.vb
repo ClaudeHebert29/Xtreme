@@ -19,7 +19,6 @@ Public Class Xtreme
         listeTXT_Produit = {Txt_prod_1, Txt_prod_2, Txt_prod_3, Txt_prod_4, Txt_prod_5, Txt_prod_6, Txt_prod_7, Txt_prod_8}
         listeTXT_Employes = {Txt_Emp_1, Txt_Emp_2, Txt_Emp_3, Txt_Emp_4, Txt_Emp_5, Txt_Emp_6, Txt_Emp_7, txt_Emp_10, Txt_Emp_8, Txt_Emp_9, Txt_Emp_11, Txt_Emp_12, Txt_Emp_16, Txt_Emp_13, Txt_Emp_14, Txt_Emp_15, Txt_Emp_17, Txt_Emp_18}
         listeTXT_Client = {txt_Clients_1, txt_Clients_2, txt_Clients_3, txt_Clients_4, txt_Clients_5, txt_Clients_6, txt_Clients_7, txt_Clients_8, txt_Clients_9, txt_Clients_10, txt_Clients_11, txt_Clients_12, txt_Clients_13, txt_Clients_14, txt_Clients_15}
-        listeTXT = {listeTXT_Client, listeTXT_Four, listeTXT_Employes}
         listeTXT_Type_Produit = {Txt_Type_Prod_2, Txt_Type_Prod_3, Txt_Type_Prod_4}
         listeTXT = {listeTXT_Client, listeTXT_Four, listeTXT_Produit, listeTXT_Employes}
         listTxt_adresse = {txt_Adresse1, txt_Adresse2, txt_Adresse3, txt_Adresse4, txt_Adresse5, txt_Adresse6, txt_Adresse7, txt_Adresse8, txt_Adresse9, txt_Adresse10, txt_Adresse11, txt_Adresse12}
@@ -27,7 +26,7 @@ Public Class Xtreme
         bd.connexion("..\xtreme.mdb")
         bd.Deconnexion()
         Btn_Element_Bloquer(False, False, False, False)
-        btnOption(True, True, True, False)
+        btnOption(False, False, False, False)
         TPVisiblePas(False)
         For c As Integer = 0 To 3
             cbx_Nomtable.Items.Add(NomTable(c))
@@ -65,6 +64,11 @@ Public Class Xtreme
             End If
             ctr2 += 1
         Next
+        If IsDBNull(dsXtreme.Tables(0).Rows(position).Item(1)) = False Then
+            listeTXT(table)(17).text = dsXtreme.Tables(0).Rows(position).Item(1)
+        Else
+            listeTXT(table)(17).text = "-"
+        End If
 
         If table = 2 Then
             ChargerDataseTypeProduit()
@@ -91,12 +95,7 @@ Public Class Xtreme
                     Exit For
                 End If
             Next
-            If IsDBNull(dsXtreme.Tables(0).Rows(position).Item(1)) = False Then
-                listeTXT(table)(17).text = dsXtreme.Tables(0).Rows(position).Item(1)
-            Else
-                listeTXT(table)(17).text = "-"
-        End If
-        For c As Integer = 0 To dsXtreme.Tables(0).Rows.Count - 1
+            For c As Integer = 0 To dsXtreme.Tables(0).Rows.Count - 1
                 If listeTXT(table)(17).text = "-" Then
                     listeTXT(table)(17).text = "-"
                     Exit For
@@ -105,8 +104,6 @@ Public Class Xtreme
                     Exit For
                 End If
             Next
-
-
             ChargerDatasetAdressesDesEmployes()
             For c As Integer = 0 To dsAdressesDesEmployes.Tables(0).Rows.Count - 1
                 If dsAdressesDesEmployes.Tables(0).Rows(c).Item(0) = dsXtreme.Tables(0).Rows(position).Item(0) Then
@@ -712,8 +709,6 @@ Public Class Xtreme
         Next
     End Sub
 #End Region
-
-
 #End Region
 End Class
 
