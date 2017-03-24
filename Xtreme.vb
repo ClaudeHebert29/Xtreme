@@ -487,7 +487,7 @@ Public Class Xtreme
     Private Sub btn_Oui_Click(sender As Object, e As EventArgs) Handles btn_Oui.Click, btn_Non.Click
         Select Case sender.text
             Case "Oui"
-                dsXtreme.Tables(0).Rows(0).Item(dsXtreme.Tables(0).Columns.Count - 1) = True
+                dsXtreme.Tables(0).Rows(position).Item(dsXtreme.Tables(0).Columns.Count - 1) = True
                 position = 0
                 btnOption(True, True, True, False)
                 Btn_Element_Bloquer(False, False, True, True)
