@@ -32,3 +32,25 @@ D:\EnvironnementVB\projet claude\Xtreme\obj\Debug\Xtreme.vbprojResolveAssemblyRe
 D:\EnvironnementVB\projet claude\Xtreme\obj\Debug\Xtreme.Xtreme.resources
 D:\EnvironnementVB\projet claude\Xtreme\obj\Debug\Xtreme.Resources.resources
 D:\EnvironnementVB\projet claude\Xtreme\obj\Debug\Xtreme.vbproj.GenerateResource.Cache
+F:\cloclo\usb\Xtreme\Xtreme\bin\Debug\Xtreme.exe.config
+F:\cloclo\usb\Xtreme\Xtreme\obj\Debug\Xtreme.exe
+F:\cloclo\usb\Xtreme\Xtreme\obj\Debug\Xtreme.xml
+F:\cloclo\usb\Xtreme\Xtreme\obj\Debug\Xtreme.pdb
+F:\cloclo\usb\Xtreme\Xtreme\bin\Debug\Xtreme.exe
+F:\cloclo\usb\Xtreme\Xtreme\bin\Debug\Xtreme.pdb
+F:\cloclo\usb\Xtreme\Xtreme\bin\Debug\Xtreme.xml
+F:\cloclo\usb\Xtreme\Xtreme\obj\Debug\Xtreme.vbprojResolveAssemblyReference.cache
+F:\cloclo\usb\Xtreme\Xtreme\obj\Debug\Xtreme.Xtreme.resources
+F:\cloclo\usb\Xtreme\Xtreme\obj\Debug\Xtreme.Resources.resources
+F:\cloclo\usb\Xtreme\Xtreme\obj\Debug\Xtreme.vbproj.GenerateResource.Cache
+H:\cloclo\usb\Xtreme\Xtreme\bin\Debug\Xtreme.exe.config
+H:\cloclo\usb\Xtreme\Xtreme\obj\Debug\Xtreme.exe
+H:\cloclo\usb\Xtreme\Xtreme\obj\Debug\Xtreme.xml
+H:\cloclo\usb\Xtreme\Xtreme\obj\Debug\Xtreme.pdb
+H:\cloclo\usb\Xtreme\Xtreme\bin\Debug\Xtreme.exe
+H:\cloclo\usb\Xtreme\Xtreme\bin\Debug\Xtreme.pdb
+H:\cloclo\usb\Xtreme\Xtreme\bin\Debug\Xtreme.xml
+H:\cloclo\usb\Xtreme\Xtreme\obj\Debug\Xtreme.vbprojResolveAssemblyReference.cache
+H:\cloclo\usb\Xtreme\Xtreme\obj\Debug\Xtreme.Xtreme.resources
+H:\cloclo\usb\Xtreme\Xtreme\obj\Debug\Xtreme.Resources.resources
+H:\cloclo\usb\Xtreme\Xtreme\obj\Debug\Xtreme.vbproj.GenerateResource.Cache
