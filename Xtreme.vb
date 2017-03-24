@@ -12,6 +12,10 @@ Public Class Xtreme
 #Region "Load"
     Private Sub Xtreme_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PictureBox1.BackgroundImage = Image.FromFile("travail.png")
+    End Sub
+
+    Private Sub tabGestionTable_Click(sender As Object, e As EventArgs) Handles tabGestionTable.Click
+
         NomtableTout = {"Achats", "Adresses des Employes", "Clients", "Commandes", "Détails des commandes", "Employes", "Fournisseurs", "Info Xtreme", "Produits", "Régions", "Types de produit"}
         NomTable = {"Clients", "Fournisseurs", "Produits", "Employes", "Types de produit"}
         nomColonne = {"Nom_du_client", "Nom_du_fournisseur", "Nom_du_produit", "Nom"}
@@ -34,6 +38,8 @@ Public Class Xtreme
         dtp_Naissance.MaxDate = Date.Today
         dtp_Embauche.MaxDate = Date.Today
     End Sub
+
+
 #End Region
 #Region "Gestion des table"
 #Region "BD"
@@ -713,7 +719,7 @@ Public Class Xtreme
 #Region "Commande"
 
 #End Region
-#Region "REch de commande"
+#Region "Recherche de commande"
     Private Sub Btn_ok_NC_RGeneral_Click(sender As Object, e As EventArgs) Handles Btn_ok_NC_RGeneral.Click
 
     End Sub
