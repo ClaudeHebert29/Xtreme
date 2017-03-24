@@ -215,6 +215,8 @@ Partial Class Xtreme
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Commandes_ID_de_produit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Commandes_commande_expedier = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Commandes_numéro_de_commande = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Commandes_Nom_de_produit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Commandes_Classe_de_produit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Commandes_Couleur_du_produit = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -223,23 +225,35 @@ Partial Class Xtreme
         Me.Commandes_PrixConseiller_de_produit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btn_menu2 = New System.Windows.Forms.Button()
         Me.tabRechGene = New System.Windows.Forms.TabPage()
+        Me.GBX_numero_commande_RGeneral = New System.Windows.Forms.GroupBox()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Txt_Date_de_commande_RGeneral_NC = New System.Windows.Forms.TextBox()
+        Me.Txt_Nom_Employer_RGeneral_NC = New System.Windows.Forms.TextBox()
+        Me.Txt_montant_Commande_RGeneral_NC = New System.Windows.Forms.TextBox()
+        Me.Label78 = New System.Windows.Forms.Label()
+        Me.Label77 = New System.Windows.Forms.Label()
+        Me.Label76 = New System.Windows.Forms.Label()
+        Me.Label75 = New System.Windows.Forms.Label()
+        Me.Label74 = New System.Windows.Forms.Label()
+        Me.Label73 = New System.Windows.Forms.Label()
+        Me.Label72 = New System.Windows.Forms.Label()
+        Me.Label71 = New System.Windows.Forms.Label()
+        Me.Label70 = New System.Windows.Forms.Label()
+        Me.Txt_ID_Commande_RGeneral_NC = New System.Windows.Forms.TextBox()
+        Me.Btn_ok_NC_RGeneral = New System.Windows.Forms.Button()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.Txt_Num_Commande_RGeneral_NC = New System.Windows.Forms.TextBox()
+        Me.LBx_Num_Prod_RGeneral_NC = New System.Windows.Forms.ListBox()
         Me.Btn_Recherche_RGeneral = New System.Windows.Forms.Button()
         Me.GBx_MRecherche_RG = New System.Windows.Forms.GroupBox()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.btn_menu3 = New System.Windows.Forms.Button()
-        Me.GBx_Vendeur_RGeneral = New System.Windows.Forms.GroupBox()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.RGeneral_Nom_employer_vendeur = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RGeneral_Prenom_employer_vendeur = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RGeneral_Poste_occuper_vendeur = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RGeneral_Date_Naissance_vendeur = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RGeneral_Date_dembauche_vendeur = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RGeneral_Telephone_perso_vendeur = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RGeneral_Poste_vendeur = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label68 = New System.Windows.Forms.Label()
         Me.GBx_Clients_RGeneral = New System.Windows.Forms.GroupBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.RGeneral_Date_de_commande = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -259,9 +273,19 @@ Partial Class Xtreme
         Me.Label62 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.GBx_Vendeur_RGeneral = New System.Windows.Forms.GroupBox()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.RGeneral_Nom_employer_vendeur = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RGeneral_Prenom_employer_vendeur = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RGeneral_Poste_occuper_vendeur = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RGeneral_Date_Naissance_vendeur = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RGeneral_Date_dembauche_vendeur = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RGeneral_Telephone_perso_vendeur = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RGeneral_Poste_vendeur = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label68 = New System.Windows.Forms.Label()
         Me.tabRechProduit = New System.Windows.Forms.TabPage()
         Me.btn_menu4 = New System.Windows.Forms.Button()
-        Me.GBX_numero_commande_RGeneral = New System.Windows.Forms.GroupBox()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_produit.SuspendLayout()
@@ -276,11 +300,12 @@ Partial Class Xtreme
         Me.tabCommandes.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabRechGene.SuspendLayout()
+        Me.GBX_numero_commande_RGeneral.SuspendLayout()
         Me.GBx_MRecherche_RG.SuspendLayout()
-        Me.GBx_Vendeur_RGeneral.SuspendLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBx_Clients_RGeneral.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GBx_Vendeur_RGeneral.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabRechProduit.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -2239,7 +2264,7 @@ Partial Class Xtreme
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(988, 265)
+        Me.ComboBox2.Location = New System.Drawing.Point(941, 265)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(195, 24)
         Me.ComboBox2.TabIndex = 73
@@ -2247,7 +2272,7 @@ Partial Class Xtreme
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(988, 201)
+        Me.ComboBox1.Location = New System.Drawing.Point(941, 201)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(195, 24)
         Me.ComboBox1.TabIndex = 72
@@ -2255,16 +2280,16 @@ Partial Class Xtreme
         'Label60
         '
         Me.Label60.AutoSize = True
-        Me.Label60.Location = New System.Drawing.Point(872, 268)
+        Me.Label60.Location = New System.Drawing.Point(827, 268)
         Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(108, 17)
+        Me.Label60.Size = New System.Drawing.Size(53, 17)
         Me.Label60.TabIndex = 71
-        Me.Label60.Text = "Type de produit"
+        Me.Label60.Text = "Produit"
         '
         'Label59
         '
         Me.Label59.AutoSize = True
-        Me.Label59.Location = New System.Drawing.Point(897, 204)
+        Me.Label59.Location = New System.Drawing.Point(827, 204)
         Me.Label59.Name = "Label59"
         Me.Label59.Size = New System.Drawing.Size(83, 17)
         Me.Label59.TabIndex = 70
@@ -2292,7 +2317,7 @@ Partial Class Xtreme
         '
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Commandes_ID_de_produit, Me.Commandes_Nom_de_produit, Me.Commandes_Classe_de_produit, Me.Commandes_Couleur_du_produit, Me.Commandes_taille_de_produit, Me.Commandes_Homme_Femme_de_produit, Me.Commandes_PrixConseiller_de_produit})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Commandes_ID_de_produit, Me.Commandes_commande_expedier, Me.Commandes_numéro_de_commande, Me.Commandes_Nom_de_produit, Me.Commandes_Classe_de_produit, Me.Commandes_Couleur_du_produit, Me.Commandes_taille_de_produit, Me.Commandes_Homme_Femme_de_produit, Me.Commandes_PrixConseiller_de_produit})
         Me.DataGridView1.Location = New System.Drawing.Point(7, 7)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 24
@@ -2304,6 +2329,17 @@ Partial Class Xtreme
         Me.Commandes_ID_de_produit.HeaderText = "ID produit"
         Me.Commandes_ID_de_produit.Name = "Commandes_ID_de_produit"
         Me.Commandes_ID_de_produit.ReadOnly = True
+        '
+        'Commandes_commande_expedier
+        '
+        Me.Commandes_commande_expedier.HeaderText = "Commande expédiéee"
+        Me.Commandes_commande_expedier.Name = "Commandes_commande_expedier"
+        '
+        'Commandes_numéro_de_commande
+        '
+        Me.Commandes_numéro_de_commande.HeaderText = "Numéro de commande"
+        Me.Commandes_numéro_de_commande.Name = "Commandes_numéro_de_commande"
+        Me.Commandes_numéro_de_commande.ReadOnly = True
         '
         'Commandes_Nom_de_produit
         '
@@ -2339,7 +2375,6 @@ Partial Class Xtreme
         '
         Me.Commandes_PrixConseiller_de_produit.HeaderText = "Prix conseillé"
         Me.Commandes_PrixConseiller_de_produit.Name = "Commandes_PrixConseiller_de_produit"
-        Me.Commandes_PrixConseiller_de_produit.ReadOnly = True
         '
         'btn_menu2
         '
@@ -2369,6 +2404,224 @@ Partial Class Xtreme
         Me.tabRechGene.Size = New System.Drawing.Size(1312, 526)
         Me.tabRechGene.TabIndex = 3
         Me.tabRechGene.Text = "Recherches générales"
+        '
+        'GBX_numero_commande_RGeneral
+        '
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.TextBox12)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.TextBox11)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.TextBox10)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.TextBox9)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.TextBox8)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Txt_Date_de_commande_RGeneral_NC)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Txt_Nom_Employer_RGeneral_NC)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Txt_montant_Commande_RGeneral_NC)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Label78)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Label77)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Label76)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Label75)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Label74)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Label73)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Label72)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Label71)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Label70)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Txt_ID_Commande_RGeneral_NC)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Btn_ok_NC_RGeneral)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Label69)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Txt_Num_Commande_RGeneral_NC)
+        Me.GBX_numero_commande_RGeneral.Controls.Add(Me.LBx_Num_Prod_RGeneral_NC)
+        Me.GBX_numero_commande_RGeneral.Location = New System.Drawing.Point(197, 26)
+        Me.GBX_numero_commande_RGeneral.Name = "GBX_numero_commande_RGeneral"
+        Me.GBX_numero_commande_RGeneral.Size = New System.Drawing.Size(998, 468)
+        Me.GBX_numero_commande_RGeneral.TabIndex = 73
+        Me.GBX_numero_commande_RGeneral.TabStop = False
+        Me.GBX_numero_commande_RGeneral.Text = "Numéro de commande"
+        '
+        'TextBox12
+        '
+        Me.TextBox12.Location = New System.Drawing.Point(721, 370)
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.ReadOnly = True
+        Me.TextBox12.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox12.TabIndex = 21
+        '
+        'TextBox11
+        '
+        Me.TextBox11.Location = New System.Drawing.Point(721, 342)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.ReadOnly = True
+        Me.TextBox11.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox11.TabIndex = 20
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(721, 314)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.ReadOnly = True
+        Me.TextBox10.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox10.TabIndex = 19
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(721, 286)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.ReadOnly = True
+        Me.TextBox9.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox9.TabIndex = 18
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(721, 258)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.ReadOnly = True
+        Me.TextBox8.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox8.TabIndex = 17
+        '
+        'Txt_Date_de_commande_RGeneral_NC
+        '
+        Me.Txt_Date_de_commande_RGeneral_NC.Location = New System.Drawing.Point(721, 230)
+        Me.Txt_Date_de_commande_RGeneral_NC.Name = "Txt_Date_de_commande_RGeneral_NC"
+        Me.Txt_Date_de_commande_RGeneral_NC.ReadOnly = True
+        Me.Txt_Date_de_commande_RGeneral_NC.Size = New System.Drawing.Size(100, 22)
+        Me.Txt_Date_de_commande_RGeneral_NC.TabIndex = 16
+        '
+        'Txt_Nom_Employer_RGeneral_NC
+        '
+        Me.Txt_Nom_Employer_RGeneral_NC.Location = New System.Drawing.Point(721, 202)
+        Me.Txt_Nom_Employer_RGeneral_NC.Name = "Txt_Nom_Employer_RGeneral_NC"
+        Me.Txt_Nom_Employer_RGeneral_NC.ReadOnly = True
+        Me.Txt_Nom_Employer_RGeneral_NC.Size = New System.Drawing.Size(100, 22)
+        Me.Txt_Nom_Employer_RGeneral_NC.TabIndex = 15
+        '
+        'Txt_montant_Commande_RGeneral_NC
+        '
+        Me.Txt_montant_Commande_RGeneral_NC.Location = New System.Drawing.Point(721, 174)
+        Me.Txt_montant_Commande_RGeneral_NC.Name = "Txt_montant_Commande_RGeneral_NC"
+        Me.Txt_montant_Commande_RGeneral_NC.ReadOnly = True
+        Me.Txt_montant_Commande_RGeneral_NC.Size = New System.Drawing.Size(100, 22)
+        Me.Txt_montant_Commande_RGeneral_NC.TabIndex = 14
+        '
+        'Label78
+        '
+        Me.Label78.AutoSize = True
+        Me.Label78.Location = New System.Drawing.Point(526, 373)
+        Me.Label78.Name = "Label78"
+        Me.Label78.Size = New System.Drawing.Size(99, 17)
+        Me.Label78.TabIndex = 13
+        Me.Label78.Text = "Paiement reçu"
+        '
+        'Label77
+        '
+        Me.Label77.AutoSize = True
+        Me.Label77.Location = New System.Drawing.Point(526, 345)
+        Me.Label77.Name = "Label77"
+        Me.Label77.Size = New System.Drawing.Size(140, 17)
+        Me.Label77.TabIndex = 12
+        Me.Label77.Text = "Commande expédiée"
+        '
+        'Label76
+        '
+        Me.Label76.AutoSize = True
+        Me.Label76.Location = New System.Drawing.Point(526, 317)
+        Me.Label76.Name = "Label76"
+        Me.Label76.Size = New System.Drawing.Size(91, 17)
+        Me.Label76.TabIndex = 11
+        Me.Label76.Text = "Transporteur"
+        '
+        'Label75
+        '
+        Me.Label75.AutoSize = True
+        Me.Label75.Location = New System.Drawing.Point(526, 289)
+        Me.Label75.Name = "Label75"
+        Me.Label75.Size = New System.Drawing.Size(117, 17)
+        Me.Label75.TabIndex = 10
+        Me.Label75.Text = "Date d'expédition"
+        '
+        'Label74
+        '
+        Me.Label74.AutoSize = True
+        Me.Label74.Location = New System.Drawing.Point(525, 261)
+        Me.Label74.Name = "Label74"
+        Me.Label74.Size = New System.Drawing.Size(104, 17)
+        Me.Label74.TabIndex = 9
+        Me.Label74.Text = "Date de besoin"
+        '
+        'Label73
+        '
+        Me.Label73.AutoSize = True
+        Me.Label73.Location = New System.Drawing.Point(526, 205)
+        Me.Label73.Name = "Label73"
+        Me.Label73.Size = New System.Drawing.Size(99, 17)
+        Me.Label73.TabIndex = 8
+        Me.Label73.Text = "Nom employer"
+        '
+        'Label72
+        '
+        Me.Label72.AutoSize = True
+        Me.Label72.Location = New System.Drawing.Point(525, 233)
+        Me.Label72.Name = "Label72"
+        Me.Label72.Size = New System.Drawing.Size(131, 17)
+        Me.Label72.TabIndex = 7
+        Me.Label72.Text = "Date de commande"
+        '
+        'Label71
+        '
+        Me.Label71.AutoSize = True
+        Me.Label71.Location = New System.Drawing.Point(525, 177)
+        Me.Label71.Name = "Label71"
+        Me.Label71.Size = New System.Drawing.Size(132, 17)
+        Me.Label71.TabIndex = 6
+        Me.Label71.Text = "Montant commande"
+        '
+        'Label70
+        '
+        Me.Label70.AutoSize = True
+        Me.Label70.Location = New System.Drawing.Point(526, 149)
+        Me.Label70.Name = "Label70"
+        Me.Label70.Size = New System.Drawing.Size(96, 17)
+        Me.Label70.TabIndex = 5
+        Me.Label70.Text = "ID Commande"
+        '
+        'Txt_ID_Commande_RGeneral_NC
+        '
+        Me.Txt_ID_Commande_RGeneral_NC.Location = New System.Drawing.Point(721, 146)
+        Me.Txt_ID_Commande_RGeneral_NC.Name = "Txt_ID_Commande_RGeneral_NC"
+        Me.Txt_ID_Commande_RGeneral_NC.ReadOnly = True
+        Me.Txt_ID_Commande_RGeneral_NC.Size = New System.Drawing.Size(100, 22)
+        Me.Txt_ID_Commande_RGeneral_NC.TabIndex = 4
+        '
+        'Btn_ok_NC_RGeneral
+        '
+        Me.Btn_ok_NC_RGeneral.Location = New System.Drawing.Point(327, 53)
+        Me.Btn_ok_NC_RGeneral.Name = "Btn_ok_NC_RGeneral"
+        Me.Btn_ok_NC_RGeneral.Size = New System.Drawing.Size(39, 22)
+        Me.Btn_ok_NC_RGeneral.TabIndex = 3
+        Me.Btn_ok_NC_RGeneral.Text = "ok"
+        Me.Btn_ok_NC_RGeneral.UseVisualStyleBackColor = True
+        '
+        'Label69
+        '
+        Me.Label69.AutoSize = True
+        Me.Label69.Location = New System.Drawing.Point(22, 56)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(151, 17)
+        Me.Label69.TabIndex = 2
+        Me.Label69.Text = "Numéro de commande"
+        '
+        'Txt_Num_Commande_RGeneral_NC
+        '
+        Me.Txt_Num_Commande_RGeneral_NC.Location = New System.Drawing.Point(179, 53)
+        Me.Txt_Num_Commande_RGeneral_NC.Name = "Txt_Num_Commande_RGeneral_NC"
+        Me.Txt_Num_Commande_RGeneral_NC.Size = New System.Drawing.Size(141, 22)
+        Me.Txt_Num_Commande_RGeneral_NC.TabIndex = 1
+        '
+        'LBx_Num_Prod_RGeneral_NC
+        '
+        Me.LBx_Num_Prod_RGeneral_NC.FormattingEnabled = True
+        Me.LBx_Num_Prod_RGeneral_NC.ItemHeight = 16
+        Me.LBx_Num_Prod_RGeneral_NC.Location = New System.Drawing.Point(22, 114)
+        Me.LBx_Num_Prod_RGeneral_NC.Name = "LBx_Num_Prod_RGeneral_NC"
+        Me.LBx_Num_Prod_RGeneral_NC.Size = New System.Drawing.Size(344, 340)
+        Me.LBx_Num_Prod_RGeneral_NC.TabIndex = 0
         '
         'Btn_Recherche_RGeneral
         '
@@ -2435,81 +2688,6 @@ Partial Class Xtreme
         Me.btn_menu3.Tag = "Menu"
         Me.btn_menu3.Text = "Menu"
         Me.btn_menu3.UseVisualStyleBackColor = True
-        '
-        'GBx_Vendeur_RGeneral
-        '
-        Me.GBx_Vendeur_RGeneral.Controls.Add(Me.DataGridView3)
-        Me.GBx_Vendeur_RGeneral.Controls.Add(Me.TextBox3)
-        Me.GBx_Vendeur_RGeneral.Controls.Add(Me.Label68)
-        Me.GBx_Vendeur_RGeneral.Location = New System.Drawing.Point(197, 26)
-        Me.GBx_Vendeur_RGeneral.Name = "GBx_Vendeur_RGeneral"
-        Me.GBx_Vendeur_RGeneral.Size = New System.Drawing.Size(992, 468)
-        Me.GBx_Vendeur_RGeneral.TabIndex = 72
-        Me.GBx_Vendeur_RGeneral.TabStop = False
-        Me.GBx_Vendeur_RGeneral.Text = "Vendeur"
-        '
-        'DataGridView3
-        '
-        Me.DataGridView3.AllowUserToDeleteRows = False
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.RGeneral_Nom_employer_vendeur, Me.RGeneral_Prenom_employer_vendeur, Me.RGeneral_Poste_occuper_vendeur, Me.RGeneral_Date_Naissance_vendeur, Me.RGeneral_Date_dembauche_vendeur, Me.RGeneral_Telephone_perso_vendeur, Me.RGeneral_Poste_vendeur})
-        Me.DataGridView3.Location = New System.Drawing.Point(134, 119)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.RowTemplate.Height = 24
-        Me.DataGridView3.Size = New System.Drawing.Size(744, 150)
-        Me.DataGridView3.TabIndex = 2
-        '
-        'RGeneral_Nom_employer_vendeur
-        '
-        Me.RGeneral_Nom_employer_vendeur.HeaderText = "Nom vendeur"
-        Me.RGeneral_Nom_employer_vendeur.Name = "RGeneral_Nom_employer_vendeur"
-        '
-        'RGeneral_Prenom_employer_vendeur
-        '
-        Me.RGeneral_Prenom_employer_vendeur.HeaderText = "Prenom vendeur"
-        Me.RGeneral_Prenom_employer_vendeur.Name = "RGeneral_Prenom_employer_vendeur"
-        '
-        'RGeneral_Poste_occuper_vendeur
-        '
-        Me.RGeneral_Poste_occuper_vendeur.HeaderText = "Poste"
-        Me.RGeneral_Poste_occuper_vendeur.Name = "RGeneral_Poste_occuper_vendeur"
-        '
-        'RGeneral_Date_Naissance_vendeur
-        '
-        Me.RGeneral_Date_Naissance_vendeur.HeaderText = "Date de naissance"
-        Me.RGeneral_Date_Naissance_vendeur.Name = "RGeneral_Date_Naissance_vendeur"
-        '
-        'RGeneral_Date_dembauche_vendeur
-        '
-        Me.RGeneral_Date_dembauche_vendeur.HeaderText = "Date d'embauche"
-        Me.RGeneral_Date_dembauche_vendeur.Name = "RGeneral_Date_dembauche_vendeur"
-        Me.RGeneral_Date_dembauche_vendeur.ReadOnly = True
-        '
-        'RGeneral_Telephone_perso_vendeur
-        '
-        Me.RGeneral_Telephone_perso_vendeur.HeaderText = "Téléphone personnel"
-        Me.RGeneral_Telephone_perso_vendeur.Name = "RGeneral_Telephone_perso_vendeur"
-        '
-        'RGeneral_Poste_vendeur
-        '
-        Me.RGeneral_Poste_vendeur.HeaderText = "Poste"
-        Me.RGeneral_Poste_vendeur.Name = "RGeneral_Poste_vendeur"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(289, 65)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox3.TabIndex = 1
-        '
-        'Label68
-        '
-        Me.Label68.AutoSize = True
-        Me.Label68.Location = New System.Drawing.Point(131, 70)
-        Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(87, 17)
-        Me.Label68.TabIndex = 0
-        Me.Label68.Text = "ID_employer"
         '
         'GBx_Clients_RGeneral
         '
@@ -2639,6 +2817,81 @@ Partial Class Xtreme
         Me.TextBox1.Size = New System.Drawing.Size(199, 22)
         Me.TextBox1.TabIndex = 0
         '
+        'GBx_Vendeur_RGeneral
+        '
+        Me.GBx_Vendeur_RGeneral.Controls.Add(Me.DataGridView3)
+        Me.GBx_Vendeur_RGeneral.Controls.Add(Me.TextBox3)
+        Me.GBx_Vendeur_RGeneral.Controls.Add(Me.Label68)
+        Me.GBx_Vendeur_RGeneral.Location = New System.Drawing.Point(197, 26)
+        Me.GBx_Vendeur_RGeneral.Name = "GBx_Vendeur_RGeneral"
+        Me.GBx_Vendeur_RGeneral.Size = New System.Drawing.Size(992, 468)
+        Me.GBx_Vendeur_RGeneral.TabIndex = 72
+        Me.GBx_Vendeur_RGeneral.TabStop = False
+        Me.GBx_Vendeur_RGeneral.Text = "Vendeur"
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AllowUserToDeleteRows = False
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.RGeneral_Nom_employer_vendeur, Me.RGeneral_Prenom_employer_vendeur, Me.RGeneral_Poste_occuper_vendeur, Me.RGeneral_Date_Naissance_vendeur, Me.RGeneral_Date_dembauche_vendeur, Me.RGeneral_Telephone_perso_vendeur, Me.RGeneral_Poste_vendeur})
+        Me.DataGridView3.Location = New System.Drawing.Point(134, 119)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.RowTemplate.Height = 24
+        Me.DataGridView3.Size = New System.Drawing.Size(744, 150)
+        Me.DataGridView3.TabIndex = 2
+        '
+        'RGeneral_Nom_employer_vendeur
+        '
+        Me.RGeneral_Nom_employer_vendeur.HeaderText = "Nom vendeur"
+        Me.RGeneral_Nom_employer_vendeur.Name = "RGeneral_Nom_employer_vendeur"
+        '
+        'RGeneral_Prenom_employer_vendeur
+        '
+        Me.RGeneral_Prenom_employer_vendeur.HeaderText = "Prenom vendeur"
+        Me.RGeneral_Prenom_employer_vendeur.Name = "RGeneral_Prenom_employer_vendeur"
+        '
+        'RGeneral_Poste_occuper_vendeur
+        '
+        Me.RGeneral_Poste_occuper_vendeur.HeaderText = "Poste"
+        Me.RGeneral_Poste_occuper_vendeur.Name = "RGeneral_Poste_occuper_vendeur"
+        '
+        'RGeneral_Date_Naissance_vendeur
+        '
+        Me.RGeneral_Date_Naissance_vendeur.HeaderText = "Date de naissance"
+        Me.RGeneral_Date_Naissance_vendeur.Name = "RGeneral_Date_Naissance_vendeur"
+        '
+        'RGeneral_Date_dembauche_vendeur
+        '
+        Me.RGeneral_Date_dembauche_vendeur.HeaderText = "Date d'embauche"
+        Me.RGeneral_Date_dembauche_vendeur.Name = "RGeneral_Date_dembauche_vendeur"
+        Me.RGeneral_Date_dembauche_vendeur.ReadOnly = True
+        '
+        'RGeneral_Telephone_perso_vendeur
+        '
+        Me.RGeneral_Telephone_perso_vendeur.HeaderText = "Téléphone personnel"
+        Me.RGeneral_Telephone_perso_vendeur.Name = "RGeneral_Telephone_perso_vendeur"
+        '
+        'RGeneral_Poste_vendeur
+        '
+        Me.RGeneral_Poste_vendeur.HeaderText = "Poste"
+        Me.RGeneral_Poste_vendeur.Name = "RGeneral_Poste_vendeur"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(289, 65)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox3.TabIndex = 1
+        '
+        'Label68
+        '
+        Me.Label68.AutoSize = True
+        Me.Label68.Location = New System.Drawing.Point(131, 70)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(87, 17)
+        Me.Label68.TabIndex = 0
+        Me.Label68.Text = "ID_employer"
+        '
         'tabRechProduit
         '
         Me.tabRechProduit.BackColor = System.Drawing.Color.Silver
@@ -2662,15 +2915,6 @@ Partial Class Xtreme
         Me.btn_menu4.Tag = "Menu"
         Me.btn_menu4.Text = "Menu"
         Me.btn_menu4.UseVisualStyleBackColor = True
-        '
-        'GBX_numero_commande_RGeneral
-        '
-        Me.GBX_numero_commande_RGeneral.Location = New System.Drawing.Point(197, 26)
-        Me.GBX_numero_commande_RGeneral.Name = "GBX_numero_commande_RGeneral"
-        Me.GBX_numero_commande_RGeneral.Size = New System.Drawing.Size(998, 468)
-        Me.GBX_numero_commande_RGeneral.TabIndex = 73
-        Me.GBX_numero_commande_RGeneral.TabStop = False
-        Me.GBX_numero_commande_RGeneral.Text = "Numéro de commande"
         '
         'Xtreme
         '
@@ -2707,14 +2951,16 @@ Partial Class Xtreme
         Me.tabCommandes.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabRechGene.ResumeLayout(False)
+        Me.GBX_numero_commande_RGeneral.ResumeLayout(False)
+        Me.GBX_numero_commande_RGeneral.PerformLayout()
         Me.GBx_MRecherche_RG.ResumeLayout(False)
         Me.GBx_MRecherche_RG.PerformLayout()
-        Me.GBx_Vendeur_RGeneral.ResumeLayout(False)
-        Me.GBx_Vendeur_RGeneral.PerformLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBx_Clients_RGeneral.ResumeLayout(False)
         Me.GBx_Clients_RGeneral.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GBx_Vendeur_RGeneral.ResumeLayout(False)
+        Me.GBx_Vendeur_RGeneral.PerformLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabRechProduit.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -2915,13 +3161,6 @@ Partial Class Xtreme
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Commandes_ID_de_produit As DataGridViewTextBoxColumn
-    Friend WithEvents Commandes_Nom_de_produit As DataGridViewTextBoxColumn
-    Friend WithEvents Commandes_Classe_de_produit As DataGridViewTextBoxColumn
-    Friend WithEvents Commandes_Couleur_du_produit As DataGridViewTextBoxColumn
-    Friend WithEvents Commandes_taille_de_produit As DataGridViewTextBoxColumn
-    Friend WithEvents Commandes_Homme_Femme_de_produit As DataGridViewTextBoxColumn
-    Friend WithEvents Commandes_PrixConseiller_de_produit As DataGridViewTextBoxColumn
     Friend WithEvents GBx_Clients_RGeneral As GroupBox
     Friend WithEvents GBx_MRecherche_RG As GroupBox
     Friend WithEvents RadioButton1 As RadioButton
@@ -2958,4 +3197,35 @@ Partial Class Xtreme
     Friend WithEvents RGeneral_Classe_du_produit As DataGridViewTextBoxColumn
     Friend WithEvents RGeneral_Taille_du_produit As DataGridViewTextBoxColumn
     Friend WithEvents GBX_numero_commande_RGeneral As GroupBox
+    Friend WithEvents Commandes_ID_de_produit As DataGridViewTextBoxColumn
+    Friend WithEvents Commandes_commande_expedier As DataGridViewTextBoxColumn
+    Friend WithEvents Commandes_numéro_de_commande As DataGridViewTextBoxColumn
+    Friend WithEvents Commandes_Nom_de_produit As DataGridViewTextBoxColumn
+    Friend WithEvents Commandes_Classe_de_produit As DataGridViewTextBoxColumn
+    Friend WithEvents Commandes_Couleur_du_produit As DataGridViewTextBoxColumn
+    Friend WithEvents Commandes_taille_de_produit As DataGridViewTextBoxColumn
+    Friend WithEvents Commandes_Homme_Femme_de_produit As DataGridViewTextBoxColumn
+    Friend WithEvents Commandes_PrixConseiller_de_produit As DataGridViewTextBoxColumn
+    Friend WithEvents LBx_Num_Prod_RGeneral_NC As ListBox
+    Friend WithEvents Btn_ok_NC_RGeneral As Button
+    Friend WithEvents Label69 As Label
+    Friend WithEvents Txt_Num_Commande_RGeneral_NC As TextBox
+    Friend WithEvents Label77 As Label
+    Friend WithEvents Label76 As Label
+    Friend WithEvents Label75 As Label
+    Friend WithEvents Label74 As Label
+    Friend WithEvents Label73 As Label
+    Friend WithEvents Label72 As Label
+    Friend WithEvents Label71 As Label
+    Friend WithEvents Label70 As Label
+    Friend WithEvents Txt_ID_Commande_RGeneral_NC As TextBox
+    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Txt_Date_de_commande_RGeneral_NC As TextBox
+    Friend WithEvents Txt_Nom_Employer_RGeneral_NC As TextBox
+    Friend WithEvents Txt_montant_Commande_RGeneral_NC As TextBox
+    Friend WithEvents Label78 As Label
 End Class
