@@ -27,7 +27,7 @@ Public Class Xtreme
         bd.connexion("..\xtreme.mdb")
         bd.Deconnexion()
         Btn_Element_Bloquer(False, False, False, False)
-        btnOption(False, False, False, False)
+        btnOption(True, True, True, False)
         TPVisiblePas(False)
         For c As Integer = 0 To 3
             cbx_Nomtable.Items.Add(NomTable(c))
@@ -39,37 +39,16 @@ Public Class Xtreme
 #Region "Gestion des table"
 #Region "BD"
     Sub ChargerDataset()
-        Dim cmdXtreme As New OleDbCommand
-        dsXtreme = New DataSet
-        cmdXtreme = bd.cnconnexion.CreateCommand
-        cmdXtreme.CommandText = "Select * from " + NomTable(table) ' + " where innactif = false"
-        daXtreme.SelectCommand = cmdXtreme
-        daXtreme.Fill(dsXtreme, NomTable(table))
-        btnOption(True, True, True, False)
+        dsXtreme = ChargerDs(daXtreme, "Select * from " + NomTable(table), NomTable(table))
     End Sub
     Sub ChargerDataseTypeProduit()
-        Dim cmdTypeProdui As New OleDbCommand
-        dsTypeProduit = New DataSet
-        cmdTypeProdui = bd.cnconnexion.CreateCommand
-        cmdTypeProdui.CommandText = "Select * from " & "TypesDeProduit"
-        daTypeProduit.SelectCommand = cmdTypeProdui
-        daTypeProduit.Fill(dsTypeProduit, "TypesDeProduit")
+        dsTypeProduit = ChargerDs(daTypeProduit, "Select * from TypesDeProduit", "TypesDeProduit")
     End Sub
     Sub ChargerDatasetAdressesDesEmployes()
-        Dim cmdAdressesDesEmployes As New OleDbCommand
-        dsAdressesDesEmployes = New DataSet
-        cmdAdressesDesEmployes = bd.cnconnexion.CreateCommand
-        cmdAdressesDesEmployes.CommandText = "Select * from AdressesDesEmployes"
-        daAdressesDesEmployes.SelectCommand = cmdAdressesDesEmployes
-        daAdressesDesEmployes.Fill(dsAdressesDesEmployes, "AdressesDesEmployes")
+        dsAdressesDesEmployes = ChargerDs(daAdressesDesEmployes, "Select * from AdressesDesEmployes", "AdressesDesEmployes")
     End Sub
     Sub ChargerDatasetFournisseur()
-        Dim cmdFournisseur As New OleDbCommand
-        dsFournisseur = New DataSet
-        cmdFournisseur = bd.cnconnexion.CreateCommand
-        cmdFournisseur.CommandText = "Select ID_fournisseur,Nom_du_fournisseur from Fournisseurs"
-        daFournisseur.SelectCommand = cmdFournisseur
-        daFournisseur.Fill(dsFournisseur, "Fournisseurs")
+        dsFournisseur = ChargerDs(daFournisseur, "Select ID_fournisseur,Nom_du_fournisseur from Fournisseurs", "Fournisseurs")
     End Sub
     Sub RemplirControles()
         PosEcrireListBox(True)
@@ -86,11 +65,6 @@ Public Class Xtreme
             End If
             ctr2 += 1
         Next
-        If IsDBNull(dsXtreme.Tables(0).Rows(position).Item(1)) = False Then
-            listeTXT(table)(17).text = dsXtreme.Tables(0).Rows(position).Item(1)
-        Else
-            listeTXT(table)(17).text = "-"
-        End If
 
         If table = 2 Then
             ChargerDataseTypeProduit()
@@ -117,7 +91,12 @@ Public Class Xtreme
                     Exit For
                 End If
             Next
-            For c As Integer = 0 To dsXtreme.Tables(0).Rows.Count - 1
+            If IsDBNull(dsXtreme.Tables(0).Rows(position).Item(1)) = False Then
+                listeTXT(table)(17).text = dsXtreme.Tables(0).Rows(position).Item(1)
+            Else
+                listeTXT(table)(17).text = "-"
+        End If
+        For c As Integer = 0 To dsXtreme.Tables(0).Rows.Count - 1
                 If listeTXT(table)(17).text = "-" Then
                     listeTXT(table)(17).text = "-"
                     Exit For
@@ -126,6 +105,8 @@ Public Class Xtreme
                     Exit For
                 End If
             Next
+
+
             ChargerDatasetAdressesDesEmployes()
             For c As Integer = 0 To dsAdressesDesEmployes.Tables(0).Rows.Count - 1
                 If dsAdressesDesEmployes.Tables(0).Rows(c).Item(0) = dsXtreme.Tables(0).Rows(position).Item(0) Then
@@ -143,77 +124,27 @@ Public Class Xtreme
     btn_ElementNext.Click, btn_ElementPreview.Click, btn_ElementFirst.Click
         Select Case sender.text
             Case "<<"
-                pos = 0
-                Do
-                    If dsXtreme.Tables(0).Rows(pos).Item(dsXtreme.Tables(0).Columns.Count() - 1) = False Then
-                        position = pos
-                        Btn_Element_Bloquer(False, False, True, True)
-                        Exit Do
-                    End If
-                    pos = pos + 1
-                Loop Until pos > dsXtreme.Tables(0).Rows.Count() - 1
+                position = fisrt(0, dsXtreme)
+                Btn_Element_Bloquer(False, False, True, True)
             Case "<"
-                pos = position - 1
-                Do
-                    If dsXtreme.Tables(0).Rows(pos).Item(dsXtreme.Tables(0).Columns.Count() - 1) = False Then
-                        Btn_Element_Bloquer(True, True, True, True)
-                        position = pos
-                        If pos < 1 Then
-                            Btn_Element_Bloquer(False, False, True, True)
-                        End If
-                        Exit Do
-                    End If
-                    pos = pos - 1
-                Loop Until pos < 0
-                pos = position - 1
-                Do
-                    If 0 > pos Then
-                        Btn_Element_Bloquer(False, False, True, True)
-                        Exit Do
-                    ElseIf 0 = pos And dsXtreme.Tables(0).Rows(pos).Item(dsXtreme.Tables(0).Columns.Count() - 1) = True Then
-                        Btn_Element_Bloquer(False, False, True, True)
-                        Exit Do
-                    End If
-                    If dsXtreme.Tables(0).Rows(pos).Item(dsXtreme.Tables(0).Columns.Count() - 1) = False Then
-                        Exit Do
-                    End If
-                    pos = pos - 1
-                Loop Until pos = 0
+                position = preview(position - 1, 0, dsXtreme)
+                Btn_Element_Bloquer(True, True, True, True)
+                Dim b As Boolean
+                b = previewCache(position - 1, 0, dsXtreme)
+                If b = False Then
+                    Btn_Element_Bloquer(False, False, True, True)
+                End If
             Case ">"
-                pos = position + 1
-                Do
-                    If dsXtreme.Tables(0).Rows(pos).Item(dsXtreme.Tables(0).Columns.Count() - 1) = False Then
-                        Btn_Element_Bloquer(True, True, True, True)
-                        position = pos
-                        Exit Do
-                    End If
-
-                    pos = pos + 1
-                Loop Until pos > dsXtreme.Tables(0).Rows.Count() - 1
-                pos = position + 1
-                Do
-                    If dsXtreme.Tables(0).Rows.Count() = pos Then
-                        Btn_Element_Bloquer(True, True, False, False)
-                        Exit Do
-                    ElseIf dsXtreme.Tables(0).Rows.Count() - 1 = pos And dsXtreme.Tables(0).rows(pos).Item(dsXtreme.Tables(0).Columns.Count() - 1) = True Then
-                        Btn_Element_Bloquer(True, True, False, False)
-                        Exit Do
-                    End If
-                    If dsXtreme.Tables(0).Rows(pos).Item(dsXtreme.Tables(0).Columns.Count() - 1) = False Then
-                        Exit Do
-                    End If
-                    pos = pos + 1
-                Loop Until pos = dsXtreme.Tables(0).Rows.Count()
+                position = suivant(position + 1, dsXtreme.Tables(0).Rows.Count() - 1, dsXtreme)
+                Btn_Element_Bloquer(True, True, True, True)
+                Dim b As Boolean
+                b = suivantCache(position + 1, dsXtreme.Tables(0).Rows.Count() - 1, dsXtreme)
+                If b = False Then
+                    Btn_Element_Bloquer(True, True, False, False)
+                End If
             Case ">>"
-                pos = dsXtreme.Tables(0).Rows.Count() - 1
-                Do
-                    If dsXtreme.Tables(0).Rows(pos).Item(dsXtreme.Tables(0).Columns.Count() - 1) = False Then
-                        position = pos
-                        Btn_Element_Bloquer(True, True, False, False)
-                        Exit Do
-                    End If
-                    pos = pos - 1
-                Loop Until pos < 0
+                position = last(dsXtreme.Tables(0).Rows.Count() - 1, dsXtreme)
+                Btn_Element_Bloquer(True, True, False, False)
         End Select
         RemplirControles()
     End Sub
@@ -487,7 +418,7 @@ Public Class Xtreme
     Private Sub btn_Oui_Click(sender As Object, e As EventArgs) Handles btn_Oui.Click, btn_Non.Click
         Select Case sender.text
             Case "Oui"
-                dsXtreme.Tables(0).Rows(0).Item(dsXtreme.Tables(0).Columns.Count - 1) = True
+                dsXtreme.Tables(0).Rows(position).Item(dsXtreme.Tables(0).Columns.Count - 1) = True
                 position = 0
                 btnOption(True, True, True, False)
                 Btn_Element_Bloquer(False, False, True, True)

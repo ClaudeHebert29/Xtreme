@@ -72,7 +72,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChargerTable.vb" />
     <Compile Include="GestionBD.vb" />
+    <Compile Include="JouerAvecBD.vb" />
     <Compile Include="Regex.vb" />
     <Compile Include="Xtreme.vb">
       <SubType>Form</SubType>
