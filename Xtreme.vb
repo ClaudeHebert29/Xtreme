@@ -710,5 +710,15 @@ Public Class Xtreme
     End Sub
 #End Region
 #End Region
+#Region "Commande"
+
+#End Region
+#Region "REch de commande"
+    Private Sub Btn_ok_NC_RGeneral_Click(sender As Object, e As EventArgs) Handles Btn_ok_NC_RGeneral.Click
+
+    End Sub
+#End Region
+
+
 End Class
 
