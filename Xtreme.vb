@@ -17,7 +17,7 @@ Public Class Xtreme
         nomColonne = {"Nom_du_client", "Nom_du_fournisseur", "Nom_du_produit", "Nom"}
         listeTXT_Four = {txt_four_1, txt_four_2, Txt_four_3, Txt_four_4, Txt_four_5, Txt_four_7, txt_four_6, Txt_four_8}
         listeTXT_Produit = {Txt_prod_1, Txt_prod_2, Txt_prod_3, Txt_prod_4, Txt_prod_5, Txt_prod_6, Txt_prod_7, Txt_prod_8}
-        listeTXT_Commande = {Txt_ID_Commande_RGeneral_NC, Txt_montant_Commande_RGeneral_NC, Txt_Nom_Employer_RGeneral_NC, Txt_Nom_Employer_RGeneral_NC, Txt_Date_de_commande_RGeneral_NC, TextBox8, TextBox9, TextBox10, TextBox11, TextBox12, TextBox4}
+        listeTXT_Commande = {Txt_ID_Commande_RGeneral_NC, Txt_montant_Commande_RGeneral_NC, Txt_Nom_Employer_RGeneral_NC, Txt_Nom_Employer_RGeneral_NC, Txt_Date_de_commande_RGeneral_NC, TextBox8, TextBox9, TextBox10, TextBox11, TextBox12}
         listeTXT_Employes = {Txt_Emp_1, Txt_Emp_2, Txt_Emp_3, Txt_Emp_4, Txt_Emp_5, Txt_Emp_6, Txt_Emp_7, txt_Emp_10, Txt_Emp_8, Txt_Emp_9, Txt_Emp_11, Txt_Emp_12, Txt_Emp_16, Txt_Emp_13, Txt_Emp_14, Txt_Emp_15, Txt_Emp_17, Txt_Emp_18}
         listeTXT_Client = {txt_Clients_1, txt_Clients_2, txt_Clients_3, txt_Clients_4, txt_Clients_5, txt_Clients_6, txt_Clients_7, txt_Clients_8, txt_Clients_9, txt_Clients_10, txt_Clients_11, txt_Clients_12, txt_Clients_13, txt_Clients_14, txt_Clients_15}
         listeTXT_Type_Produit = {Txt_Type_Prod_2, Txt_Type_Prod_3, Txt_Type_Prod_4}
