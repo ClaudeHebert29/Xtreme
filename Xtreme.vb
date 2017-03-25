@@ -1,8 +1,8 @@
 ﻿Imports System.Data.OleDb
 Public Class Xtreme
     Dim bd As New GestionBD
-    Dim daXtreme, daTypeProduit, daFournisseur, daAdressesDesEmployes As New OleDbDataAdapter
-    Dim dsXtreme, dsTypeProduit, dsFournisseur, dsAdressesDesEmployes As New DataSet
+    Dim daXtreme, daTypeProduit, daFournisseur, daAdressesDesEmployes, daCommande, daEmployer, daClient, daproduit As New OleDbDataAdapter
+    Dim dsXtreme, dsTypeProduit, dsFournisseur, dsAdressesDesEmployes, dsCommande, dsEmployer, dsClient, dsproduit As New DataSet
     Dim gestionoperation As New OleDbCommandBuilder
     Dim position, table, ctrTable, min, max, posAdresse, pos As Integer
     Dim NomTable(), NomtableTout(), nomColonne() As String
@@ -12,10 +12,6 @@ Public Class Xtreme
 #Region "Load"
     Private Sub Xtreme_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PictureBox1.BackgroundImage = Image.FromFile("travail.png")
-    End Sub
-
-    Private Sub tabGestionTable_Click(sender As Object, e As EventArgs) Handles tabGestionTable.Click
-
         NomtableTout = {"Achats", "Adresses des Employes", "Clients", "Commandes", "Détails des commandes", "Employes", "Fournisseurs", "Info Xtreme", "Produits", "Régions", "Types de produit"}
         NomTable = {"Clients", "Fournisseurs", "Produits", "Employes", "Types de produit"}
         nomColonne = {"Nom_du_client", "Nom_du_fournisseur", "Nom_du_produit", "Nom"}
@@ -38,6 +34,7 @@ Public Class Xtreme
         dtp_Naissance.MaxDate = Date.Today
         dtp_Embauche.MaxDate = Date.Today
     End Sub
+
 
 
 #End Region
@@ -417,7 +414,6 @@ Public Class Xtreme
         gbx_sup.Visible = True
         EnableDurantoption(False)
     End Sub
-
     Private Sub btn_Oui_Click(sender As Object, e As EventArgs) Handles btn_Oui.Click, btn_Non.Click
         Select Case sender.text
             Case "Oui"
@@ -435,11 +431,13 @@ Public Class Xtreme
         RemplirControles()
     End Sub
 
+
 #End Region
 #Region "Bouton Annuler"
     Private Sub Annuler(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_annuler.Click
         annuler()
     End Sub
+
 
     Sub annuler()
         cacher_Adresse_Employer(True, False)
@@ -695,18 +693,18 @@ Public Class Xtreme
 #End Region
 #End Region
 #Region "Menu Principal"
-    Private Sub ChangerdepageDuMenu(sender As Object, e As EventArgs) Handles btn_Gestion_table.Click, btn_Recherche_Generales.Click, btn_Recherche_produit.Click, btn_Commandes.Click, btn_menu1.Click, btn_menu2.Click, btn_menu3.Click, Rech_prod.Click
+    Private Sub ChangerdepageDuMenu(sender As Object, e As EventArgs) Handles btn_Gestion_table.Click, btn_Recherche_Generales.Click, btn_Recherche_produit.Click, btn_Commandes.Click, btn_menu1.Click, btn_menu2.Click, btn_menu3.Click, btn_menu4.Click, Tab_Option.Click
         Select Case sender.tag
             Case "1"
-                Rech_prod.SelectedIndex = 1
+                Tab_Option.SelectedIndex = 1
             Case "2"
-                Rech_prod.SelectedIndex = 2
+                Tab_Option.SelectedIndex = 2
             Case "3"
-                Rech_prod.SelectedIndex = 3
+                Tab_Option.SelectedIndex = 3
             Case "4"
-                Rech_prod.SelectedIndex = 4
+                Tab_Option.SelectedIndex = 4
             Case "Menu"
-                Rech_prod.SelectedIndex = 0
+                Tab_Option.SelectedIndex = 0
         End Select
     End Sub
     Sub PosEcrireListBox(b As Boolean)
@@ -716,7 +714,110 @@ Public Class Xtreme
     End Sub
 #End Region
 #End Region
+    Dim listCommande As Object()
 #Region "Commande"
+#Region "bd"
+
+    Private Sub SetCommande(sender As Object, e As EventArgs) Handles btn_reset.Click
+        listCommande = {Txt_montant, cbx_Client_C, cbx_Emp_C, dtp_Com_C, dtp_Besoin_C, dtp_Exp_C, txt_trans, lab_oui_non_co, Lab_oui_non_paye, dgv_produit, cbx_Prod_C, NumericUpDown1, btn_prodCom}
+        'For c As Integer = 0 To listCommande.Count - 1
+        '    listCommande(c).Enabled = False
+        'Next
+        position = 0
+        ChargerDatasetCommande()
+        remplirCommande()
+        remplirCBX()
+        pan_commande.Visible = True
+        Btn_BloqueCom(False, False, True, True)
+    End Sub
+    Sub ChargerDatasetCommande()
+        dsCommande = ChargerDs(daCommande, "Select * from Commandes", "Commandes")
+    End Sub
+    Sub ChargerDatasetClient()
+        dsClient = ChargerDs(daClient, "Select ID_client,Nom_du_client from Clients where Innactif = false", "Clients")
+    End Sub
+    Sub ChargerDatasetEmploye()
+        dsEmployer = ChargerDs(daEmployer, "Select ID_employe,Nom from Employes where Innactif = false", "Employes")
+    End Sub
+    Sub ChargerDatasetProduit()
+        dsproduit = ChargerDs(daEmployer, "Select * from Produits where Innactif = false", "Produits")
+    End Sub
+    Sub remplirCommande()
+        Txt_montant.Text = dsCommande.Tables(0).Rows(position).Item(1)
+        cbx_Client_C.Text = dsCommande.Tables(0).Rows(position).Item(2)
+        cbx_Emp_C.Text = dsCommande.Tables(0).Rows(position).Item(3)
+        dtp_Com_C.Text = dsCommande.Tables(0).Rows(position).Item(4)
+        dtp_Besoin_C.Text = dsCommande.Tables(0).Rows(position).Item(5)
+        dtp_Exp_C.Text = dsCommande.Tables(0).Rows(position).Item(6)
+        txt_trans.Text = dsCommande.Tables(0).Rows(position).Item(7)
+        lab_oui_non_co.Text = dsCommande.Tables(0).Rows(position).Item(8)
+        Lab_oui_non_paye.Text = dsCommande.Tables(0).Rows(position).Item(10)
+    End Sub
+
+    Sub remplirCBX()
+        ChargerDatasetClient()
+        For c As Integer = 0 To dsClient.Tables(0).Rows.Count - 1
+            cbx_Client_C.Items.Add(dsClient.Tables(0).Rows(c).Item(1))
+        Next
+        ChargerDatasetEmploye()
+        For c As Integer = 0 To dsEmployer.Tables(0).Rows.Count - 1
+            cbx_Emp_C.Items.Add(dsEmployer.Tables(0).Rows(c).Item(1))
+        Next
+        ChargerDatasetProduit()
+        Dim a, b, d As String
+        For c As Integer = 0 To dsproduit.Tables(0).Rows.Count - 1
+            If IsDBNull(dsproduit.Tables(0).Rows(c).Item(2)) = False Then
+                a = dsproduit.Tables(0).Rows(c).Item(2)
+            Else
+                a = "-"
+            End If
+            If IsDBNull(dsproduit.Tables(0).Rows(c).Item(3)) = False Then
+                b = dsproduit.Tables(0).Rows(c).Item(3)
+            Else
+                b = "-"
+            End If
+            If IsDBNull(dsproduit.Tables(0).Rows(c).Item(4)) = False Then
+                d = dsproduit.Tables(0).Rows(c).Item(4)
+            Else
+                d = "-"
+            End If
+            cbx_Prod_C.Items.Add(dsproduit.Tables(0).Rows(c).Item(1) & "(" & a & ")" & "(" & b & ")" & "(" & d & ")")
+        Next
+    End Sub
+    Public Sub Btn_BloqueCom(a As Boolean, b As Boolean, c As Boolean, d As Boolean)
+        btn_fisrtComande.Enabled = a
+        btn_previewComande.Enabled = b
+        btn_nextComande.Enabled = c
+        btn_lastComande.Enabled = d
+    End Sub
+#End Region
+#Region "Déplacement table Commande"
+
+    Private Sub btn_DeplacementCommande(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_lastComande.Click,
+   btn_nextComande.Click, btn_previewComande.Click, btn_fisrtComande.Click
+        Select Case sender.text
+            Case "<<"
+                position = 0
+                Btn_BloqueCom(False, False, True, True)
+            Case "<"
+                position -= 1
+                Btn_BloqueCom(True, True, True, True)
+                If position = 0 Then
+                    Btn_BloqueCom(False, False, True, True)
+                End If
+            Case ">"
+                position += 1
+                Btn_BloqueCom(True, True, True, True)
+                If position = dsCommande.Tables(0).Rows.Count() - 1 Then
+                    Btn_BloqueCom(True, True, False, False)
+                End If
+            Case ">>"
+                position = dsCommande.Tables(0).Rows.Count() - 1
+                Btn_BloqueCom(True, True, False, False)
+        End Select
+        remplirCommande()
+    End Sub
+#End Region
 
 #End Region
 #Region "Recherche de commande"

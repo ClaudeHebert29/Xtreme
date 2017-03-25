@@ -90,4 +90,5 @@ Module JouerAvecBD
         Loop Until pos > 0
         Return b
     End Function
+
 End Module

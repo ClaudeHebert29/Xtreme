@@ -167,7 +167,7 @@ Partial Class Xtreme
         Me.Label41 = New System.Windows.Forms.Label()
         Me.btn_annuler_tp = New System.Windows.Forms.Button()
         Me.btn_Enregistrer_Type = New System.Windows.Forms.Button()
-        Me.Rech_prod = New System.Windows.Forms.TabControl()
+        Me.Tab_Option = New System.Windows.Forms.TabControl()
         Me.tabMenu = New System.Windows.Forms.TabPage()
         Me.Label47 = New System.Windows.Forms.Label()
         Me.btn_Recherche_produit = New System.Windows.Forms.Button()
@@ -207,21 +207,45 @@ Partial Class Xtreme
         Me.Label64 = New System.Windows.Forms.Label()
         Me.Label65 = New System.Windows.Forms.Label()
         Me.tabCommandes = New System.Windows.Forms.TabPage()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label60 = New System.Windows.Forms.Label()
+        Me.btn_reset = New System.Windows.Forms.Button()
         Me.Label59 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Commandes_ID_de_produit = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Commandes_commande_expedier = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Commandes_numéro_de_commande = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Lab_oui_non_paye = New System.Windows.Forms.Label()
+        Me.Label90 = New System.Windows.Forms.Label()
+        Me.txt_trans = New System.Windows.Forms.TextBox()
+        Me.Label88 = New System.Windows.Forms.Label()
+        Me.Txt_montant = New System.Windows.Forms.TextBox()
+        Me.Label87 = New System.Windows.Forms.Label()
+        Me.Label86 = New System.Windows.Forms.Label()
+        Me.lab_oui_non_co = New System.Windows.Forms.Label()
+        Me.Label85 = New System.Windows.Forms.Label()
+        Me.dtp_Exp_C = New System.Windows.Forms.DateTimePicker()
+        Me.dtp_Besoin_C = New System.Windows.Forms.DateTimePicker()
+        Me.dtp_Com_C = New System.Windows.Forms.DateTimePicker()
+        Me.Label82 = New System.Windows.Forms.Label()
+        Me.Label83 = New System.Windows.Forms.Label()
+        Me.Label84 = New System.Windows.Forms.Label()
+        Me.Label81 = New System.Windows.Forms.Label()
+        Me.btn_prodCom = New System.Windows.Forms.Button()
+        Me.cbx_Client_C = New System.Windows.Forms.ComboBox()
+        Me.Label80 = New System.Windows.Forms.Label()
+        Me.cbx_Emp_C = New System.Windows.Forms.ComboBox()
+        Me.Label79 = New System.Windows.Forms.Label()
+        Me.btn_fisrtComande = New System.Windows.Forms.Button()
+        Me.btn_previewComande = New System.Windows.Forms.Button()
+        Me.btn_nextComande = New System.Windows.Forms.Button()
+        Me.btn_lastComande = New System.Windows.Forms.Button()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.cbx_Prod_C = New System.Windows.Forms.ComboBox()
+        Me.Label60 = New System.Windows.Forms.Label()
+        Me.btn_modCom = New System.Windows.Forms.Button()
+        Me.btn_newCom = New System.Windows.Forms.Button()
+        Me.dgv_produit = New System.Windows.Forms.DataGridView()
         Me.Commandes_Nom_de_produit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Commandes_Classe_de_produit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Commandes_Couleur_du_produit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Commandes_taille_de_produit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Commandes_Homme_Femme_de_produit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Qte = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Commandes_PrixConseiller_de_produit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btn_menu2 = New System.Windows.Forms.Button()
         Me.tabRechGene = New System.Windows.Forms.TabPage()
@@ -286,19 +310,21 @@ Partial Class Xtreme
         Me.Label68 = New System.Windows.Forms.Label()
         Me.tabRechProduit = New System.Windows.Forms.TabPage()
         Me.btn_menu4 = New System.Windows.Forms.Button()
+        Me.pan_commande = New System.Windows.Forms.Panel()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_produit.SuspendLayout()
         Me.pan_Fournisseur.SuspendLayout()
         Me.gbx_sup.SuspendLayout()
         Me.Pan_Type_produit.SuspendLayout()
-        Me.Rech_prod.SuspendLayout()
+        Me.Tab_Option.SuspendLayout()
         Me.tabMenu.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabGestionTable.SuspendLayout()
         Me.pan_adresse.SuspendLayout()
         Me.tabCommandes.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_produit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabRechGene.SuspendLayout()
         Me.GBX_numero_commande_RGeneral.SuspendLayout()
         Me.GBx_MRecherche_RG.SuspendLayout()
@@ -307,6 +333,7 @@ Partial Class Xtreme
         Me.GBx_Vendeur_RGeneral.SuspendLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabRechProduit.SuspendLayout()
+        Me.pan_commande.SuspendLayout()
         Me.SuspendLayout()
         '
         'btn_ElementLast
@@ -1593,7 +1620,7 @@ Partial Class Xtreme
         'Txt_Type_Prod_2
         '
         Me.Txt_Type_Prod_2.Location = New System.Drawing.Point(354, 110)
-        Me.Txt_Type_Prod_2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Type_Prod_2.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Type_Prod_2.Name = "Txt_Type_Prod_2"
         Me.Txt_Type_Prod_2.Size = New System.Drawing.Size(127, 20)
         Me.Txt_Type_Prod_2.TabIndex = 27
@@ -1601,7 +1628,7 @@ Partial Class Xtreme
         'Txt_Type_Prod_3
         '
         Me.Txt_Type_Prod_3.Location = New System.Drawing.Point(354, 160)
-        Me.Txt_Type_Prod_3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Type_Prod_3.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Type_Prod_3.Multiline = True
         Me.Txt_Type_Prod_3.Name = "Txt_Type_Prod_3"
         Me.Txt_Type_Prod_3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -1611,7 +1638,7 @@ Partial Class Xtreme
         'Txt_Type_Prod_4
         '
         Me.Txt_Type_Prod_4.Location = New System.Drawing.Point(529, 110)
-        Me.Txt_Type_Prod_4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Type_Prod_4.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Type_Prod_4.Name = "Txt_Type_Prod_4"
         Me.Txt_Type_Prod_4.Size = New System.Drawing.Size(127, 20)
         Me.Txt_Type_Prod_4.TabIndex = 29
@@ -1628,7 +1655,7 @@ Partial Class Xtreme
         Me.Pan_Type_produit.Controls.Add(Me.Label37)
         Me.Pan_Type_produit.Controls.Add(Me.Label36)
         Me.Pan_Type_produit.Location = New System.Drawing.Point(-4, 48)
-        Me.Pan_Type_produit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Pan_Type_produit.Margin = New System.Windows.Forms.Padding(2)
         Me.Pan_Type_produit.Name = "Pan_Type_produit"
         Me.Pan_Type_produit.Size = New System.Drawing.Size(986, 342)
         Me.Pan_Type_produit.TabIndex = 55
@@ -1662,18 +1689,18 @@ Partial Class Xtreme
         Me.btn_Enregistrer_Type.Text = "Enregistrer"
         Me.btn_Enregistrer_Type.UseVisualStyleBackColor = True
         '
-        'Rech_prod
+        'Tab_Option
         '
-        Me.Rech_prod.Controls.Add(Me.tabMenu)
-        Me.Rech_prod.Controls.Add(Me.tabGestionTable)
-        Me.Rech_prod.Controls.Add(Me.tabCommandes)
-        Me.Rech_prod.Controls.Add(Me.tabRechGene)
-        Me.Rech_prod.Controls.Add(Me.tabRechProduit)
-        Me.Rech_prod.Location = New System.Drawing.Point(1, 0)
-        Me.Rech_prod.Name = "Rech_prod"
-        Me.Rech_prod.SelectedIndex = 0
-        Me.Rech_prod.Size = New System.Drawing.Size(990, 451)
-        Me.Rech_prod.TabIndex = 56
+        Me.Tab_Option.Controls.Add(Me.tabMenu)
+        Me.Tab_Option.Controls.Add(Me.tabGestionTable)
+        Me.Tab_Option.Controls.Add(Me.tabCommandes)
+        Me.Tab_Option.Controls.Add(Me.tabRechGene)
+        Me.Tab_Option.Controls.Add(Me.tabRechProduit)
+        Me.Tab_Option.Location = New System.Drawing.Point(1, 0)
+        Me.Tab_Option.Name = "Tab_Option"
+        Me.Tab_Option.SelectedIndex = 0
+        Me.Tab_Option.Size = New System.Drawing.Size(990, 451)
+        Me.Tab_Option.TabIndex = 56
         '
         'tabMenu
         '
@@ -1686,7 +1713,7 @@ Partial Class Xtreme
         Me.tabMenu.Controls.Add(Me.PictureBox1)
         Me.tabMenu.Location = New System.Drawing.Point(4, 22)
         Me.tabMenu.Name = "tabMenu"
-        Me.tabMenu.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tabMenu.Padding = New System.Windows.Forms.Padding(3)
         Me.tabMenu.Size = New System.Drawing.Size(982, 425)
         Me.tabMenu.TabIndex = 1
         Me.tabMenu.Text = "Menu"
@@ -1769,15 +1796,15 @@ Partial Class Xtreme
         Me.tabGestionTable.Controls.Add(Me.btn_ChangerTable)
         Me.tabGestionTable.Controls.Add(Me.btn_ElementNext)
         Me.tabGestionTable.Controls.Add(Me.btn_ElementLast)
-        Me.tabGestionTable.Controls.Add(Me.Pan_employer)
         Me.tabGestionTable.Controls.Add(Me.Pan_Type_produit)
         Me.tabGestionTable.Controls.Add(Me.pan_Fournisseur)
         Me.tabGestionTable.Controls.Add(Me.Pan_produit)
         Me.tabGestionTable.Controls.Add(Me.pan_clients)
         Me.tabGestionTable.Controls.Add(Me.pan_adresse)
+        Me.tabGestionTable.Controls.Add(Me.Pan_employer)
         Me.tabGestionTable.Location = New System.Drawing.Point(4, 22)
         Me.tabGestionTable.Name = "tabGestionTable"
-        Me.tabGestionTable.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tabGestionTable.Padding = New System.Windows.Forms.Padding(3)
         Me.tabGestionTable.Size = New System.Drawing.Size(982, 425)
         Me.tabGestionTable.TabIndex = 0
         Me.tabGestionTable.Text = "Gestion table"
@@ -2065,107 +2092,351 @@ Partial Class Xtreme
         'tabCommandes
         '
         Me.tabCommandes.BackColor = System.Drawing.Color.Silver
-        Me.tabCommandes.Controls.Add(Me.ComboBox2)
-        Me.tabCommandes.Controls.Add(Me.ComboBox1)
-        Me.tabCommandes.Controls.Add(Me.Label60)
+        Me.tabCommandes.Controls.Add(Me.pan_commande)
+        Me.tabCommandes.Controls.Add(Me.btn_reset)
         Me.tabCommandes.Controls.Add(Me.Label59)
-        Me.tabCommandes.Controls.Add(Me.Button2)
-        Me.tabCommandes.Controls.Add(Me.Button1)
-        Me.tabCommandes.Controls.Add(Me.DataGridView1)
         Me.tabCommandes.Controls.Add(Me.btn_menu2)
         Me.tabCommandes.Location = New System.Drawing.Point(4, 22)
         Me.tabCommandes.Name = "tabCommandes"
-        Me.tabCommandes.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tabCommandes.Padding = New System.Windows.Forms.Padding(3)
         Me.tabCommandes.Size = New System.Drawing.Size(982, 425)
         Me.tabCommandes.TabIndex = 2
         Me.tabCommandes.Text = "Commandes"
         '
-        'ComboBox2
+        'btn_reset
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(706, 215)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(147, 21)
-        Me.ComboBox2.TabIndex = 73
+        Me.btn_reset.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btn_reset.Location = New System.Drawing.Point(901, 35)
+        Me.btn_reset.Name = "btn_reset"
+        Me.btn_reset.Size = New System.Drawing.Size(75, 23)
+        Me.btn_reset.TabIndex = 102
+        Me.btn_reset.Tag = "Menu"
+        Me.btn_reset.Text = "Commencer"
+        Me.btn_reset.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'Label59
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(706, 163)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(147, 21)
-        Me.ComboBox1.TabIndex = 72
+        Me.Label59.AutoSize = True
+        Me.Label59.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label59.Location = New System.Drawing.Point(7, 14)
+        Me.Label59.Name = "Label59"
+        Me.Label59.Size = New System.Drawing.Size(166, 33)
+        Me.Label59.TabIndex = 101
+        Me.Label59.Text = "Commande"
+        '
+        'Lab_oui_non_paye
+        '
+        Me.Lab_oui_non_paye.AutoSize = True
+        Me.Lab_oui_non_paye.Location = New System.Drawing.Point(772, 242)
+        Me.Lab_oui_non_paye.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Lab_oui_non_paye.Name = "Lab_oui_non_paye"
+        Me.Lab_oui_non_paye.Size = New System.Drawing.Size(25, 13)
+        Me.Lab_oui_non_paye.TabIndex = 100
+        Me.Lab_oui_non_paye.Text = "non"
+        '
+        'Label90
+        '
+        Me.Label90.AutoSize = True
+        Me.Label90.Location = New System.Drawing.Point(766, 225)
+        Me.Label90.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label90.Name = "Label90"
+        Me.Label90.Size = New System.Drawing.Size(106, 13)
+        Me.Label90.TabIndex = 99
+        Me.Label90.Text = "Commande expédiée"
+        '
+        'txt_trans
+        '
+        Me.txt_trans.Location = New System.Drawing.Point(780, 76)
+        Me.txt_trans.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_trans.Name = "txt_trans"
+        Me.txt_trans.ReadOnly = True
+        Me.txt_trans.Size = New System.Drawing.Size(124, 20)
+        Me.txt_trans.TabIndex = 98
+        Me.txt_trans.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label88
+        '
+        Me.Label88.AutoSize = True
+        Me.Label88.Location = New System.Drawing.Point(895, 186)
+        Me.Label88.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label88.Name = "Label88"
+        Me.Label88.Size = New System.Drawing.Size(13, 13)
+        Me.Label88.TabIndex = 97
+        Me.Label88.Text = "$"
+        '
+        'Txt_montant
+        '
+        Me.Txt_montant.Location = New System.Drawing.Point(769, 183)
+        Me.Txt_montant.Margin = New System.Windows.Forms.Padding(2)
+        Me.Txt_montant.Name = "Txt_montant"
+        Me.Txt_montant.ReadOnly = True
+        Me.Txt_montant.Size = New System.Drawing.Size(124, 20)
+        Me.Txt_montant.TabIndex = 96
+        Me.Txt_montant.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label87
+        '
+        Me.Label87.AutoSize = True
+        Me.Label87.Location = New System.Drawing.Point(766, 158)
+        Me.Label87.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label87.Name = "Label87"
+        Me.Label87.Size = New System.Drawing.Size(127, 13)
+        Me.Label87.TabIndex = 95
+        Me.Label87.Text = "Montant de la commande"
+        '
+        'Label86
+        '
+        Me.Label86.AutoSize = True
+        Me.Label86.Location = New System.Drawing.Point(777, 61)
+        Me.Label86.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label86.Name = "Label86"
+        Me.Label86.Size = New System.Drawing.Size(52, 13)
+        Me.Label86.TabIndex = 93
+        Me.Label86.Text = "Transport"
+        '
+        'lab_oui_non_co
+        '
+        Me.lab_oui_non_co.AutoSize = True
+        Me.lab_oui_non_co.Location = New System.Drawing.Point(772, 281)
+        Me.lab_oui_non_co.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lab_oui_non_co.Name = "lab_oui_non_co"
+        Me.lab_oui_non_co.Size = New System.Drawing.Size(25, 13)
+        Me.lab_oui_non_co.TabIndex = 92
+        Me.lab_oui_non_co.Text = "non"
+        '
+        'Label85
+        '
+        Me.Label85.AutoSize = True
+        Me.Label85.Location = New System.Drawing.Point(766, 264)
+        Me.Label85.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label85.Name = "Label85"
+        Me.Label85.Size = New System.Drawing.Size(106, 13)
+        Me.Label85.TabIndex = 91
+        Me.Label85.Text = "Commande expédiée"
+        '
+        'dtp_Exp_C
+        '
+        Me.dtp_Exp_C.Location = New System.Drawing.Point(604, 76)
+        Me.dtp_Exp_C.MaxDate = New Date(2018, 12, 31, 0, 0, 0, 0)
+        Me.dtp_Exp_C.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
+        Me.dtp_Exp_C.Name = "dtp_Exp_C"
+        Me.dtp_Exp_C.Size = New System.Drawing.Size(147, 20)
+        Me.dtp_Exp_C.TabIndex = 90
+        '
+        'dtp_Besoin_C
+        '
+        Me.dtp_Besoin_C.Location = New System.Drawing.Point(422, 76)
+        Me.dtp_Besoin_C.MaxDate = New Date(2018, 12, 31, 0, 0, 0, 0)
+        Me.dtp_Besoin_C.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
+        Me.dtp_Besoin_C.Name = "dtp_Besoin_C"
+        Me.dtp_Besoin_C.Size = New System.Drawing.Size(147, 20)
+        Me.dtp_Besoin_C.TabIndex = 89
+        '
+        'dtp_Com_C
+        '
+        Me.dtp_Com_C.Location = New System.Drawing.Point(422, 29)
+        Me.dtp_Com_C.MaxDate = New Date(2018, 12, 31, 0, 0, 0, 0)
+        Me.dtp_Com_C.MinDate = New Date(1900, 1, 1, 21, 10, 0, 0)
+        Me.dtp_Com_C.Name = "dtp_Com_C"
+        Me.dtp_Com_C.Size = New System.Drawing.Size(147, 20)
+        Me.dtp_Com_C.TabIndex = 88
+        Me.dtp_Com_C.Value = New Date(2017, 3, 24, 21, 10, 28, 0)
+        '
+        'Label82
+        '
+        Me.Label82.AutoSize = True
+        Me.Label82.Location = New System.Drawing.Point(601, 60)
+        Me.Label82.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label82.Name = "Label82"
+        Me.Label82.Size = New System.Drawing.Size(89, 13)
+        Me.Label82.TabIndex = 87
+        Me.Label82.Text = "Date d'expédition"
+        '
+        'Label83
+        '
+        Me.Label83.AutoSize = True
+        Me.Label83.Location = New System.Drawing.Point(419, 60)
+        Me.Label83.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label83.Name = "Label83"
+        Me.Label83.Size = New System.Drawing.Size(79, 13)
+        Me.Label83.TabIndex = 86
+        Me.Label83.Text = "Date de besoin"
+        '
+        'Label84
+        '
+        Me.Label84.AutoSize = True
+        Me.Label84.Location = New System.Drawing.Point(419, 11)
+        Me.Label84.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label84.Name = "Label84"
+        Me.Label84.Size = New System.Drawing.Size(100, 13)
+        Me.Label84.TabIndex = 85
+        Me.Label84.Text = "Date de commande"
+        '
+        'Label81
+        '
+        Me.Label81.AutoSize = True
+        Me.Label81.Location = New System.Drawing.Point(257, 75)
+        Me.Label81.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label81.Name = "Label81"
+        Me.Label81.Size = New System.Drawing.Size(27, 13)
+        Me.Label81.TabIndex = 84
+        Me.Label81.Text = "Qte."
+        '
+        'btn_prodCom
+        '
+        Me.btn_prodCom.Location = New System.Drawing.Point(319, 87)
+        Me.btn_prodCom.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_prodCom.Name = "btn_prodCom"
+        Me.btn_prodCom.Size = New System.Drawing.Size(75, 25)
+        Me.btn_prodCom.TabIndex = 83
+        Me.btn_prodCom.Text = "Ajouter"
+        Me.btn_prodCom.UseVisualStyleBackColor = True
+        '
+        'cbx_Client_C
+        '
+        Me.cbx_Client_C.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cbx_Client_C.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbx_Client_C.FormattingEnabled = True
+        Me.cbx_Client_C.Location = New System.Drawing.Point(10, 29)
+        Me.cbx_Client_C.Margin = New System.Windows.Forms.Padding(2)
+        Me.cbx_Client_C.Name = "cbx_Client_C"
+        Me.cbx_Client_C.Size = New System.Drawing.Size(147, 21)
+        Me.cbx_Client_C.TabIndex = 82
+        '
+        'Label80
+        '
+        Me.Label80.AutoSize = True
+        Me.Label80.Location = New System.Drawing.Point(7, 10)
+        Me.Label80.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label80.Name = "Label80"
+        Me.Label80.Size = New System.Drawing.Size(33, 13)
+        Me.Label80.TabIndex = 81
+        Me.Label80.Text = "Client"
+        '
+        'cbx_Emp_C
+        '
+        Me.cbx_Emp_C.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cbx_Emp_C.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbx_Emp_C.FormattingEnabled = True
+        Me.cbx_Emp_C.Location = New System.Drawing.Point(178, 30)
+        Me.cbx_Emp_C.Margin = New System.Windows.Forms.Padding(2)
+        Me.cbx_Emp_C.Name = "cbx_Emp_C"
+        Me.cbx_Emp_C.Size = New System.Drawing.Size(147, 21)
+        Me.cbx_Emp_C.TabIndex = 80
+        '
+        'Label79
+        '
+        Me.Label79.AutoSize = True
+        Me.Label79.Location = New System.Drawing.Point(175, 11)
+        Me.Label79.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label79.Name = "Label79"
+        Me.Label79.Size = New System.Drawing.Size(47, 13)
+        Me.Label79.TabIndex = 79
+        Me.Label79.Text = "Employé"
+        '
+        'btn_fisrtComande
+        '
+        Me.btn_fisrtComande.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btn_fisrtComande.Location = New System.Drawing.Point(206, 336)
+        Me.btn_fisrtComande.Name = "btn_fisrtComande"
+        Me.btn_fisrtComande.Size = New System.Drawing.Size(75, 23)
+        Me.btn_fisrtComande.TabIndex = 75
+        Me.btn_fisrtComande.Text = "<<"
+        Me.btn_fisrtComande.UseVisualStyleBackColor = True
+        '
+        'btn_previewComande
+        '
+        Me.btn_previewComande.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btn_previewComande.Location = New System.Drawing.Point(286, 336)
+        Me.btn_previewComande.Name = "btn_previewComande"
+        Me.btn_previewComande.Size = New System.Drawing.Size(75, 23)
+        Me.btn_previewComande.TabIndex = 76
+        Me.btn_previewComande.Text = "<"
+        Me.btn_previewComande.UseVisualStyleBackColor = True
+        '
+        'btn_nextComande
+        '
+        Me.btn_nextComande.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btn_nextComande.Location = New System.Drawing.Point(367, 336)
+        Me.btn_nextComande.Name = "btn_nextComande"
+        Me.btn_nextComande.Size = New System.Drawing.Size(75, 23)
+        Me.btn_nextComande.TabIndex = 77
+        Me.btn_nextComande.Text = ">"
+        Me.btn_nextComande.UseVisualStyleBackColor = True
+        '
+        'btn_lastComande
+        '
+        Me.btn_lastComande.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btn_lastComande.Location = New System.Drawing.Point(448, 336)
+        Me.btn_lastComande.Name = "btn_lastComande"
+        Me.btn_lastComande.Size = New System.Drawing.Size(75, 23)
+        Me.btn_lastComande.TabIndex = 78
+        Me.btn_lastComande.Text = ">>"
+        Me.btn_lastComande.UseVisualStyleBackColor = True
+        '
+        'NumericUpDown1
+        '
+        Me.NumericUpDown1.Location = New System.Drawing.Point(260, 91)
+        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(44, 20)
+        Me.NumericUpDown1.TabIndex = 74
+        Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'cbx_Prod_C
+        '
+        Me.cbx_Prod_C.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cbx_Prod_C.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cbx_Prod_C.FormattingEnabled = True
+        Me.cbx_Prod_C.Location = New System.Drawing.Point(9, 91)
+        Me.cbx_Prod_C.Margin = New System.Windows.Forms.Padding(2)
+        Me.cbx_Prod_C.Name = "cbx_Prod_C"
+        Me.cbx_Prod_C.Size = New System.Drawing.Size(246, 21)
+        Me.cbx_Prod_C.TabIndex = 73
         '
         'Label60
         '
         Me.Label60.AutoSize = True
-        Me.Label60.Location = New System.Drawing.Point(620, 218)
+        Me.Label60.Location = New System.Drawing.Point(6, 76)
         Me.Label60.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(40, 13)
         Me.Label60.TabIndex = 71
         Me.Label60.Text = "Produit"
         '
-        'Label59
+        'btn_modCom
         '
-        Me.Label59.AutoSize = True
-        Me.Label59.Location = New System.Drawing.Point(620, 166)
-        Me.Label59.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(61, 13)
-        Me.Label59.TabIndex = 70
-        Me.Label59.Text = "Fournisseur"
+        Me.btn_modCom.Location = New System.Drawing.Point(528, 334)
+        Me.btn_modCom.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_modCom.Name = "btn_modCom"
+        Me.btn_modCom.Size = New System.Drawing.Size(75, 25)
+        Me.btn_modCom.TabIndex = 69
+        Me.btn_modCom.Text = "Modifier"
+        Me.btn_modCom.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btn_newCom
         '
-        Me.Button2.Location = New System.Drawing.Point(741, 113)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(56, 25)
-        Me.Button2.TabIndex = 69
-        Me.Button2.Text = "Modifier"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btn_newCom.Location = New System.Drawing.Point(126, 335)
+        Me.btn_newCom.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_newCom.Name = "btn_newCom"
+        Me.btn_newCom.Size = New System.Drawing.Size(75, 25)
+        Me.btn_newCom.TabIndex = 68
+        Me.btn_newCom.Text = "Nouvelle"
+        Me.btn_newCom.UseVisualStyleBackColor = True
         '
-        'Button1
+        'dgv_produit
         '
-        Me.Button1.Location = New System.Drawing.Point(741, 83)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(56, 25)
-        Me.Button1.TabIndex = 68
-        Me.Button1.Text = "Ajouter"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Commandes_ID_de_produit, Me.Commandes_commande_expedier, Me.Commandes_numéro_de_commande, Me.Commandes_Nom_de_produit, Me.Commandes_Classe_de_produit, Me.Commandes_Couleur_du_produit, Me.Commandes_taille_de_produit, Me.Commandes_Homme_Femme_de_produit, Me.Commandes_PrixConseiller_de_produit})
-        Me.DataGridView1.Location = New System.Drawing.Point(5, 6)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(610, 214)
-        Me.DataGridView1.TabIndex = 67
-        '
-        'Commandes_ID_de_produit
-        '
-        Me.Commandes_ID_de_produit.HeaderText = "ID produit"
-        Me.Commandes_ID_de_produit.Name = "Commandes_ID_de_produit"
-        Me.Commandes_ID_de_produit.ReadOnly = True
-        '
-        'Commandes_commande_expedier
-        '
-        Me.Commandes_commande_expedier.HeaderText = "Commande expédiéee"
-        Me.Commandes_commande_expedier.Name = "Commandes_commande_expedier"
-        '
-        'Commandes_numéro_de_commande
-        '
-        Me.Commandes_numéro_de_commande.HeaderText = "Numéro de commande"
-        Me.Commandes_numéro_de_commande.Name = "Commandes_numéro_de_commande"
-        Me.Commandes_numéro_de_commande.ReadOnly = True
+        Me.dgv_produit.AllowUserToAddRows = False
+        Me.dgv_produit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_produit.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Commandes_Nom_de_produit, Me.Commandes_Classe_de_produit, Me.Commandes_Couleur_du_produit, Me.Commandes_taille_de_produit, Me.Commandes_Homme_Femme_de_produit, Me.Qte, Me.Commandes_PrixConseiller_de_produit})
+        Me.dgv_produit.Location = New System.Drawing.Point(4, 117)
+        Me.dgv_produit.Margin = New System.Windows.Forms.Padding(2)
+        Me.dgv_produit.Name = "dgv_produit"
+        Me.dgv_produit.ReadOnly = True
+        Me.dgv_produit.RowTemplate.Height = 24
+        Me.dgv_produit.Size = New System.Drawing.Size(743, 214)
+        Me.dgv_produit.TabIndex = 67
         '
         'Commandes_Nom_de_produit
         '
@@ -2175,7 +2446,7 @@ Partial Class Xtreme
         '
         'Commandes_Classe_de_produit
         '
-        Me.Commandes_Classe_de_produit.HeaderText = "Classe du produit"
+        Me.Commandes_Classe_de_produit.HeaderText = "Type du produit"
         Me.Commandes_Classe_de_produit.Name = "Commandes_Classe_de_produit"
         Me.Commandes_Classe_de_produit.ReadOnly = True
         '
@@ -2197,10 +2468,17 @@ Partial Class Xtreme
         Me.Commandes_Homme_Femme_de_produit.Name = "Commandes_Homme_Femme_de_produit"
         Me.Commandes_Homme_Femme_de_produit.ReadOnly = True
         '
+        'Qte
+        '
+        Me.Qte.HeaderText = "Qte."
+        Me.Qte.Name = "Qte"
+        Me.Qte.ReadOnly = True
+        '
         'Commandes_PrixConseiller_de_produit
         '
-        Me.Commandes_PrixConseiller_de_produit.HeaderText = "Prix conseillé"
+        Me.Commandes_PrixConseiller_de_produit.HeaderText = "Prix unitaire"
         Me.Commandes_PrixConseiller_de_produit.Name = "Commandes_PrixConseiller_de_produit"
+        Me.Commandes_PrixConseiller_de_produit.ReadOnly = True
         '
         'btn_menu2
         '
@@ -2224,7 +2502,7 @@ Partial Class Xtreme
         Me.tabRechGene.Controls.Add(Me.GBx_Vendeur_RGeneral)
         Me.tabRechGene.Location = New System.Drawing.Point(4, 22)
         Me.tabRechGene.Name = "tabRechGene"
-        Me.tabRechGene.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tabRechGene.Padding = New System.Windows.Forms.Padding(3)
         Me.tabRechGene.Size = New System.Drawing.Size(982, 425)
         Me.tabRechGene.TabIndex = 3
         Me.tabRechGene.Text = "Recherches générales"
@@ -2254,9 +2532,9 @@ Partial Class Xtreme
         Me.GBX_numero_commande_RGeneral.Controls.Add(Me.Txt_Num_Commande_RGeneral_NC)
         Me.GBX_numero_commande_RGeneral.Controls.Add(Me.LBx_Num_Prod_RGeneral_NC)
         Me.GBX_numero_commande_RGeneral.Location = New System.Drawing.Point(148, 21)
-        Me.GBX_numero_commande_RGeneral.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GBX_numero_commande_RGeneral.Margin = New System.Windows.Forms.Padding(2)
         Me.GBX_numero_commande_RGeneral.Name = "GBX_numero_commande_RGeneral"
-        Me.GBX_numero_commande_RGeneral.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GBX_numero_commande_RGeneral.Padding = New System.Windows.Forms.Padding(2)
         Me.GBX_numero_commande_RGeneral.Size = New System.Drawing.Size(748, 380)
         Me.GBX_numero_commande_RGeneral.TabIndex = 73
         Me.GBX_numero_commande_RGeneral.TabStop = False
@@ -2264,8 +2542,8 @@ Partial Class Xtreme
         '
         'TextBox12
         '
-        Me.TextBox12.Location = New System.Drawing.Point(541, 301)
-        Me.TextBox12.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox12.Location = New System.Drawing.Point(536, 335)
+        Me.TextBox12.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.ReadOnly = True
         Me.TextBox12.Size = New System.Drawing.Size(76, 20)
@@ -2273,8 +2551,8 @@ Partial Class Xtreme
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(541, 278)
-        Me.TextBox11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox11.Location = New System.Drawing.Point(630, 37)
+        Me.TextBox11.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.ReadOnly = True
         Me.TextBox11.Size = New System.Drawing.Size(76, 20)
@@ -2282,8 +2560,8 @@ Partial Class Xtreme
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(541, 255)
-        Me.TextBox10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox10.Location = New System.Drawing.Point(291, 168)
+        Me.TextBox10.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.ReadOnly = True
         Me.TextBox10.Size = New System.Drawing.Size(76, 20)
@@ -2291,35 +2569,35 @@ Partial Class Xtreme
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(541, 232)
-        Me.TextBox9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox9.Location = New System.Drawing.Point(541, 113)
+        Me.TextBox9.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.ReadOnly = True
-        Me.TextBox9.Size = New System.Drawing.Size(76, 20)
+        Me.TextBox9.Size = New System.Drawing.Size(96, 20)
         Me.TextBox9.TabIndex = 18
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(541, 210)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox8.Location = New System.Drawing.Point(429, 113)
+        Me.TextBox8.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.ReadOnly = True
-        Me.TextBox8.Size = New System.Drawing.Size(76, 20)
+        Me.TextBox8.Size = New System.Drawing.Size(89, 20)
         Me.TextBox8.TabIndex = 17
         '
         'Txt_Date_de_commande_RGeneral_NC
         '
-        Me.Txt_Date_de_commande_RGeneral_NC.Location = New System.Drawing.Point(541, 187)
-        Me.Txt_Date_de_commande_RGeneral_NC.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Date_de_commande_RGeneral_NC.Location = New System.Drawing.Point(291, 113)
+        Me.Txt_Date_de_commande_RGeneral_NC.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Date_de_commande_RGeneral_NC.Name = "Txt_Date_de_commande_RGeneral_NC"
         Me.Txt_Date_de_commande_RGeneral_NC.ReadOnly = True
-        Me.Txt_Date_de_commande_RGeneral_NC.Size = New System.Drawing.Size(76, 20)
+        Me.Txt_Date_de_commande_RGeneral_NC.Size = New System.Drawing.Size(97, 20)
         Me.Txt_Date_de_commande_RGeneral_NC.TabIndex = 16
         '
         'Txt_Nom_Employer_RGeneral_NC
         '
-        Me.Txt_Nom_Employer_RGeneral_NC.Location = New System.Drawing.Point(541, 164)
-        Me.Txt_Nom_Employer_RGeneral_NC.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Nom_Employer_RGeneral_NC.Location = New System.Drawing.Point(442, 35)
+        Me.Txt_Nom_Employer_RGeneral_NC.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Nom_Employer_RGeneral_NC.Name = "Txt_Nom_Employer_RGeneral_NC"
         Me.Txt_Nom_Employer_RGeneral_NC.ReadOnly = True
         Me.Txt_Nom_Employer_RGeneral_NC.Size = New System.Drawing.Size(76, 20)
@@ -2327,8 +2605,8 @@ Partial Class Xtreme
         '
         'Txt_montant_Commande_RGeneral_NC
         '
-        Me.Txt_montant_Commande_RGeneral_NC.Location = New System.Drawing.Point(541, 141)
-        Me.Txt_montant_Commande_RGeneral_NC.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_montant_Commande_RGeneral_NC.Location = New System.Drawing.Point(301, 335)
+        Me.Txt_montant_Commande_RGeneral_NC.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_montant_Commande_RGeneral_NC.Name = "Txt_montant_Commande_RGeneral_NC"
         Me.Txt_montant_Commande_RGeneral_NC.ReadOnly = True
         Me.Txt_montant_Commande_RGeneral_NC.Size = New System.Drawing.Size(76, 20)
@@ -2337,7 +2615,7 @@ Partial Class Xtreme
         'Label78
         '
         Me.Label78.AutoSize = True
-        Me.Label78.Location = New System.Drawing.Point(394, 303)
+        Me.Label78.Location = New System.Drawing.Point(537, 320)
         Me.Label78.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label78.Name = "Label78"
         Me.Label78.Size = New System.Drawing.Size(75, 13)
@@ -2347,7 +2625,7 @@ Partial Class Xtreme
         'Label77
         '
         Me.Label77.AutoSize = True
-        Me.Label77.Location = New System.Drawing.Point(394, 280)
+        Me.Label77.Location = New System.Drawing.Point(627, 20)
         Me.Label77.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label77.Name = "Label77"
         Me.Label77.Size = New System.Drawing.Size(106, 13)
@@ -2357,7 +2635,7 @@ Partial Class Xtreme
         'Label76
         '
         Me.Label76.AutoSize = True
-        Me.Label76.Location = New System.Drawing.Point(394, 258)
+        Me.Label76.Location = New System.Drawing.Point(290, 153)
         Me.Label76.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label76.Name = "Label76"
         Me.Label76.Size = New System.Drawing.Size(67, 13)
@@ -2367,7 +2645,7 @@ Partial Class Xtreme
         'Label75
         '
         Me.Label75.AutoSize = True
-        Me.Label75.Location = New System.Drawing.Point(394, 235)
+        Me.Label75.Location = New System.Drawing.Point(538, 91)
         Me.Label75.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label75.Name = "Label75"
         Me.Label75.Size = New System.Drawing.Size(89, 13)
@@ -2377,7 +2655,7 @@ Partial Class Xtreme
         'Label74
         '
         Me.Label74.AutoSize = True
-        Me.Label74.Location = New System.Drawing.Point(394, 212)
+        Me.Label74.Location = New System.Drawing.Point(426, 91)
         Me.Label74.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(79, 13)
@@ -2387,7 +2665,7 @@ Partial Class Xtreme
         'Label73
         '
         Me.Label73.AutoSize = True
-        Me.Label73.Location = New System.Drawing.Point(394, 167)
+        Me.Label73.Location = New System.Drawing.Point(444, 15)
         Me.Label73.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label73.Name = "Label73"
         Me.Label73.Size = New System.Drawing.Size(74, 13)
@@ -2397,7 +2675,7 @@ Partial Class Xtreme
         'Label72
         '
         Me.Label72.AutoSize = True
-        Me.Label72.Location = New System.Drawing.Point(394, 189)
+        Me.Label72.Location = New System.Drawing.Point(288, 91)
         Me.Label72.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(100, 13)
@@ -2407,7 +2685,7 @@ Partial Class Xtreme
         'Label71
         '
         Me.Label71.AutoSize = True
-        Me.Label71.Location = New System.Drawing.Point(394, 144)
+        Me.Label71.Location = New System.Drawing.Point(298, 320)
         Me.Label71.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(101, 13)
@@ -2417,7 +2695,7 @@ Partial Class Xtreme
         'Label70
         '
         Me.Label70.AutoSize = True
-        Me.Label70.Location = New System.Drawing.Point(394, 121)
+        Me.Label70.Location = New System.Drawing.Point(287, 14)
         Me.Label70.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(74, 13)
@@ -2426,8 +2704,8 @@ Partial Class Xtreme
         '
         'Txt_ID_Commande_RGeneral_NC
         '
-        Me.Txt_ID_Commande_RGeneral_NC.Location = New System.Drawing.Point(541, 119)
-        Me.Txt_ID_Commande_RGeneral_NC.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_ID_Commande_RGeneral_NC.Location = New System.Drawing.Point(290, 37)
+        Me.Txt_ID_Commande_RGeneral_NC.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_ID_Commande_RGeneral_NC.Name = "Txt_ID_Commande_RGeneral_NC"
         Me.Txt_ID_Commande_RGeneral_NC.ReadOnly = True
         Me.Txt_ID_Commande_RGeneral_NC.Size = New System.Drawing.Size(76, 20)
@@ -2435,10 +2713,10 @@ Partial Class Xtreme
         '
         'Btn_ok_NC_RGeneral
         '
-        Me.Btn_ok_NC_RGeneral.Location = New System.Drawing.Point(245, 43)
-        Me.Btn_ok_NC_RGeneral.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_ok_NC_RGeneral.Location = New System.Drawing.Point(127, 43)
+        Me.Btn_ok_NC_RGeneral.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_ok_NC_RGeneral.Name = "Btn_ok_NC_RGeneral"
-        Me.Btn_ok_NC_RGeneral.Size = New System.Drawing.Size(29, 18)
+        Me.Btn_ok_NC_RGeneral.Size = New System.Drawing.Size(29, 22)
         Me.Btn_ok_NC_RGeneral.TabIndex = 3
         Me.Btn_ok_NC_RGeneral.Text = "ok"
         Me.Btn_ok_NC_RGeneral.UseVisualStyleBackColor = True
@@ -2446,7 +2724,7 @@ Partial Class Xtreme
         'Label69
         '
         Me.Label69.AutoSize = True
-        Me.Label69.Location = New System.Drawing.Point(16, 46)
+        Me.Label69.Location = New System.Drawing.Point(13, 27)
         Me.Label69.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label69.Name = "Label69"
         Me.Label69.Size = New System.Drawing.Size(114, 13)
@@ -2455,8 +2733,8 @@ Partial Class Xtreme
         '
         'Txt_Num_Commande_RGeneral_NC
         '
-        Me.Txt_Num_Commande_RGeneral_NC.Location = New System.Drawing.Point(134, 43)
-        Me.Txt_Num_Commande_RGeneral_NC.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Num_Commande_RGeneral_NC.Location = New System.Drawing.Point(16, 45)
+        Me.Txt_Num_Commande_RGeneral_NC.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Num_Commande_RGeneral_NC.Name = "Txt_Num_Commande_RGeneral_NC"
         Me.Txt_Num_Commande_RGeneral_NC.Size = New System.Drawing.Size(107, 20)
         Me.Txt_Num_Commande_RGeneral_NC.TabIndex = 1
@@ -2465,15 +2743,15 @@ Partial Class Xtreme
         '
         Me.LBx_Num_Prod_RGeneral_NC.FormattingEnabled = True
         Me.LBx_Num_Prod_RGeneral_NC.Location = New System.Drawing.Point(16, 93)
-        Me.LBx_Num_Prod_RGeneral_NC.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.LBx_Num_Prod_RGeneral_NC.Margin = New System.Windows.Forms.Padding(2)
         Me.LBx_Num_Prod_RGeneral_NC.Name = "LBx_Num_Prod_RGeneral_NC"
-        Me.LBx_Num_Prod_RGeneral_NC.Size = New System.Drawing.Size(259, 277)
+        Me.LBx_Num_Prod_RGeneral_NC.Size = New System.Drawing.Size(162, 277)
         Me.LBx_Num_Prod_RGeneral_NC.TabIndex = 0
         '
         'Btn_Recherche_RGeneral
         '
         Me.Btn_Recherche_RGeneral.Location = New System.Drawing.Point(901, 58)
-        Me.Btn_Recherche_RGeneral.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Recherche_RGeneral.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Recherche_RGeneral.Name = "Btn_Recherche_RGeneral"
         Me.Btn_Recherche_RGeneral.Size = New System.Drawing.Size(75, 28)
         Me.Btn_Recherche_RGeneral.TabIndex = 4
@@ -2486,10 +2764,10 @@ Partial Class Xtreme
         Me.GBx_MRecherche_RG.Controls.Add(Me.RadioButton3)
         Me.GBx_MRecherche_RG.Controls.Add(Me.RadioButton2)
         Me.GBx_MRecherche_RG.Location = New System.Drawing.Point(5, 56)
-        Me.GBx_MRecherche_RG.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GBx_MRecherche_RG.Margin = New System.Windows.Forms.Padding(2)
         Me.GBx_MRecherche_RG.Name = "GBx_MRecherche_RG"
-        Me.GBx_MRecherche_RG.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GBx_MRecherche_RG.Size = New System.Drawing.Size(138, 273)
+        Me.GBx_MRecherche_RG.Padding = New System.Windows.Forms.Padding(2)
+        Me.GBx_MRecherche_RG.Size = New System.Drawing.Size(138, 91)
         Me.GBx_MRecherche_RG.TabIndex = 70
         Me.GBx_MRecherche_RG.TabStop = False
         Me.GBx_MRecherche_RG.Text = "Mode de recherche"
@@ -2498,7 +2776,7 @@ Partial Class Xtreme
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Location = New System.Drawing.Point(4, 24)
-        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(2)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(51, 17)
         Me.RadioButton1.TabIndex = 67
@@ -2509,8 +2787,8 @@ Partial Class Xtreme
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(4, 240)
-        Me.RadioButton3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.RadioButton3.Location = New System.Drawing.Point(4, 66)
+        Me.RadioButton3.Margin = New System.Windows.Forms.Padding(2)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(132, 17)
         Me.RadioButton3.TabIndex = 69
@@ -2521,8 +2799,8 @@ Partial Class Xtreme
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(4, 129)
-        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.RadioButton2.Location = New System.Drawing.Point(4, 45)
+        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(2)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(65, 17)
         Me.RadioButton2.TabIndex = 68
@@ -2550,9 +2828,9 @@ Partial Class Xtreme
         Me.GBx_Clients_RGeneral.Controls.Add(Me.TextBox2)
         Me.GBx_Clients_RGeneral.Controls.Add(Me.TextBox1)
         Me.GBx_Clients_RGeneral.Location = New System.Drawing.Point(148, 21)
-        Me.GBx_Clients_RGeneral.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GBx_Clients_RGeneral.Margin = New System.Windows.Forms.Padding(2)
         Me.GBx_Clients_RGeneral.Name = "GBx_Clients_RGeneral"
-        Me.GBx_Clients_RGeneral.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GBx_Clients_RGeneral.Padding = New System.Windows.Forms.Padding(2)
         Me.GBx_Clients_RGeneral.Size = New System.Drawing.Size(748, 380)
         Me.GBx_Clients_RGeneral.TabIndex = 71
         Me.GBx_Clients_RGeneral.TabStop = False
@@ -2564,7 +2842,7 @@ Partial Class Xtreme
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.RGeneral_Date_de_commande, Me.RGeneral_Date_dexpedition, Me.RGeneral_Date_de_besoin, Me.RGeneral_ID_commande, Me.RGeneral_Montant_commande, Me.RGeneral_Employer, Me.RGeneral_Paiement, Me.RGeneral_numero_de_commande, Me.RGeneral_Nom_de_produit, Me.RGeneral_Couleur_produit, Me.RGeneral_Classe_du_produit, Me.RGeneral_Taille_du_produit})
         Me.DataGridView2.Location = New System.Drawing.Point(4, 97)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowTemplate.Height = 24
         Me.DataGridView2.Size = New System.Drawing.Size(740, 211)
@@ -2664,7 +2942,7 @@ Partial Class Xtreme
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(541, 48)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(186, 20)
         Me.TextBox2.TabIndex = 1
@@ -2672,7 +2950,7 @@ Partial Class Xtreme
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(111, 48)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(150, 20)
         Me.TextBox1.TabIndex = 0
@@ -2683,9 +2961,9 @@ Partial Class Xtreme
         Me.GBx_Vendeur_RGeneral.Controls.Add(Me.TextBox3)
         Me.GBx_Vendeur_RGeneral.Controls.Add(Me.Label68)
         Me.GBx_Vendeur_RGeneral.Location = New System.Drawing.Point(148, 21)
-        Me.GBx_Vendeur_RGeneral.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GBx_Vendeur_RGeneral.Margin = New System.Windows.Forms.Padding(2)
         Me.GBx_Vendeur_RGeneral.Name = "GBx_Vendeur_RGeneral"
-        Me.GBx_Vendeur_RGeneral.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GBx_Vendeur_RGeneral.Padding = New System.Windows.Forms.Padding(2)
         Me.GBx_Vendeur_RGeneral.Size = New System.Drawing.Size(744, 380)
         Me.GBx_Vendeur_RGeneral.TabIndex = 72
         Me.GBx_Vendeur_RGeneral.TabStop = False
@@ -2697,7 +2975,7 @@ Partial Class Xtreme
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.RGeneral_Nom_employer_vendeur, Me.RGeneral_Prenom_employer_vendeur, Me.RGeneral_Poste_occuper_vendeur, Me.RGeneral_Date_Naissance_vendeur, Me.RGeneral_Date_dembauche_vendeur, Me.RGeneral_Telephone_perso_vendeur, Me.RGeneral_Poste_vendeur})
         Me.DataGridView3.Location = New System.Drawing.Point(100, 97)
-        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView3.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.RowTemplate.Height = 24
         Me.DataGridView3.Size = New System.Drawing.Size(558, 122)
@@ -2742,7 +3020,7 @@ Partial Class Xtreme
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(217, 53)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(76, 20)
         Me.TextBox3.TabIndex = 1
@@ -2763,7 +3041,7 @@ Partial Class Xtreme
         Me.tabRechProduit.Controls.Add(Me.btn_menu4)
         Me.tabRechProduit.Location = New System.Drawing.Point(4, 22)
         Me.tabRechProduit.Name = "tabRechProduit"
-        Me.tabRechProduit.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.tabRechProduit.Padding = New System.Windows.Forms.Padding(3)
         Me.tabRechProduit.Size = New System.Drawing.Size(982, 425)
         Me.tabRechProduit.TabIndex = 4
         Me.tabRechProduit.Text = " Recherches avec produits"
@@ -2779,13 +3057,53 @@ Partial Class Xtreme
         Me.btn_menu4.Text = "Menu"
         Me.btn_menu4.UseVisualStyleBackColor = True
         '
+        'pan_commande
+        '
+        Me.pan_commande.Controls.Add(Me.Label80)
+        Me.pan_commande.Controls.Add(Me.dgv_produit)
+        Me.pan_commande.Controls.Add(Me.btn_newCom)
+        Me.pan_commande.Controls.Add(Me.Label88)
+        Me.pan_commande.Controls.Add(Me.Lab_oui_non_paye)
+        Me.pan_commande.Controls.Add(Me.btn_modCom)
+        Me.pan_commande.Controls.Add(Me.Label90)
+        Me.pan_commande.Controls.Add(Me.Label60)
+        Me.pan_commande.Controls.Add(Me.txt_trans)
+        Me.pan_commande.Controls.Add(Me.cbx_Prod_C)
+        Me.pan_commande.Controls.Add(Me.NumericUpDown1)
+        Me.pan_commande.Controls.Add(Me.Txt_montant)
+        Me.pan_commande.Controls.Add(Me.btn_lastComande)
+        Me.pan_commande.Controls.Add(Me.Label87)
+        Me.pan_commande.Controls.Add(Me.btn_nextComande)
+        Me.pan_commande.Controls.Add(Me.Label86)
+        Me.pan_commande.Controls.Add(Me.btn_previewComande)
+        Me.pan_commande.Controls.Add(Me.lab_oui_non_co)
+        Me.pan_commande.Controls.Add(Me.btn_fisrtComande)
+        Me.pan_commande.Controls.Add(Me.Label85)
+        Me.pan_commande.Controls.Add(Me.Label79)
+        Me.pan_commande.Controls.Add(Me.dtp_Exp_C)
+        Me.pan_commande.Controls.Add(Me.cbx_Emp_C)
+        Me.pan_commande.Controls.Add(Me.dtp_Besoin_C)
+        Me.pan_commande.Controls.Add(Me.cbx_Client_C)
+        Me.pan_commande.Controls.Add(Me.dtp_Com_C)
+        Me.pan_commande.Controls.Add(Me.btn_prodCom)
+        Me.pan_commande.Controls.Add(Me.Label82)
+        Me.pan_commande.Controls.Add(Me.Label81)
+        Me.pan_commande.Controls.Add(Me.Label83)
+        Me.pan_commande.Controls.Add(Me.Label84)
+        Me.pan_commande.Location = New System.Drawing.Point(3, 58)
+        Me.pan_commande.Margin = New System.Windows.Forms.Padding(2)
+        Me.pan_commande.Name = "pan_commande"
+        Me.pan_commande.Size = New System.Drawing.Size(914, 371)
+        Me.pan_commande.TabIndex = 103
+        Me.pan_commande.Visible = False
+        '
         'Xtreme
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GrayText
         Me.ClientSize = New System.Drawing.Size(993, 453)
-        Me.Controls.Add(Me.Rech_prod)
+        Me.Controls.Add(Me.Tab_Option)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Xtreme"
         Me.Text = "Gestion de Xtreme"
@@ -2801,7 +3119,7 @@ Partial Class Xtreme
         Me.gbx_sup.PerformLayout()
         Me.Pan_Type_produit.ResumeLayout(False)
         Me.Pan_Type_produit.PerformLayout()
-        Me.Rech_prod.ResumeLayout(False)
+        Me.Tab_Option.ResumeLayout(False)
         Me.tabMenu.ResumeLayout(False)
         Me.tabMenu.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2811,7 +3129,8 @@ Partial Class Xtreme
         Me.pan_adresse.PerformLayout()
         Me.tabCommandes.ResumeLayout(False)
         Me.tabCommandes.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_produit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabRechGene.ResumeLayout(False)
         Me.GBX_numero_commande_RGeneral.ResumeLayout(False)
         Me.GBX_numero_commande_RGeneral.PerformLayout()
@@ -2824,6 +3143,8 @@ Partial Class Xtreme
         Me.GBx_Vendeur_RGeneral.PerformLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabRechProduit.ResumeLayout(False)
+        Me.pan_commande.ResumeLayout(False)
+        Me.pan_commande.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2955,7 +3276,7 @@ Partial Class Xtreme
     Friend WithEvents cbx_Sup_h As ComboBox
     Friend WithEvents dtp_Embauche As DateTimePicker
     Friend WithEvents dtp_Naissance As DateTimePicker
-    Friend WithEvents Rech_prod As TabControl
+    Friend WithEvents Tab_Option As TabControl
     Friend WithEvents tabGestionTable As TabPage
     Friend WithEvents tabMenu As TabPage
     Friend WithEvents tabCommandes As TabPage
@@ -3016,13 +3337,11 @@ Partial Class Xtreme
     Friend WithEvents Label51 As Label
     Friend WithEvents lab_Etape1 As Label
     Friend WithEvents lab_etape2 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbx_Prod_C As ComboBox
     Friend WithEvents Label60 As Label
-    Friend WithEvents Label59 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btn_modCom As Button
+    Friend WithEvents btn_newCom As Button
+    Friend WithEvents dgv_produit As DataGridView
     Friend WithEvents GBx_Clients_RGeneral As GroupBox
     Friend WithEvents GBx_MRecherche_RG As GroupBox
     Friend WithEvents RadioButton1 As RadioButton
@@ -3059,15 +3378,6 @@ Partial Class Xtreme
     Friend WithEvents RGeneral_Classe_du_produit As DataGridViewTextBoxColumn
     Friend WithEvents RGeneral_Taille_du_produit As DataGridViewTextBoxColumn
     Friend WithEvents GBX_numero_commande_RGeneral As GroupBox
-    Friend WithEvents Commandes_ID_de_produit As DataGridViewTextBoxColumn
-    Friend WithEvents Commandes_commande_expedier As DataGridViewTextBoxColumn
-    Friend WithEvents Commandes_numéro_de_commande As DataGridViewTextBoxColumn
-    Friend WithEvents Commandes_Nom_de_produit As DataGridViewTextBoxColumn
-    Friend WithEvents Commandes_Classe_de_produit As DataGridViewTextBoxColumn
-    Friend WithEvents Commandes_Couleur_du_produit As DataGridViewTextBoxColumn
-    Friend WithEvents Commandes_taille_de_produit As DataGridViewTextBoxColumn
-    Friend WithEvents Commandes_Homme_Femme_de_produit As DataGridViewTextBoxColumn
-    Friend WithEvents Commandes_PrixConseiller_de_produit As DataGridViewTextBoxColumn
     Friend WithEvents LBx_Num_Prod_RGeneral_NC As ListBox
     Friend WithEvents Btn_ok_NC_RGeneral As Button
     Friend WithEvents Label69 As Label
@@ -3090,4 +3400,40 @@ Partial Class Xtreme
     Friend WithEvents Txt_Nom_Employer_RGeneral_NC As TextBox
     Friend WithEvents Txt_montant_Commande_RGeneral_NC As TextBox
     Friend WithEvents Label78 As Label
+    Friend WithEvents NumericUpDown1 As NumericUpDown
+    Friend WithEvents btn_fisrtComande As Button
+    Friend WithEvents btn_previewComande As Button
+    Friend WithEvents btn_nextComande As Button
+    Friend WithEvents btn_lastComande As Button
+    Friend WithEvents cbx_Emp_C As ComboBox
+    Friend WithEvents Label79 As Label
+    Friend WithEvents Label81 As Label
+    Friend WithEvents btn_prodCom As Button
+    Friend WithEvents cbx_Client_C As ComboBox
+    Friend WithEvents Label80 As Label
+    Friend WithEvents dtp_Exp_C As DateTimePicker
+    Friend WithEvents dtp_Besoin_C As DateTimePicker
+    Friend WithEvents dtp_Com_C As DateTimePicker
+    Friend WithEvents Label82 As Label
+    Friend WithEvents Label83 As Label
+    Friend WithEvents Label84 As Label
+    Friend WithEvents lab_oui_non_co As Label
+    Friend WithEvents Label85 As Label
+    Friend WithEvents txt_trans As TextBox
+    Friend WithEvents Label88 As Label
+    Friend WithEvents Txt_montant As TextBox
+    Friend WithEvents Label87 As Label
+    Friend WithEvents Label86 As Label
+    Friend WithEvents Commandes_Nom_de_produit As DataGridViewTextBoxColumn
+    Friend WithEvents Commandes_Classe_de_produit As DataGridViewTextBoxColumn
+    Friend WithEvents Commandes_Couleur_du_produit As DataGridViewTextBoxColumn
+    Friend WithEvents Commandes_taille_de_produit As DataGridViewTextBoxColumn
+    Friend WithEvents Commandes_Homme_Femme_de_produit As DataGridViewTextBoxColumn
+    Friend WithEvents Qte As DataGridViewTextBoxColumn
+    Friend WithEvents Commandes_PrixConseiller_de_produit As DataGridViewTextBoxColumn
+    Friend WithEvents Lab_oui_non_paye As Label
+    Friend WithEvents Label90 As Label
+    Friend WithEvents Label59 As Label
+    Friend WithEvents btn_reset As Button
+    Friend WithEvents pan_commande As Panel
 End Class
