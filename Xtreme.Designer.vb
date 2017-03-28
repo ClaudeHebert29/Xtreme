@@ -251,6 +251,7 @@ Partial Class Xtreme
         Me.btn_menu2 = New System.Windows.Forms.Button()
         Me.tabRechGene = New System.Windows.Forms.TabPage()
         Me.GBX_numero_commande_RGeneral = New System.Windows.Forms.GroupBox()
+        Me.Label89 = New System.Windows.Forms.Label()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
@@ -312,7 +313,6 @@ Partial Class Xtreme
         Me.tabRechProduit = New System.Windows.Forms.TabPage()
         Me.btn_menu4 = New System.Windows.Forms.Button()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label89 = New System.Windows.Forms.Label()
         Me.pan_clients.SuspendLayout()
         Me.Pan_employer.SuspendLayout()
         Me.Pan_produit.SuspendLayout()
@@ -342,7 +342,7 @@ Partial Class Xtreme
         '
         Me.btn_ElementLast.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_ElementLast.Location = New System.Drawing.Point(547, 487)
-        Me.btn_ElementLast.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_ElementLast.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_ElementLast.Name = "btn_ElementLast"
         Me.btn_ElementLast.Size = New System.Drawing.Size(100, 28)
         Me.btn_ElementLast.TabIndex = 18
@@ -353,7 +353,7 @@ Partial Class Xtreme
         '
         Me.btn_ElementNext.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_ElementNext.Location = New System.Drawing.Point(439, 487)
-        Me.btn_ElementNext.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_ElementNext.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_ElementNext.Name = "btn_ElementNext"
         Me.btn_ElementNext.Size = New System.Drawing.Size(100, 28)
         Me.btn_ElementNext.TabIndex = 17
@@ -364,7 +364,7 @@ Partial Class Xtreme
         '
         Me.btn_ElementPreview.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_ElementPreview.Location = New System.Drawing.Point(331, 487)
-        Me.btn_ElementPreview.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_ElementPreview.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_ElementPreview.Name = "btn_ElementPreview"
         Me.btn_ElementPreview.Size = New System.Drawing.Size(100, 28)
         Me.btn_ElementPreview.TabIndex = 16
@@ -375,7 +375,7 @@ Partial Class Xtreme
         '
         Me.btn_ElementFirst.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_ElementFirst.Location = New System.Drawing.Point(224, 487)
-        Me.btn_ElementFirst.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_ElementFirst.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_ElementFirst.Name = "btn_ElementFirst"
         Me.btn_ElementFirst.Size = New System.Drawing.Size(100, 28)
         Me.btn_ElementFirst.TabIndex = 15
@@ -416,7 +416,7 @@ Partial Class Xtreme
         Me.pan_clients.Controls.Add(Me.Lab_vente)
         Me.pan_clients.Controls.Add(Me.Lab_adresse)
         Me.pan_clients.Location = New System.Drawing.Point(0, 59)
-        Me.pan_clients.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pan_clients.Margin = New System.Windows.Forms.Padding(4)
         Me.pan_clients.Name = "pan_clients"
         Me.pan_clients.Size = New System.Drawing.Size(1315, 421)
         Me.pan_clients.TabIndex = 44
@@ -455,7 +455,7 @@ Partial Class Xtreme
         'txt_Clients_1
         '
         Me.txt_Clients_1.Location = New System.Drawing.Point(240, 62)
-        Me.txt_Clients_1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_1.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_1.Name = "txt_Clients_1"
         Me.txt_Clients_1.Size = New System.Drawing.Size(180, 22)
         Me.txt_Clients_1.TabIndex = 0
@@ -463,7 +463,7 @@ Partial Class Xtreme
         'txt_Clients_10
         '
         Me.txt_Clients_10.Location = New System.Drawing.Point(927, 246)
-        Me.txt_Clients_10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_10.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_10.Name = "txt_Clients_10"
         Me.txt_Clients_10.Size = New System.Drawing.Size(192, 22)
         Me.txt_Clients_10.TabIndex = 41
@@ -471,7 +471,7 @@ Partial Class Xtreme
         'txt_Clients_2
         '
         Me.txt_Clients_2.Location = New System.Drawing.Point(467, 123)
-        Me.txt_Clients_2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_2.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_2.Name = "txt_Clients_2"
         Me.txt_Clients_2.Size = New System.Drawing.Size(169, 22)
         Me.txt_Clients_2.TabIndex = 1
@@ -479,7 +479,7 @@ Partial Class Xtreme
         'txt_Clients_15
         '
         Me.txt_Clients_15.Location = New System.Drawing.Point(467, 308)
-        Me.txt_Clients_15.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_15.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_15.Name = "txt_Clients_15"
         Me.txt_Clients_15.Size = New System.Drawing.Size(168, 22)
         Me.txt_Clients_15.TabIndex = 40
@@ -487,7 +487,7 @@ Partial Class Xtreme
         'txt_Clients_3
         '
         Me.txt_Clients_3.Location = New System.Drawing.Point(240, 123)
-        Me.txt_Clients_3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_3.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_3.Name = "txt_Clients_3"
         Me.txt_Clients_3.Size = New System.Drawing.Size(180, 22)
         Me.txt_Clients_3.TabIndex = 2
@@ -495,7 +495,7 @@ Partial Class Xtreme
         'txt_Clients_13
         '
         Me.txt_Clients_13.Location = New System.Drawing.Point(240, 246)
-        Me.txt_Clients_13.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_13.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_13.Name = "txt_Clients_13"
         Me.txt_Clients_13.Size = New System.Drawing.Size(180, 22)
         Me.txt_Clients_13.TabIndex = 39
@@ -503,7 +503,7 @@ Partial Class Xtreme
         'txt_Clients_4
         '
         Me.txt_Clients_4.Location = New System.Drawing.Point(243, 185)
-        Me.txt_Clients_4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_4.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_4.Name = "txt_Clients_4"
         Me.txt_Clients_4.Size = New System.Drawing.Size(51, 22)
         Me.txt_Clients_4.TabIndex = 3
@@ -511,7 +511,7 @@ Partial Class Xtreme
         'txt_Clients_14
         '
         Me.txt_Clients_14.Location = New System.Drawing.Point(240, 308)
-        Me.txt_Clients_14.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_14.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_14.Name = "txt_Clients_14"
         Me.txt_Clients_14.Size = New System.Drawing.Size(180, 22)
         Me.txt_Clients_14.TabIndex = 38
@@ -519,7 +519,7 @@ Partial Class Xtreme
         'txt_Clients_5
         '
         Me.txt_Clients_5.Location = New System.Drawing.Point(467, 185)
-        Me.txt_Clients_5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_5.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_5.Name = "txt_Clients_5"
         Me.txt_Clients_5.Size = New System.Drawing.Size(172, 22)
         Me.txt_Clients_5.TabIndex = 4
@@ -527,7 +527,7 @@ Partial Class Xtreme
         'txt_Clients_12
         '
         Me.txt_Clients_12.Location = New System.Drawing.Point(700, 185)
-        Me.txt_Clients_12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_12.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_12.Name = "txt_Clients_12"
         Me.txt_Clients_12.Size = New System.Drawing.Size(180, 22)
         Me.txt_Clients_12.TabIndex = 37
@@ -535,7 +535,7 @@ Partial Class Xtreme
         'txt_Clients_6
         '
         Me.txt_Clients_6.Location = New System.Drawing.Point(700, 308)
-        Me.txt_Clients_6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_6.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_6.Name = "txt_Clients_6"
         Me.txt_Clients_6.Size = New System.Drawing.Size(180, 22)
         Me.txt_Clients_6.TabIndex = 5
@@ -544,7 +544,7 @@ Partial Class Xtreme
         'txt_Clients_11
         '
         Me.txt_Clients_11.Location = New System.Drawing.Point(700, 246)
-        Me.txt_Clients_11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_11.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_11.Name = "txt_Clients_11"
         Me.txt_Clients_11.Size = New System.Drawing.Size(180, 22)
         Me.txt_Clients_11.TabIndex = 36
@@ -552,7 +552,7 @@ Partial Class Xtreme
         'txt_Clients_7
         '
         Me.txt_Clients_7.Location = New System.Drawing.Point(700, 123)
-        Me.txt_Clients_7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_7.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_7.Name = "txt_Clients_7"
         Me.txt_Clients_7.Size = New System.Drawing.Size(180, 22)
         Me.txt_Clients_7.TabIndex = 6
@@ -570,7 +570,7 @@ Partial Class Xtreme
         'txt_Clients_8
         '
         Me.txt_Clients_8.Location = New System.Drawing.Point(927, 123)
-        Me.txt_Clients_8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_8.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_8.Name = "txt_Clients_8"
         Me.txt_Clients_8.Size = New System.Drawing.Size(192, 22)
         Me.txt_Clients_8.TabIndex = 7
@@ -588,7 +588,7 @@ Partial Class Xtreme
         'txt_Clients_9
         '
         Me.txt_Clients_9.Location = New System.Drawing.Point(927, 185)
-        Me.txt_Clients_9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Clients_9.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Clients_9.Name = "txt_Clients_9"
         Me.txt_Clients_9.Size = New System.Drawing.Size(192, 22)
         Me.txt_Clients_9.TabIndex = 8
@@ -706,7 +706,7 @@ Partial Class Xtreme
         'btn_ChangerTable
         '
         Me.btn_ChangerTable.Location = New System.Drawing.Point(191, 23)
-        Me.btn_ChangerTable.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_ChangerTable.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_ChangerTable.Name = "btn_ChangerTable"
         Me.btn_ChangerTable.Size = New System.Drawing.Size(36, 28)
         Me.btn_ChangerTable.TabIndex = 45
@@ -718,7 +718,7 @@ Partial Class Xtreme
         Me.cbx_Nomtable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbx_Nomtable.FormattingEnabled = True
         Me.cbx_Nomtable.Location = New System.Drawing.Point(21, 26)
-        Me.cbx_Nomtable.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbx_Nomtable.Margin = New System.Windows.Forms.Padding(4)
         Me.cbx_Nomtable.Name = "cbx_Nomtable"
         Me.cbx_Nomtable.Size = New System.Drawing.Size(160, 24)
         Me.cbx_Nomtable.TabIndex = 46
@@ -782,7 +782,7 @@ Partial Class Xtreme
         Me.Pan_employer.Controls.Add(Me.dtp_Naissance)
         Me.Pan_employer.Controls.Add(Me.Txt_Emp_9)
         Me.Pan_employer.Location = New System.Drawing.Point(4, 59)
-        Me.Pan_employer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Pan_employer.Margin = New System.Windows.Forms.Padding(4)
         Me.Pan_employer.Name = "Pan_employer"
         Me.Pan_employer.Size = New System.Drawing.Size(1307, 421)
         Me.Pan_employer.TabIndex = 48
@@ -813,7 +813,7 @@ Partial Class Xtreme
         'Txt_Emp_18
         '
         Me.Txt_Emp_18.Location = New System.Drawing.Point(707, 180)
-        Me.Txt_Emp_18.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_18.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_18.Name = "Txt_Emp_18"
         Me.Txt_Emp_18.Size = New System.Drawing.Size(227, 22)
         Me.Txt_Emp_18.TabIndex = 76
@@ -831,7 +831,7 @@ Partial Class Xtreme
         'Txt_Emp_17
         '
         Me.Txt_Emp_17.Location = New System.Drawing.Point(233, 240)
-        Me.Txt_Emp_17.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_17.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_17.Name = "Txt_Emp_17"
         Me.Txt_Emp_17.ReadOnly = True
         Me.Txt_Emp_17.Size = New System.Drawing.Size(173, 22)
@@ -840,7 +840,7 @@ Partial Class Xtreme
         'btn_Adresse
         '
         Me.btn_Adresse.Location = New System.Drawing.Point(419, 239)
-        Me.btn_Adresse.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_Adresse.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_Adresse.Name = "btn_Adresse"
         Me.btn_Adresse.Size = New System.Drawing.Size(88, 28)
         Me.btn_Adresse.TabIndex = 74
@@ -893,7 +893,7 @@ Partial Class Xtreme
         'Txt_Emp_16
         '
         Me.Txt_Emp_16.Location = New System.Drawing.Point(440, 326)
-        Me.Txt_Emp_16.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_16.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_16.Name = "Txt_Emp_16"
         Me.Txt_Emp_16.Size = New System.Drawing.Size(163, 22)
         Me.Txt_Emp_16.TabIndex = 46
@@ -911,7 +911,7 @@ Partial Class Xtreme
         'txt_Emp_10
         '
         Me.txt_Emp_10.Location = New System.Drawing.Point(1067, 55)
-        Me.txt_Emp_10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Emp_10.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Emp_10.Name = "txt_Emp_10"
         Me.txt_Emp_10.Size = New System.Drawing.Size(221, 22)
         Me.txt_Emp_10.TabIndex = 44
@@ -949,7 +949,7 @@ Partial Class Xtreme
         'Txt_Emp_1
         '
         Me.Txt_Emp_1.Location = New System.Drawing.Point(440, 55)
-        Me.Txt_Emp_1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_1.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_1.Name = "Txt_Emp_1"
         Me.Txt_Emp_1.Size = New System.Drawing.Size(163, 22)
         Me.Txt_Emp_1.TabIndex = 0
@@ -957,7 +957,7 @@ Partial Class Xtreme
         'Txt_Emp_2
         '
         Me.Txt_Emp_2.Location = New System.Drawing.Point(233, 55)
-        Me.Txt_Emp_2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_2.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_2.Name = "Txt_Emp_2"
         Me.Txt_Emp_2.Size = New System.Drawing.Size(173, 22)
         Me.Txt_Emp_2.TabIndex = 1
@@ -965,7 +965,7 @@ Partial Class Xtreme
         'Txt_Emp_15
         '
         Me.Txt_Emp_15.Location = New System.Drawing.Point(233, 388)
-        Me.Txt_Emp_15.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_15.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_15.Name = "Txt_Emp_15"
         Me.Txt_Emp_15.Size = New System.Drawing.Size(173, 22)
         Me.Txt_Emp_15.TabIndex = 40
@@ -973,7 +973,7 @@ Partial Class Xtreme
         'Txt_Emp_3
         '
         Me.Txt_Emp_3.Location = New System.Drawing.Point(707, 55)
-        Me.Txt_Emp_3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_3.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_3.Name = "Txt_Emp_3"
         Me.Txt_Emp_3.Size = New System.Drawing.Size(223, 22)
         Me.Txt_Emp_3.TabIndex = 2
@@ -981,7 +981,7 @@ Partial Class Xtreme
         'Txt_Emp_13
         '
         Me.Txt_Emp_13.Location = New System.Drawing.Point(233, 326)
-        Me.Txt_Emp_13.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_13.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_13.Name = "Txt_Emp_13"
         Me.Txt_Emp_13.Size = New System.Drawing.Size(172, 22)
         Me.Txt_Emp_13.TabIndex = 39
@@ -989,7 +989,7 @@ Partial Class Xtreme
         'Txt_Emp_4
         '
         Me.Txt_Emp_4.Location = New System.Drawing.Point(233, 117)
-        Me.Txt_Emp_4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_4.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_4.Name = "Txt_Emp_4"
         Me.Txt_Emp_4.Size = New System.Drawing.Size(172, 22)
         Me.Txt_Emp_4.TabIndex = 3
@@ -997,7 +997,7 @@ Partial Class Xtreme
         'Txt_Emp_14
         '
         Me.Txt_Emp_14.Location = New System.Drawing.Point(440, 388)
-        Me.Txt_Emp_14.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_14.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_14.Name = "Txt_Emp_14"
         Me.Txt_Emp_14.Size = New System.Drawing.Size(163, 22)
         Me.Txt_Emp_14.TabIndex = 38
@@ -1005,7 +1005,7 @@ Partial Class Xtreme
         'Txt_Emp_5
         '
         Me.Txt_Emp_5.Location = New System.Drawing.Point(707, 117)
-        Me.Txt_Emp_5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_5.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_5.Name = "Txt_Emp_5"
         Me.Txt_Emp_5.Size = New System.Drawing.Size(184, 22)
         Me.Txt_Emp_5.TabIndex = 4
@@ -1013,7 +1013,7 @@ Partial Class Xtreme
         'Txt_Emp_12
         '
         Me.Txt_Emp_12.Location = New System.Drawing.Point(440, 117)
-        Me.Txt_Emp_12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_12.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_12.Name = "Txt_Emp_12"
         Me.Txt_Emp_12.Size = New System.Drawing.Size(173, 22)
         Me.Txt_Emp_12.TabIndex = 37
@@ -1021,7 +1021,7 @@ Partial Class Xtreme
         'Txt_Emp_6
         '
         Me.Txt_Emp_6.Location = New System.Drawing.Point(233, 178)
-        Me.Txt_Emp_6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_6.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_6.Name = "Txt_Emp_6"
         Me.Txt_Emp_6.Size = New System.Drawing.Size(172, 22)
         Me.Txt_Emp_6.TabIndex = 5
@@ -1029,7 +1029,7 @@ Partial Class Xtreme
         'Txt_Emp_11
         '
         Me.Txt_Emp_11.Location = New System.Drawing.Point(707, 240)
-        Me.Txt_Emp_11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_11.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_11.Name = "Txt_Emp_11"
         Me.Txt_Emp_11.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Txt_Emp_11.Size = New System.Drawing.Size(221, 22)
@@ -1039,7 +1039,7 @@ Partial Class Xtreme
         'Txt_Emp_7
         '
         Me.Txt_Emp_7.Location = New System.Drawing.Point(440, 178)
-        Me.Txt_Emp_7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_7.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_7.Name = "Txt_Emp_7"
         Me.Txt_Emp_7.Size = New System.Drawing.Size(163, 22)
         Me.Txt_Emp_7.TabIndex = 6
@@ -1067,7 +1067,7 @@ Partial Class Xtreme
         'Txt_Emp_8
         '
         Me.Txt_Emp_8.Location = New System.Drawing.Point(707, 308)
-        Me.Txt_Emp_8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_8.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_8.Multiline = True
         Me.Txt_Emp_8.Name = "Txt_Emp_8"
         Me.Txt_Emp_8.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -1179,7 +1179,7 @@ Partial Class Xtreme
         '
         Me.cbx_Sup.FormattingEnabled = True
         Me.cbx_Sup.Location = New System.Drawing.Point(705, 178)
-        Me.cbx_Sup.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbx_Sup.Margin = New System.Windows.Forms.Padding(4)
         Me.cbx_Sup.Name = "cbx_Sup"
         Me.cbx_Sup.Size = New System.Drawing.Size(228, 24)
         Me.cbx_Sup.TabIndex = 78
@@ -1189,7 +1189,7 @@ Partial Class Xtreme
         '
         Me.cbx_Sup_h.FormattingEnabled = True
         Me.cbx_Sup_h.Location = New System.Drawing.Point(1067, 177)
-        Me.cbx_Sup_h.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbx_Sup_h.Margin = New System.Windows.Forms.Padding(4)
         Me.cbx_Sup_h.Name = "cbx_Sup_h"
         Me.cbx_Sup_h.Size = New System.Drawing.Size(221, 24)
         Me.cbx_Sup_h.TabIndex = 56
@@ -1198,7 +1198,7 @@ Partial Class Xtreme
         'dtp_Embauche
         '
         Me.dtp_Embauche.Location = New System.Drawing.Point(707, 117)
-        Me.dtp_Embauche.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtp_Embauche.Margin = New System.Windows.Forms.Padding(4)
         Me.dtp_Embauche.MaxDate = New Date(2020, 1, 1, 0, 0, 0, 0)
         Me.dtp_Embauche.MinDate = New Date(1940, 1, 1, 0, 0, 0, 0)
         Me.dtp_Embauche.Name = "dtp_Embauche"
@@ -1210,7 +1210,7 @@ Partial Class Xtreme
         'dtp_Naissance
         '
         Me.dtp_Naissance.Location = New System.Drawing.Point(233, 117)
-        Me.dtp_Naissance.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtp_Naissance.Margin = New System.Windows.Forms.Padding(4)
         Me.dtp_Naissance.MaxDate = New Date(2017, 3, 17, 0, 0, 0, 0)
         Me.dtp_Naissance.MinDate = New Date(1910, 1, 1, 0, 0, 0, 0)
         Me.dtp_Naissance.Name = "dtp_Naissance"
@@ -1222,7 +1222,7 @@ Partial Class Xtreme
         'Txt_Emp_9
         '
         Me.Txt_Emp_9.Location = New System.Drawing.Point(1067, 177)
-        Me.Txt_Emp_9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_Emp_9.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_Emp_9.Name = "Txt_Emp_9"
         Me.Txt_Emp_9.Size = New System.Drawing.Size(223, 22)
         Me.Txt_Emp_9.TabIndex = 41
@@ -1251,7 +1251,7 @@ Partial Class Xtreme
         Me.Pan_produit.Controls.Add(Me.Txt_prod_8)
         Me.Pan_produit.Controls.Add(Me.Txt_prod_6)
         Me.Pan_produit.Location = New System.Drawing.Point(0, 59)
-        Me.Pan_produit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Pan_produit.Margin = New System.Windows.Forms.Padding(4)
         Me.Pan_produit.Name = "Pan_produit"
         Me.Pan_produit.Size = New System.Drawing.Size(1305, 421)
         Me.Pan_produit.TabIndex = 47
@@ -1282,7 +1282,7 @@ Partial Class Xtreme
         'btn_Ajouter_type_prod
         '
         Me.btn_Ajouter_type_prod.Location = New System.Drawing.Point(980, 160)
-        Me.btn_Ajouter_type_prod.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_Ajouter_type_prod.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_Ajouter_type_prod.Name = "btn_Ajouter_type_prod"
         Me.btn_Ajouter_type_prod.Size = New System.Drawing.Size(77, 28)
         Me.btn_Ajouter_type_prod.TabIndex = 54
@@ -1303,7 +1303,7 @@ Partial Class Xtreme
         'Txt_prod_1
         '
         Me.Txt_prod_1.Location = New System.Drawing.Point(413, 98)
-        Me.Txt_prod_1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_prod_1.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_prod_1.Name = "Txt_prod_1"
         Me.Txt_prod_1.Size = New System.Drawing.Size(221, 22)
         Me.Txt_prod_1.TabIndex = 0
@@ -1311,7 +1311,7 @@ Partial Class Xtreme
         'Txt_prod_2
         '
         Me.Txt_prod_2.Location = New System.Drawing.Point(413, 160)
-        Me.Txt_prod_2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_prod_2.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_prod_2.Name = "Txt_prod_2"
         Me.Txt_prod_2.Size = New System.Drawing.Size(223, 22)
         Me.Txt_prod_2.TabIndex = 1
@@ -1319,7 +1319,7 @@ Partial Class Xtreme
         'Txt_prod_3
         '
         Me.Txt_prod_3.Location = New System.Drawing.Point(413, 222)
-        Me.Txt_prod_3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_prod_3.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_prod_3.Name = "Txt_prod_3"
         Me.Txt_prod_3.Size = New System.Drawing.Size(223, 22)
         Me.Txt_prod_3.TabIndex = 2
@@ -1327,7 +1327,7 @@ Partial Class Xtreme
         'Txt_prod_4
         '
         Me.Txt_prod_4.Location = New System.Drawing.Point(413, 283)
-        Me.Txt_prod_4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_prod_4.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_prod_4.Name = "Txt_prod_4"
         Me.Txt_prod_4.Size = New System.Drawing.Size(221, 22)
         Me.Txt_prod_4.TabIndex = 3
@@ -1335,7 +1335,7 @@ Partial Class Xtreme
         'Txt_prod_5
         '
         Me.Txt_prod_5.Location = New System.Drawing.Point(693, 98)
-        Me.Txt_prod_5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_prod_5.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_prod_5.Name = "Txt_prod_5"
         Me.Txt_prod_5.Size = New System.Drawing.Size(223, 22)
         Me.Txt_prod_5.TabIndex = 4
@@ -1343,7 +1343,7 @@ Partial Class Xtreme
         'Txt_prod_7
         '
         Me.Txt_prod_7.Location = New System.Drawing.Point(693, 222)
-        Me.Txt_prod_7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_prod_7.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_prod_7.Name = "Txt_prod_7"
         Me.Txt_prod_7.Size = New System.Drawing.Size(223, 22)
         Me.Txt_prod_7.TabIndex = 6
@@ -1422,7 +1422,7 @@ Partial Class Xtreme
         '
         Me.cbx_typeProduit.FormattingEnabled = True
         Me.cbx_typeProduit.Location = New System.Drawing.Point(693, 160)
-        Me.cbx_typeProduit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbx_typeProduit.Margin = New System.Windows.Forms.Padding(4)
         Me.cbx_typeProduit.Name = "cbx_typeProduit"
         Me.cbx_typeProduit.Size = New System.Drawing.Size(223, 24)
         Me.cbx_typeProduit.TabIndex = 55
@@ -1432,7 +1432,7 @@ Partial Class Xtreme
         '
         Me.cbx_fournisseur.FormattingEnabled = True
         Me.cbx_fournisseur.Location = New System.Drawing.Point(693, 283)
-        Me.cbx_fournisseur.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbx_fournisseur.Margin = New System.Windows.Forms.Padding(4)
         Me.cbx_fournisseur.Name = "cbx_fournisseur"
         Me.cbx_fournisseur.Size = New System.Drawing.Size(223, 24)
         Me.cbx_fournisseur.TabIndex = 56
@@ -1441,7 +1441,7 @@ Partial Class Xtreme
         'Txt_prod_8
         '
         Me.Txt_prod_8.Location = New System.Drawing.Point(693, 283)
-        Me.Txt_prod_8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_prod_8.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_prod_8.Name = "Txt_prod_8"
         Me.Txt_prod_8.Size = New System.Drawing.Size(223, 22)
         Me.Txt_prod_8.TabIndex = 7
@@ -1449,7 +1449,7 @@ Partial Class Xtreme
         'Txt_prod_6
         '
         Me.Txt_prod_6.Location = New System.Drawing.Point(693, 160)
-        Me.Txt_prod_6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_prod_6.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_prod_6.Name = "Txt_prod_6"
         Me.Txt_prod_6.Size = New System.Drawing.Size(223, 22)
         Me.Txt_prod_6.TabIndex = 5
@@ -1474,7 +1474,7 @@ Partial Class Xtreme
         Me.pan_Fournisseur.Controls.Add(Me.Label11)
         Me.pan_Fournisseur.Controls.Add(Me.Label31)
         Me.pan_Fournisseur.Location = New System.Drawing.Point(-5, 59)
-        Me.pan_Fournisseur.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pan_Fournisseur.Margin = New System.Windows.Forms.Padding(4)
         Me.pan_Fournisseur.Name = "pan_Fournisseur"
         Me.pan_Fournisseur.Size = New System.Drawing.Size(1315, 421)
         Me.pan_Fournisseur.TabIndex = 49
@@ -1494,7 +1494,7 @@ Partial Class Xtreme
         'txt_four_6
         '
         Me.txt_four_6.Location = New System.Drawing.Point(400, 225)
-        Me.txt_four_6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_four_6.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_four_6.Name = "txt_four_6"
         Me.txt_four_6.Size = New System.Drawing.Size(223, 22)
         Me.txt_four_6.TabIndex = 27
@@ -1522,7 +1522,7 @@ Partial Class Xtreme
         'txt_four_1
         '
         Me.txt_four_1.Location = New System.Drawing.Point(400, 102)
-        Me.txt_four_1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_four_1.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_four_1.Name = "txt_four_1"
         Me.txt_four_1.Size = New System.Drawing.Size(221, 22)
         Me.txt_four_1.TabIndex = 0
@@ -1530,7 +1530,7 @@ Partial Class Xtreme
         'txt_four_2
         '
         Me.txt_four_2.Location = New System.Drawing.Point(400, 164)
-        Me.txt_four_2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_four_2.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_four_2.Name = "txt_four_2"
         Me.txt_four_2.Size = New System.Drawing.Size(223, 22)
         Me.txt_four_2.TabIndex = 1
@@ -1538,7 +1538,7 @@ Partial Class Xtreme
         'Txt_four_3
         '
         Me.Txt_four_3.Location = New System.Drawing.Point(693, 164)
-        Me.Txt_four_3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_four_3.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_four_3.Name = "Txt_four_3"
         Me.Txt_four_3.Size = New System.Drawing.Size(223, 22)
         Me.Txt_four_3.TabIndex = 2
@@ -1546,7 +1546,7 @@ Partial Class Xtreme
         'Txt_four_4
         '
         Me.Txt_four_4.Location = New System.Drawing.Point(693, 225)
-        Me.Txt_four_4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_four_4.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_four_4.Name = "Txt_four_4"
         Me.Txt_four_4.Size = New System.Drawing.Size(221, 22)
         Me.Txt_four_4.TabIndex = 3
@@ -1554,7 +1554,7 @@ Partial Class Xtreme
         'Txt_four_5
         '
         Me.Txt_four_5.Location = New System.Drawing.Point(693, 287)
-        Me.Txt_four_5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_four_5.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_four_5.Name = "Txt_four_5"
         Me.Txt_four_5.Size = New System.Drawing.Size(223, 22)
         Me.Txt_four_5.TabIndex = 4
@@ -1562,7 +1562,7 @@ Partial Class Xtreme
         'Txt_four_7
         '
         Me.Txt_four_7.Location = New System.Drawing.Point(400, 287)
-        Me.Txt_four_7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_four_7.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_four_7.Name = "Txt_four_7"
         Me.Txt_four_7.Size = New System.Drawing.Size(223, 22)
         Me.Txt_four_7.TabIndex = 5
@@ -1570,7 +1570,7 @@ Partial Class Xtreme
         'Txt_four_8
         '
         Me.Txt_four_8.Location = New System.Drawing.Point(693, 102)
-        Me.Txt_four_8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Txt_four_8.Margin = New System.Windows.Forms.Padding(4)
         Me.Txt_four_8.Name = "Txt_four_8"
         Me.Txt_four_8.Size = New System.Drawing.Size(223, 22)
         Me.Txt_four_8.TabIndex = 6
@@ -1639,7 +1639,7 @@ Partial Class Xtreme
         '
         Me.btn_annuler.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_annuler.Location = New System.Drawing.Point(1029, 487)
-        Me.btn_annuler.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_annuler.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_annuler.Name = "btn_annuler"
         Me.btn_annuler.Size = New System.Drawing.Size(100, 28)
         Me.btn_annuler.TabIndex = 53
@@ -1650,7 +1650,7 @@ Partial Class Xtreme
         '
         Me.btn_supprimer.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_supprimer.Location = New System.Drawing.Point(921, 487)
-        Me.btn_supprimer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_supprimer.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_supprimer.Name = "btn_supprimer"
         Me.btn_supprimer.Size = New System.Drawing.Size(100, 28)
         Me.btn_supprimer.TabIndex = 52
@@ -1661,7 +1661,7 @@ Partial Class Xtreme
         '
         Me.btn_Modifier.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_Modifier.Location = New System.Drawing.Point(813, 487)
-        Me.btn_Modifier.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_Modifier.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_Modifier.Name = "btn_Modifier"
         Me.btn_Modifier.Size = New System.Drawing.Size(100, 28)
         Me.btn_Modifier.TabIndex = 51
@@ -1672,7 +1672,7 @@ Partial Class Xtreme
         '
         Me.btn_Ajouter.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_Ajouter.Location = New System.Drawing.Point(707, 487)
-        Me.btn_Ajouter.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_Ajouter.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_Ajouter.Name = "btn_Ajouter"
         Me.btn_Ajouter.Size = New System.Drawing.Size(100, 28)
         Me.btn_Ajouter.TabIndex = 50
@@ -1686,9 +1686,9 @@ Partial Class Xtreme
         Me.gbx_sup.Controls.Add(Me.btn_Oui)
         Me.gbx_sup.Controls.Add(Me.Label34)
         Me.gbx_sup.Location = New System.Drawing.Point(487, 4)
-        Me.gbx_sup.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gbx_sup.Margin = New System.Windows.Forms.Padding(4)
         Me.gbx_sup.Name = "gbx_sup"
-        Me.gbx_sup.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gbx_sup.Padding = New System.Windows.Forms.Padding(4)
         Me.gbx_sup.Size = New System.Drawing.Size(345, 123)
         Me.gbx_sup.TabIndex = 54
         Me.gbx_sup.TabStop = False
@@ -1699,7 +1699,7 @@ Partial Class Xtreme
         '
         Me.btn_Non.AccessibleRole = System.Windows.Forms.AccessibleRole.WhiteSpace
         Me.btn_Non.Location = New System.Drawing.Point(176, 70)
-        Me.btn_Non.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_Non.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_Non.Name = "btn_Non"
         Me.btn_Non.Size = New System.Drawing.Size(100, 28)
         Me.btn_Non.TabIndex = 56
@@ -1710,7 +1710,7 @@ Partial Class Xtreme
         '
         Me.btn_Oui.AccessibleRole = System.Windows.Forms.AccessibleRole.WhiteSpace
         Me.btn_Oui.Location = New System.Drawing.Point(69, 70)
-        Me.btn_Oui.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_Oui.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_Oui.Name = "btn_Oui"
         Me.btn_Oui.Size = New System.Drawing.Size(100, 28)
         Me.btn_Oui.TabIndex = 55
@@ -1815,7 +1815,7 @@ Partial Class Xtreme
         'btn_annuler_tp
         '
         Me.btn_annuler_tp.Location = New System.Drawing.Point(700, 305)
-        Me.btn_annuler_tp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_annuler_tp.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_annuler_tp.Name = "btn_annuler_tp"
         Me.btn_annuler_tp.Size = New System.Drawing.Size(100, 28)
         Me.btn_annuler_tp.TabIndex = 56
@@ -1825,7 +1825,7 @@ Partial Class Xtreme
         'btn_Enregistrer_Type
         '
         Me.btn_Enregistrer_Type.Location = New System.Drawing.Point(540, 305)
-        Me.btn_Enregistrer_Type.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_Enregistrer_Type.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_Enregistrer_Type.Name = "btn_Enregistrer_Type"
         Me.btn_Enregistrer_Type.Size = New System.Drawing.Size(100, 28)
         Me.btn_Enregistrer_Type.TabIndex = 56
@@ -1840,7 +1840,7 @@ Partial Class Xtreme
         Me.Tab_Option.Controls.Add(Me.tabRechGene)
         Me.Tab_Option.Controls.Add(Me.tabRechProduit)
         Me.Tab_Option.Location = New System.Drawing.Point(1, 0)
-        Me.Tab_Option.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Tab_Option.Margin = New System.Windows.Forms.Padding(4)
         Me.Tab_Option.Name = "Tab_Option"
         Me.Tab_Option.SelectedIndex = 0
         Me.Tab_Option.Size = New System.Drawing.Size(1320, 555)
@@ -1856,9 +1856,9 @@ Partial Class Xtreme
         Me.tabMenu.Controls.Add(Me.btn_Gestion_table)
         Me.tabMenu.Controls.Add(Me.PictureBox1)
         Me.tabMenu.Location = New System.Drawing.Point(4, 25)
-        Me.tabMenu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabMenu.Margin = New System.Windows.Forms.Padding(4)
         Me.tabMenu.Name = "tabMenu"
-        Me.tabMenu.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabMenu.Padding = New System.Windows.Forms.Padding(4)
         Me.tabMenu.Size = New System.Drawing.Size(1312, 526)
         Me.tabMenu.TabIndex = 1
         Me.tabMenu.Text = "Menu"
@@ -1878,7 +1878,7 @@ Partial Class Xtreme
         '
         Me.btn_Recherche_produit.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_Recherche_produit.Location = New System.Drawing.Point(628, 192)
-        Me.btn_Recherche_produit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_Recherche_produit.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_Recherche_produit.Name = "btn_Recherche_produit"
         Me.btn_Recherche_produit.Size = New System.Drawing.Size(159, 48)
         Me.btn_Recherche_produit.TabIndex = 57
@@ -1890,7 +1890,7 @@ Partial Class Xtreme
         '
         Me.btn_Recherche_Generales.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_Recherche_Generales.Location = New System.Drawing.Point(407, 192)
-        Me.btn_Recherche_Generales.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_Recherche_Generales.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_Recherche_Generales.Name = "btn_Recherche_Generales"
         Me.btn_Recherche_Generales.Size = New System.Drawing.Size(159, 48)
         Me.btn_Recherche_Generales.TabIndex = 56
@@ -1902,7 +1902,7 @@ Partial Class Xtreme
         '
         Me.btn_Commandes.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_Commandes.Location = New System.Drawing.Point(628, 94)
-        Me.btn_Commandes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_Commandes.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_Commandes.Name = "btn_Commandes"
         Me.btn_Commandes.Size = New System.Drawing.Size(159, 48)
         Me.btn_Commandes.TabIndex = 55
@@ -1914,7 +1914,7 @@ Partial Class Xtreme
         '
         Me.btn_Gestion_table.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_Gestion_table.Location = New System.Drawing.Point(407, 94)
-        Me.btn_Gestion_table.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_Gestion_table.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_Gestion_table.Name = "btn_Gestion_table"
         Me.btn_Gestion_table.Size = New System.Drawing.Size(159, 48)
         Me.btn_Gestion_table.TabIndex = 54
@@ -1925,7 +1925,7 @@ Partial Class Xtreme
         'PictureBox1
         '
         Me.PictureBox1.Location = New System.Drawing.Point(9, 18)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(333, 308)
         Me.PictureBox1.TabIndex = 0
@@ -1954,9 +1954,9 @@ Partial Class Xtreme
         Me.tabGestionTable.Controls.Add(Me.pan_adresse)
         Me.tabGestionTable.Controls.Add(Me.Pan_employer)
         Me.tabGestionTable.Location = New System.Drawing.Point(4, 25)
-        Me.tabGestionTable.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabGestionTable.Margin = New System.Windows.Forms.Padding(4)
         Me.tabGestionTable.Name = "tabGestionTable"
-        Me.tabGestionTable.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabGestionTable.Padding = New System.Windows.Forms.Padding(4)
         Me.tabGestionTable.Size = New System.Drawing.Size(1312, 526)
         Me.tabGestionTable.TabIndex = 0
         Me.tabGestionTable.Text = "Gestion table"
@@ -1965,7 +1965,7 @@ Partial Class Xtreme
         '
         Me.btn_menu1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_menu1.Location = New System.Drawing.Point(1201, 7)
-        Me.btn_menu1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_menu1.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_menu1.Name = "btn_menu1"
         Me.btn_menu1.Size = New System.Drawing.Size(100, 28)
         Me.btn_menu1.TabIndex = 65
@@ -2004,7 +2004,7 @@ Partial Class Xtreme
         Me.pan_adresse.Controls.Add(Me.Label64)
         Me.pan_adresse.Controls.Add(Me.Label65)
         Me.pan_adresse.Location = New System.Drawing.Point(4, 59)
-        Me.pan_adresse.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pan_adresse.Margin = New System.Windows.Forms.Padding(4)
         Me.pan_adresse.Name = "pan_adresse"
         Me.pan_adresse.Size = New System.Drawing.Size(1307, 421)
         Me.pan_adresse.TabIndex = 64
@@ -2026,7 +2026,7 @@ Partial Class Xtreme
         '
         Me.btn_retour_Employer.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_retour_Employer.Location = New System.Drawing.Point(612, 370)
-        Me.btn_retour_Employer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_retour_Employer.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_retour_Employer.Name = "btn_retour_Employer"
         Me.btn_retour_Employer.Size = New System.Drawing.Size(100, 28)
         Me.btn_retour_Employer.TabIndex = 65
@@ -2046,7 +2046,7 @@ Partial Class Xtreme
         'txt_Adresse8
         '
         Me.txt_Adresse8.Location = New System.Drawing.Point(917, 156)
-        Me.txt_Adresse8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Adresse8.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Adresse8.Name = "txt_Adresse8"
         Me.txt_Adresse8.Size = New System.Drawing.Size(163, 22)
         Me.txt_Adresse8.TabIndex = 62
@@ -2054,7 +2054,7 @@ Partial Class Xtreme
         'txt_Adresse7
         '
         Me.txt_Adresse7.Location = New System.Drawing.Point(711, 156)
-        Me.txt_Adresse7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Adresse7.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Adresse7.Name = "txt_Adresse7"
         Me.txt_Adresse7.Size = New System.Drawing.Size(173, 22)
         Me.txt_Adresse7.TabIndex = 63
@@ -2062,7 +2062,7 @@ Partial Class Xtreme
         'txt_Adresse9
         '
         Me.txt_Adresse9.Location = New System.Drawing.Point(711, 218)
-        Me.txt_Adresse9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Adresse9.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Adresse9.Name = "txt_Adresse9"
         Me.txt_Adresse9.Size = New System.Drawing.Size(172, 22)
         Me.txt_Adresse9.TabIndex = 64
@@ -2070,7 +2070,7 @@ Partial Class Xtreme
         'txt_Adresse10
         '
         Me.txt_Adresse10.Location = New System.Drawing.Point(917, 218)
-        Me.txt_Adresse10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Adresse10.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Adresse10.Name = "txt_Adresse10"
         Me.txt_Adresse10.Size = New System.Drawing.Size(163, 22)
         Me.txt_Adresse10.TabIndex = 73
@@ -2078,7 +2078,7 @@ Partial Class Xtreme
         'txt_Adresse11
         '
         Me.txt_Adresse11.Location = New System.Drawing.Point(711, 279)
-        Me.txt_Adresse11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Adresse11.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Adresse11.Name = "txt_Adresse11"
         Me.txt_Adresse11.Size = New System.Drawing.Size(172, 22)
         Me.txt_Adresse11.TabIndex = 65
@@ -2086,7 +2086,7 @@ Partial Class Xtreme
         'txt_Adresse12
         '
         Me.txt_Adresse12.Location = New System.Drawing.Point(917, 279)
-        Me.txt_Adresse12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Adresse12.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Adresse12.Name = "txt_Adresse12"
         Me.txt_Adresse12.Size = New System.Drawing.Size(163, 22)
         Me.txt_Adresse12.TabIndex = 66
@@ -2176,7 +2176,7 @@ Partial Class Xtreme
         'txt_Adresse2
         '
         Me.txt_Adresse2.Location = New System.Drawing.Point(477, 151)
-        Me.txt_Adresse2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Adresse2.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Adresse2.Name = "txt_Adresse2"
         Me.txt_Adresse2.Size = New System.Drawing.Size(163, 22)
         Me.txt_Adresse2.TabIndex = 0
@@ -2184,7 +2184,7 @@ Partial Class Xtreme
         'txt_Adresse1
         '
         Me.txt_Adresse1.Location = New System.Drawing.Point(271, 151)
-        Me.txt_Adresse1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Adresse1.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Adresse1.Name = "txt_Adresse1"
         Me.txt_Adresse1.Size = New System.Drawing.Size(173, 22)
         Me.txt_Adresse1.TabIndex = 1
@@ -2192,7 +2192,7 @@ Partial Class Xtreme
         'txt_Adresse3
         '
         Me.txt_Adresse3.Location = New System.Drawing.Point(271, 213)
-        Me.txt_Adresse3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Adresse3.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Adresse3.Name = "txt_Adresse3"
         Me.txt_Adresse3.Size = New System.Drawing.Size(172, 22)
         Me.txt_Adresse3.TabIndex = 3
@@ -2200,7 +2200,7 @@ Partial Class Xtreme
         'txt_Adresse4
         '
         Me.txt_Adresse4.Location = New System.Drawing.Point(477, 213)
-        Me.txt_Adresse4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Adresse4.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Adresse4.Name = "txt_Adresse4"
         Me.txt_Adresse4.Size = New System.Drawing.Size(163, 22)
         Me.txt_Adresse4.TabIndex = 37
@@ -2208,7 +2208,7 @@ Partial Class Xtreme
         'txt_Adresse5
         '
         Me.txt_Adresse5.Location = New System.Drawing.Point(271, 274)
-        Me.txt_Adresse5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Adresse5.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Adresse5.Name = "txt_Adresse5"
         Me.txt_Adresse5.Size = New System.Drawing.Size(172, 22)
         Me.txt_Adresse5.TabIndex = 5
@@ -2216,7 +2216,7 @@ Partial Class Xtreme
         'txt_Adresse6
         '
         Me.txt_Adresse6.Location = New System.Drawing.Point(477, 274)
-        Me.txt_Adresse6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_Adresse6.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_Adresse6.Name = "txt_Adresse6"
         Me.txt_Adresse6.Size = New System.Drawing.Size(163, 22)
         Me.txt_Adresse6.TabIndex = 6
@@ -2279,9 +2279,9 @@ Partial Class Xtreme
         Me.tabCommandes.Controls.Add(Me.Label59)
         Me.tabCommandes.Controls.Add(Me.btn_menu2)
         Me.tabCommandes.Location = New System.Drawing.Point(4, 25)
-        Me.tabCommandes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabCommandes.Margin = New System.Windows.Forms.Padding(4)
         Me.tabCommandes.Name = "tabCommandes"
-        Me.tabCommandes.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabCommandes.Padding = New System.Windows.Forms.Padding(4)
         Me.tabCommandes.Size = New System.Drawing.Size(1312, 526)
         Me.tabCommandes.TabIndex = 2
         Me.tabCommandes.Text = "Commandes"
@@ -2470,7 +2470,7 @@ Partial Class Xtreme
         'NumericUpDown1
         '
         Me.NumericUpDown1.Location = New System.Drawing.Point(347, 112)
-        Me.NumericUpDown1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.NumericUpDown1.Margin = New System.Windows.Forms.Padding(4)
         Me.NumericUpDown1.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
         Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
@@ -2492,7 +2492,7 @@ Partial Class Xtreme
         '
         Me.btn_lastComande.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_lastComande.Location = New System.Drawing.Point(597, 414)
-        Me.btn_lastComande.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_lastComande.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_lastComande.Name = "btn_lastComande"
         Me.btn_lastComande.Size = New System.Drawing.Size(100, 28)
         Me.btn_lastComande.TabIndex = 78
@@ -2512,7 +2512,7 @@ Partial Class Xtreme
         '
         Me.btn_nextComande.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_nextComande.Location = New System.Drawing.Point(489, 414)
-        Me.btn_nextComande.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_nextComande.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_nextComande.Name = "btn_nextComande"
         Me.btn_nextComande.Size = New System.Drawing.Size(100, 28)
         Me.btn_nextComande.TabIndex = 77
@@ -2532,7 +2532,7 @@ Partial Class Xtreme
         '
         Me.btn_previewComande.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_previewComande.Location = New System.Drawing.Point(381, 414)
-        Me.btn_previewComande.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_previewComande.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_previewComande.Name = "btn_previewComande"
         Me.btn_previewComande.Size = New System.Drawing.Size(100, 28)
         Me.btn_previewComande.TabIndex = 76
@@ -2552,7 +2552,7 @@ Partial Class Xtreme
         '
         Me.btn_fisrtComande.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_fisrtComande.Location = New System.Drawing.Point(275, 414)
-        Me.btn_fisrtComande.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_fisrtComande.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_fisrtComande.Name = "btn_fisrtComande"
         Me.btn_fisrtComande.Size = New System.Drawing.Size(100, 28)
         Me.btn_fisrtComande.TabIndex = 75
@@ -2580,7 +2580,7 @@ Partial Class Xtreme
         'dtp_Exp_C
         '
         Me.dtp_Exp_C.Location = New System.Drawing.Point(805, 94)
-        Me.dtp_Exp_C.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtp_Exp_C.Margin = New System.Windows.Forms.Padding(4)
         Me.dtp_Exp_C.MaxDate = New Date(2018, 12, 31, 0, 0, 0, 0)
         Me.dtp_Exp_C.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
         Me.dtp_Exp_C.Name = "dtp_Exp_C"
@@ -2601,7 +2601,7 @@ Partial Class Xtreme
         'dtp_Besoin_C
         '
         Me.dtp_Besoin_C.Location = New System.Drawing.Point(563, 94)
-        Me.dtp_Besoin_C.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtp_Besoin_C.Margin = New System.Windows.Forms.Padding(4)
         Me.dtp_Besoin_C.MaxDate = New Date(2018, 12, 31, 0, 0, 0, 0)
         Me.dtp_Besoin_C.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
         Me.dtp_Besoin_C.Name = "dtp_Besoin_C"
@@ -2622,7 +2622,7 @@ Partial Class Xtreme
         'dtp_Com_C
         '
         Me.dtp_Com_C.Location = New System.Drawing.Point(563, 36)
-        Me.dtp_Com_C.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtp_Com_C.Margin = New System.Windows.Forms.Padding(4)
         Me.dtp_Com_C.MaxDate = New Date(2018, 12, 31, 0, 0, 0, 0)
         Me.dtp_Com_C.MinDate = New Date(1900, 1, 1, 21, 10, 0, 0)
         Me.dtp_Com_C.Name = "dtp_Com_C"
@@ -2680,7 +2680,7 @@ Partial Class Xtreme
         '
         Me.btn_reset.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_reset.Location = New System.Drawing.Point(1201, 43)
-        Me.btn_reset.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_reset.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_reset.Name = "btn_reset"
         Me.btn_reset.Size = New System.Drawing.Size(100, 28)
         Me.btn_reset.TabIndex = 102
@@ -2703,7 +2703,7 @@ Partial Class Xtreme
         '
         Me.btn_menu2.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_menu2.Location = New System.Drawing.Point(1201, 7)
-        Me.btn_menu2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_menu2.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_menu2.Name = "btn_menu2"
         Me.btn_menu2.Size = New System.Drawing.Size(100, 28)
         Me.btn_menu2.TabIndex = 66
@@ -2721,9 +2721,9 @@ Partial Class Xtreme
         Me.tabRechGene.Controls.Add(Me.GBx_Clients_RGeneral)
         Me.tabRechGene.Controls.Add(Me.GBx_Vendeur_RGeneral)
         Me.tabRechGene.Location = New System.Drawing.Point(4, 25)
-        Me.tabRechGene.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabRechGene.Margin = New System.Windows.Forms.Padding(4)
         Me.tabRechGene.Name = "tabRechGene"
-        Me.tabRechGene.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabRechGene.Padding = New System.Windows.Forms.Padding(4)
         Me.tabRechGene.Size = New System.Drawing.Size(1312, 526)
         Me.tabRechGene.TabIndex = 3
         Me.tabRechGene.Text = "Recherches générales"
@@ -2762,6 +2762,15 @@ Partial Class Xtreme
         Me.GBX_numero_commande_RGeneral.TabIndex = 73
         Me.GBX_numero_commande_RGeneral.TabStop = False
         Me.GBX_numero_commande_RGeneral.Text = "Numéro de commande"
+        '
+        'Label89
+        '
+        Me.Label89.AutoSize = True
+        Me.Label89.Location = New System.Drawing.Point(717, 313)
+        Me.Label89.Name = "Label89"
+        Me.Label89.Size = New System.Drawing.Size(99, 17)
+        Me.Label89.TabIndex = 23
+        Me.Label89.Text = "Paiement reçu"
         '
         'TextBox12
         '
@@ -3026,7 +3035,7 @@ Partial Class Xtreme
         '
         Me.btn_menu3.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_menu3.Location = New System.Drawing.Point(1201, 7)
-        Me.btn_menu3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_menu3.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_menu3.Name = "btn_menu3"
         Me.btn_menu3.Size = New System.Drawing.Size(100, 28)
         Me.btn_menu3.TabIndex = 66
@@ -3251,9 +3260,9 @@ Partial Class Xtreme
         Me.tabRechProduit.BackColor = System.Drawing.Color.Silver
         Me.tabRechProduit.Controls.Add(Me.btn_menu4)
         Me.tabRechProduit.Location = New System.Drawing.Point(4, 25)
-        Me.tabRechProduit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabRechProduit.Margin = New System.Windows.Forms.Padding(4)
         Me.tabRechProduit.Name = "tabRechProduit"
-        Me.tabRechProduit.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tabRechProduit.Padding = New System.Windows.Forms.Padding(4)
         Me.tabRechProduit.Size = New System.Drawing.Size(1312, 526)
         Me.tabRechProduit.TabIndex = 4
         Me.tabRechProduit.Text = " Recherches avec produits"
@@ -3262,7 +3271,7 @@ Partial Class Xtreme
         '
         Me.btn_menu4.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btn_menu4.Location = New System.Drawing.Point(1201, 7)
-        Me.btn_menu4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_menu4.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_menu4.Name = "btn_menu4"
         Me.btn_menu4.Size = New System.Drawing.Size(100, 28)
         Me.btn_menu4.TabIndex = 66
@@ -3279,15 +3288,6 @@ Partial Class Xtreme
         Me.TextBox4.Size = New System.Drawing.Size(100, 22)
         Me.TextBox4.TabIndex = 22
         '
-        'Label89
-        '
-        Me.Label89.AutoSize = True
-        Me.Label89.Location = New System.Drawing.Point(717, 313)
-        Me.Label89.Name = "Label89"
-        Me.Label89.Size = New System.Drawing.Size(99, 17)
-        Me.Label89.TabIndex = 23
-        Me.Label89.Text = "Paiement reçu"
-        '
         'Xtreme
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -3296,7 +3296,7 @@ Partial Class Xtreme
         Me.ClientSize = New System.Drawing.Size(1324, 558)
         Me.Controls.Add(Me.Tab_Option)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Xtreme"
         Me.Text = "Gestion de Xtreme"
         Me.pan_clients.ResumeLayout(False)
